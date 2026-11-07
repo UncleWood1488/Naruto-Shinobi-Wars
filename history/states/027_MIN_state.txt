@@ -1,0 +1,19 @@
+state = {
+    id = 27
+    name = "STATE_27"
+    manpower = 38039
+    state_category = city
+    history = {
+        owner = MIN
+        controller = MIN
+        add_core_of = MIN
+        buildings = {
+            industrial_complex = 1
+            infrastructure = 1
+        }
+            victory_points = { 161 5 }
+            victory_points = { 172 2 }
+    }
+    provinces = { 161 162 163 164 165 166 167 168 169 170 171 172 175 177 193 194 208 }
+    local_supplies = 2.0
+}

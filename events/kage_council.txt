@@ -1,0 +1,201 @@
+################################
+# СОВЕТ ПЯТИ КАГЕ
+################################
+
+# ============================================================
+# СОЗЫВ СОВЕТА
+# ============================================================
+country_event = {
+    id = kage_council.1
+    title = kage_council.1.t
+    desc = kage_council.1.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = yes
+    major = yes
+
+    # В зависимости от того, кто созывает — разные варианты
+    option = {
+        name = kage_council.1.a # Объединить всех Каге
+        trigger = { NOT = { has_country_flag = sasuke_path } }
+        add_political_power = -100
+        add_stability = 0.05
+        set_country_flag = kage_council_held
+        set_country_flag = kage_council_united
+
+        # Всем пяти деревням — приглашение на Совет
+        every_country = {
+            limit = {
+                OR = { tag = KNO tag = SUN tag = KIR tag = NKU tag = IWA }
+                NOT = { tag = ROOT }
+            }
+            country_event = { id = kage_council.2 days = 2 }
+        }
+    }
+
+    option = {
+        name = kage_council.1.b # Саске атакует Совет
+        trigger = {
+            OR = {
+                has_country_flag = sasuke_path
+                KNO = { has_country_flag = sasuke_returns }
+            }
+        }
+        set_country_flag = kage_council_held
+        set_country_flag = sasuke_attacks_council
+        add_stability = -0.10
+
+        country_event = { id = kage_council.3 days = 1 }
+    }
+
+    option = {
+        name = kage_council.1.c # Отложить Совет
+        add_political_power = 25
+        add_stability = -0.03
+    }
+}
+
+# ============================================================
+# КАЖДАЯ ДЕРЕВНЯ ПОЛУЧАЕТ ПРИГЛАШЕНИЕ
+# ============================================================
+country_event = {
+    id = kage_council.2
+    title = kage_council.2.t
+    desc = kage_council.2.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = kage_council.2.a # Присоединиться к Совету
+        add_political_power = 50
+        add_stability = 0.05
+        set_country_flag = joined_kage_council
+
+        # Создаём/дополняем Альянс Шиноби
+        if = {
+            limit = { NOT = { exists = yes_faction_shinobi } }
+            create_faction = "Альянс Шиноби"
+        }
+        if = {
+            limit = {
+                NOT = { is_in_faction = yes }
+            }
+            # Присоединяемся к тому, кто созвал
+            every_country = {
+                limit = {
+                    has_country_flag = kage_council_called
+                    is_in_faction = yes
+                }
+                add_to_faction = PREV
+            }
+        }
+    }
+
+    option = {
+        name = kage_council.2.b # Отказаться
+        add_stability = -0.05
+        add_political_power = -25
+        set_country_flag = refused_kage_council
+    }
+}
+
+# ============================================================
+# РЕЗНЯ НА СОВЕТЕ (Саске)
+# ============================================================
+country_event = {
+    id = kage_council.3
+    title = kage_council.3.t
+    desc = kage_council.3.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = kage_council.3.a # Убить всех Каге
+        add_stability = -0.20
+        add_war_support = 0.20
+        add_political_power = 200
+        set_country_flag = kage_massacre
+        set_country_flag = sasuke_tyrant
+
+        # Все деревни — ослаблены
+        every_country = {
+            limit = {
+                OR = { tag = SUN tag = KIR tag = NKU tag = IWA }
+                NOT = { tag = KNO }
+            }
+            country_event = { id = kage_council.3.target days = 1 }
+        }
+
+        # Если играет Коноха — Саске становится лидером
+        if = {
+            limit = { tag = KNO }
+            set_country_leader = {
+                name = "Саске Учиха"
+                desc = "Тиран Конохи"
+                picture = "GFX_portrait_generic_asia_6"
+                ideology = fascism
+            }
+        }
+    }
+
+    option = {
+        name = kage_council.3.b # Убить только Данзо
+        trigger = {
+            KNO = { has_country_flag = danzo_leader }
+        }
+        add_stability = -0.05
+        add_war_support = 0.10
+        set_country_flag = danzo_killed
+
+        KNO = {
+            remove_ideas = KNO_danzo_rule_idea
+            remove_ideas = KNO_dictatorship_idea
+            set_country_flag = danzo_dead
+            country_event = { id = kage_council.3.danzo_dies days = 1 }
+        }
+    }
+}
+
+# ============================================================
+# РЕАКЦИЯ ДЕРЕВЕНЬ НА РЕЗНЮ
+# ============================================================
+country_event = {
+    id = kage_council.3.target
+    title = kage_council.3.target.t
+    desc = kage_council.3.target.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = yes
+
+    option = {
+        name = kage_council.3.target.a
+        add_stability = -0.15
+        add_war_support = 0.15
+        add_ideas = KNO_danzo_rule_idea # временно, до смены лидера
+        # Убийство Каге — временный хаос
+        add_ideas = village_chaos_idea
+    }
+}
+
+# ============================================================
+# СМЕРТЬ ДАНЗО
+# ============================================================
+country_event = {
+    id = kage_council.3.danzo_dies
+    title = kage_council.3.danzo_dies.t
+    desc = kage_council.3.danzo_dies.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = yes
+
+    option = {
+        name = kage_council.3.danzo_dies.a
+        add_stability = 0.10
+        add_political_power = 100
+        set_country_leader = {
+            name = "Какаши Хатаке"
+            desc = "Шестой Хокаге"
+            picture = "GFX_portrait_generic_asia_2"
+            ideology = democratic
+        }
+    }
+}

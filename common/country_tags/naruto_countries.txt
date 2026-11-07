@@ -1,0 +1,8 @@
+KNO = "countries/Konoha.txt"
+SUN = "countries/Suna.txt"
+KIR = "countries/Kiri.txt"
+NKU = "countries/Kumo.txt"
+IWA = "countries/Iwa.txt"
+OTO = "countries/Oto.txt"
+AKA = "countries/Akatsuki.txt"
+MIN = "countries/Minor.txt"

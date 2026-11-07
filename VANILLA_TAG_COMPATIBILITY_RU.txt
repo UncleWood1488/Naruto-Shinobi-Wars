@@ -1,0 +1,19 @@
+﻿ПРОВЕРКА СОВМЕСТИМОСТИ ВАНИЛЬНЫХ COUNTRY TAGS
+
+Источник: сборка Naruto Shinobi Wars plane-icons diagnostic и предоставленный пользователем файл 00_plane_icons.txt из установленной HOI4.
+
+ИЗМЕНЕНИЯ
+1. gfx/interface/equipmentdesigner/graphic_db/00_plane_icons.txt заменён полным файлом из установленной игры. В нём найдено 40 верхнеуровневых блоков страновых тегов: AST, BUL, CAN, CHI, CZE, DEN, ENG, EST, FIN, FRA, GER, GRE, GXC, HOL, HUN, ITA, JAP, LAT, LIT, MAN, MEX, NOR, NZL, POL, POR, PRC, RAJ, ROM, SAF, SHX, SIK, SOV, SPR, SWE, SWI, TUR, USA, XSM, YUG, YUN. Скобки сбалансированы.
+2. В common/on_actions/00_naruto_setup.txt удалён устаревший блок remove_core_of = FRA и связанный transfer_state = 1, завязанные на комментарии про Корсику. Штат 1 уже принадлежит KNO и имеет ядро KNO в history/states/001_KNO_state.txt.
+
+РЕЗУЛЬТАТ АУДИТА
+- В актуальных игровых скриптах мода, помимо полного plane-icons файла, найден только один активный остаток ванильного country tag: FRA в стартовом on_action. Он удалён.
+- Упоминания HOL, INS, MEX, JAP, CZE, SIA и подобных тегов в диагностических TXT — это текстовые отчёты/комментарии, а не исполняемые скрипты.
+- Четыре файла в common/raids содержат только комментарии и не исполняют ванильные рейдовые определения с несовместимыми tag/state/province ссылками.
+- В descriptor.mod нет replace_path = common/country_tags. Поэтому vanilla country tag declarations продолжают поступать из самой игры. replace_path = history/countries оставлен: он изолирует историю ванильных стран от кастомной карты и не заменяет каталог country_tags.
+- В моде нет собственных игровых файлов gfx/models/units, кроме README. Поэтому предупреждения Duplicate entity для HOL/INS/MEX/JAP нельзя устранить добавлением в мод отсутствующих vanilla country-history файлов; эти предупреждения относятся к entity assets, поставляемым игрой/DLC или другими источниками.
+
+ВАЖНО
+Полные vanilla history/countries, common/countries и gfx/models/units не копировались в мод: это дублировало бы/расширяло vanilla content и могло бы вернуть страны и ссылки на карту, которых в Naruto Shinobi Wars нет.
+
+Проверка: ZIP CRC, скобки plane-icons и startup script; запуск игры не выполнялся.

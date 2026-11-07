@@ -1,0 +1,329 @@
+agency_upgrade = {
+    # ============================================================
+    # БАЗОВЫЕ (доступны всем)
+    # ============================================================
+    generic_agency_upgrade = {
+        upgrade_type = agency_upgrade
+
+        upgrade = {
+            id = agency_operative_slot_1
+            name = agency_operative_slot_1
+            cost = 1
+            icon = GFX_agency_upgrade_operative_slot
+            modifier = {
+                operative_slots = 1
+            }
+        }
+
+        upgrade = {
+            id = agency_intel_network_1
+            name = agency_intel_network_1
+            cost = 1
+            icon = GFX_agency_upgrade_intel
+            modifier = {
+                intel_network_gain_factor = 0.15
+            }
+        }
+
+        upgrade = {
+            id = agency_encryption_1
+            name = agency_encryption_1
+            cost = 1
+            icon = GFX_agency_upgrade_encryption
+            modifier = {
+                encryption_factor = 0.15
+                decryption_factor = 0.15
+            }
+        }
+
+        upgrade = {
+            id = agency_defense_1
+            name = agency_defense_1
+            cost = 1
+            icon = GFX_agency_upgrade_defense
+            modifier = {
+                defensive_factor = 0.20
+            }
+        }
+
+        upgrade = {
+            id = agency_offense_1
+            name = agency_offense_1
+            cost = 1
+            icon = GFX_agency_upgrade_offense
+            modifier = {
+                offensive_factor = 0.20
+            }
+        }
+    }
+
+    # ============================================================
+    # КОНОХА — АНБУ / КОРЕНЬ
+    # ============================================================
+    konoha_agency_upgrade = {
+        upgrade_type = agency_upgrade
+
+        upgrade = {
+            id = kno_anbu_training
+            name = kno_anbu_training
+            cost = 2
+            icon = GFX_agency_upgrade_kno_anbu
+            modifier = {
+                operative_slots = 1
+                intel_network_gain_factor = 0.10
+            }
+        }
+
+        upgrade = {
+            id = kno_root_infiltration
+            name = kno_root_infiltration
+            cost = 3
+            icon = GFX_agency_upgrade_kno_root
+            modifier = {
+                infiltration_gain_factor = 0.25
+                defensive_factor = 0.15
+            }
+            requires = { kno_anbu_training }
+        }
+
+        upgrade = {
+            id = kno_itachi_double_agent
+            name = kno_itachi_double_agent
+            cost = 4
+            icon = GFX_agency_upgrade_kno_itachi
+            modifier = {
+                decryption_factor = 0.30
+                intel_network_gain_factor = 0.20
+            }
+            requires = { kno_root_infiltration }
+            allowed = { has_country_flag = itachi_double_agent }
+        }
+
+        upgrade = {
+            id = kno_sharingan_intel
+            name = kno_sharingan_intel
+            cost = 3
+            icon = GFX_agency_upgrade_kno_sharingan
+            modifier = {
+                intel_network_gain = 0.20
+                decryption_factor = 0.20
+            }
+        }
+    }
+
+    # ============================================================
+    # СУНА — КУКОЛЬНАЯ БРИГАДА
+    # ============================================================
+    suna_agency_upgrade = {
+        upgrade_type = agency_upgrade
+
+        upgrade = {
+            id = sun_puppet_network
+            name = sun_puppet_network
+            cost = 2
+            icon = GFX_agency_upgrade_sun_puppet
+            modifier = {
+                intel_network_gain_factor = 0.20
+                defensive_factor = 0.15
+            }
+        }
+
+        upgrade = {
+            id = sun_poison_units
+            name = sun_poison_units
+            cost = 3
+            icon = GFX_agency_upgrade_sun_poison
+            modifier = {
+                offensive_factor = 0.25
+                infiltration_gain_factor = 0.15
+            }
+            requires = { sun_puppet_network }
+        }
+    }
+
+    # ============================================================
+    # КИРИ — ОХОТНИКИ-НИНДЗЯ
+    # ============================================================
+    kiri_agency_upgrade = {
+        upgrade_type = agency_upgrade
+
+        upgrade = {
+            id = kir_hunter_training
+            name = kir_hunter_training
+            cost = 2
+            icon = GFX_agency_upgrade_kir_hunter
+            modifier = {
+                offensive_factor = 0.25
+                infiltration_gain_factor = 0.15
+            }
+        }
+
+        upgrade = {
+            id = kir_swordsmen
+            name = kir_swordsmen
+            cost = 3
+            icon = GFX_agency_upgrade_kir_swords
+            modifier = {
+                offensive_factor = 0.30
+                intel_network_gain_factor = 0.15
+            }
+            requires = { kir_hunter_training }
+        }
+
+        upgrade = {
+            id = kir_bloody_mist
+            name = kir_bloody_mist
+            cost = 4
+            icon = GFX_agency_upgrade_kir_mist
+            modifier = {
+                infiltration_gain_factor = 0.30
+                defensive_factor = 0.20
+            }
+            requires = { kir_swordsmen }
+        }
+    }
+
+    # ============================================================
+    # КУМО — АНБУ ОБЛАКА
+    # ============================================================
+    kumo_agency_upgrade = {
+        upgrade_type = agency_upgrade
+
+        upgrade = {
+            id = kum_lightning_intel
+            name = kum_lightning_intel
+            cost = 2
+            icon = GFX_agency_upgrade_kum_lightning
+            modifier = {
+                intel_network_gain_factor = 0.20
+                encryption_factor = 0.15
+            }
+        }
+
+        upgrade = {
+            id = kum_kinkaku_force
+            name = kum_kinkaku_force
+            cost = 3
+            icon = GFX_agency_upgrade_kum_kinkaku
+            modifier = {
+                operative_slots = 1
+                offensive_factor = 0.20
+            }
+            requires = { kum_lightning_intel }
+        }
+    }
+
+    # ============================================================
+    # ИВА — КОРПУС ВЗРЫВА
+    # ============================================================
+    iwa_agency_upgrade = {
+        upgrade_type = agency_upgrade
+
+        upgrade = {
+            id = iwa_explosion_corps
+            name = iwa_explosion_corps
+            cost = 2
+            icon = GFX_agency_upgrade_iwa_explosion
+            modifier = {
+                offensive_factor = 0.20
+                defensive_factor = 0.15
+            }
+        }
+
+        upgrade = {
+            id = iwa_earth_wall
+            name = iwa_earth_wall
+            cost = 3
+            icon = GFX_agency_upgrade_iwa_wall
+            modifier = {
+                defensive_factor = 0.30
+                encryption_factor = 0.15
+            }
+            requires = { iwa_explosion_corps }
+        }
+    }
+
+    # ============================================================
+    # ОТО — ЧЕТВЁРКА ЗВУКА
+    # ============================================================
+    oto_agency_upgrade = {
+        upgrade_type = agency_upgrade
+
+        upgrade = {
+            id = oto_sound_four
+            name = oto_sound_four
+            cost = 2
+            icon = GFX_agency_upgrade_oto_sound
+            modifier = {
+                operative_slots = 1
+                infiltration_gain_factor = 0.20
+            }
+        }
+
+        upgrade = {
+            id = oto_curse_mark
+            name = oto_curse_mark
+            cost = 3
+            icon = GFX_agency_upgrade_oto_curse
+            modifier = {
+                offensive_factor = 0.30
+                intel_network_gain_factor = 0.15
+            }
+            requires = { oto_sound_four }
+        }
+
+        upgrade = {
+            id = oto_orochimaru_lab
+            name = oto_orochimaru_lab
+            cost = 4
+            icon = GFX_agency_upgrade_oto_lab
+            modifier = {
+                decryption_factor = 0.30
+                infiltration_gain_factor = 0.25
+            }
+            requires = { oto_curse_mark }
+        }
+    }
+
+    # ============================================================
+    # АКАЦУКИ — СЕТЬ ЗЕЦУ
+    # ============================================================
+    aka_agency_upgrade = {
+        upgrade_type = agency_upgrade
+
+        upgrade = {
+            id = aka_zetsu_network
+            name = aka_zetsu_network
+            cost = 2
+            icon = GFX_agency_upgrade_aka_zetsu
+            modifier = {
+                intel_network_gain_factor = 0.30
+                infiltration_gain_factor = 0.20
+            }
+        }
+
+        upgrade = {
+            id = aka_rinnegan_vision
+            name = aka_rinnegan_vision
+            cost = 3
+            icon = GFX_agency_upgrade_aka_rinnegan
+            modifier = {
+                intel_network_max_factor = 0.25
+                decryption_factor = 0.25
+            }
+            requires = { aka_zetsu_network }
+        }
+
+        upgrade = {
+            id = aka_pain_paths
+            name = aka_pain_paths
+            cost = 4
+            icon = GFX_agency_upgrade_aka_pain
+            modifier = {
+                operative_slots = 2
+                offensive_factor = 0.30
+            }
+            requires = { aka_rinnegan_vision }
+        }
+    }
+}

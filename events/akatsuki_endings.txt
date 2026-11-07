@@ -1,0 +1,165 @@
+################################
+# ФИНАЛЫ АКАЦУКИ
+################################
+
+# ============================================================
+# КОНЦОВКА 1: БЕСКОНЕЧНОЕ ЦУКУЁМИ (Мадара — бог)
+# ============================================================
+
+country_event = {
+    id = akatsuki_ending.1
+    title = akatsuki_ending.1.t
+    desc = akatsuki_ending.1.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = akatsuki_ending.1.a
+        add_stability = 0.30
+        add_political_power = 500
+        add_ideas = AKA_god_emperor_idea
+        set_country_flag = madara_god_victory
+
+        # Все страны — под контролем Акацуки
+        every_country = {
+            limit = {
+                NOT = { tag = AKA }
+                is_major = yes
+            }
+            country_event = { id = akatsuki_ending.1.target days = 2 }
+        }
+    }
+}
+
+country_event = {
+    id = akatsuki_ending.1.target
+    title = akatsuki_ending.1.target.t
+    desc = akatsuki_ending.1.target.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = yes
+
+    option = {
+        name = akatsuki_ending.1.target.a
+        # Страна подчинена Акацуки
+        set_politics = {
+            ruling_party = fascism
+            elections_allowed = no
+        }
+        set_popularities = {
+            fascism = 100
+        }
+        add_stability = -0.30
+        add_war_support = -0.20
+        set_country_flag = tsukuyomi_dreaming
+        add_ideas = dreaming_under_tsukuyomi_idea
+    }
+}
+
+# ============================================================
+# КОНЦОВКА 2: МИРОВОЕ ЗАВОЕВАНИЕ (сила дзинчурики)
+# ============================================================
+
+country_event = {
+    id = akatsuki_ending.2
+    title = akatsuki_ending.2.t
+    desc = akatsuki_ending.2.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = akatsuki_ending.2.a
+        add_stability = 0.25
+        add_political_power = 400
+        add_ideas = AKA_world_emperor_idea
+        set_country_flag = conquest_victory_final
+
+        # Все оставшиеся страны становятся марионетками
+        every_country = {
+            limit = {
+                NOT = { tag = AKA }
+                NOT = { is_in_faction_with = AKA }
+                exists = yes
+            }
+            country_event = { id = akatsuki_ending.2.target days = 2 }
+        }
+    }
+}
+
+country_event = {
+    id = akatsuki_ending.2.target
+    title = akatsuki_ending.2.target.t
+    desc = akatsuki_ending.2.target.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = yes
+
+    option = {
+        name = akatsuki_ending.2.target.a # Подчиниться
+        add_stability = -0.20
+        set_country_flag = conquered_by_akatsuki
+        add_ideas = conquered_by_akatsuki_idea
+    }
+    option = {
+        name = akatsuki_ending.2.target.b # Сражаться
+        add_stability = -0.10
+        add_war_support = 0.20
+        add_ideas = last_stand_idea
+    }
+}
+
+# ============================================================
+# ПОРАЖЕНИЕ АКАЦУКИ (если война проиграна)
+# ============================================================
+
+country_event = {
+    id = akatsuki_ending.100
+    title = akatsuki_ending.100.t
+    desc = akatsuki_ending.100.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = no
+    fire_only_once = yes
+    major = yes
+
+    trigger = {
+        tag = AKA
+        has_country_flag = fourth_war_started
+        surrender_progress >= 1.0
+    }
+
+    option = {
+        name = akatsuki_ending.100.a
+        set_country_flag = akatsuki_defeated
+        add_stability = -0.50
+        add_war_support = -0.30
+        remove_ideas = AKA_hunt_begins_idea
+    }
+}
+
+# ============================================================
+# ПОБЕДА КОНОХИ (реакция на поражение Акацуки)
+# ============================================================
+
+country_event = {
+    id = akatsuki_ending.101
+    title = akatsuki_ending.101.t
+    desc = akatsuki_ending.101.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = no
+    fire_only_once = yes
+
+    trigger = {
+        tag = KNO
+        AKA = { has_country_flag = akatsuki_defeated }
+        has_country_flag = fourth_war_started
+    }
+    mean_time_to_happen = { days = 30 }
+
+    option = {
+        name = akatsuki_ending.101.a
+        add_stability = 0.30
+        add_political_power = 300
+        add_ideas = KNO_victory_idea
+        set_country_flag = konoha_won_war
+    }
+}

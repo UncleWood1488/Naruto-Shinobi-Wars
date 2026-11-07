@@ -1,0 +1,75 @@
+################################
+# СОЗДАНИЕ ПОСТОЯННОГО СОВЕТА
+################################
+
+country_event = {
+    id = kage_council.10
+    title = kage_council.10.t
+    desc = kage_council.10.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = kage_council.10.a # Создать постоянный Совет
+        add_political_power = 100
+        add_stability = 0.05
+        add_ideas = kage_council_active_idea
+        set_country_flag = in_kage_council
+        set_country_flag = kage_council_active
+
+        # Создаём/дополняем фракцию
+        if = {
+            limit = { NOT = { is_in_faction = yes } }
+            create_faction = faction_shinobi_alliance
+        }
+
+        # Приглашаем всех
+        every_country = {
+            limit = {
+                OR = { tag = KNO tag = SUN tag = KIR tag = NKU tag = IWA }
+                NOT = { tag = PREV }
+            }
+            country_event = { id = kage_council.11 days = 2 }
+        }
+    }
+
+    option = {
+        name = kage_council.10.b # Создать временный Совет
+        add_political_power = 50
+        add_stability = 0.03
+        set_country_flag = kage_council_temporary
+    }
+}
+
+country_event = {
+    id = kage_council.11
+    title = kage_council.11.t
+    desc = kage_council.11.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = kage_council.11.a # Войти в постоянный Совет
+        add_political_power = 50
+        add_stability = 0.05
+        add_ideas = kage_council_active_idea
+        set_country_flag = in_kage_council
+        set_country_flag = kage_council_active
+
+        every_country = {
+            limit = {
+                has_country_flag = kage_council_active
+                is_in_faction = yes
+            }
+            add_to_faction = PREV
+        }
+    }
+
+    option = {
+        name = kage_council.11.b # Отказаться
+        add_stability = -0.05
+        add_political_power = -25
+    }
+}

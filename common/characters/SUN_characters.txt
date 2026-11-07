@@ -1,0 +1,16 @@
+characters = {
+    SUN_rasa_character = {
+        name = SUN_rasa_character
+        portraits = {
+            civilian = {
+                large = GFX_portrait_gaara
+            }
+        }
+        gender = male
+        country_leader = {
+            ideology = despotism
+            desc = SUN_rasa_character_desc
+            traits = { }
+        }
+    }
+}

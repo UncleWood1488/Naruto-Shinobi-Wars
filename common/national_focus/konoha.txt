@@ -1,0 +1,630 @@
+focus_tree = {
+    id = konoha_focus_tree
+
+    country = {
+        factor = 0
+        modifier = {
+            add = 10
+            tag = KNO
+        }
+    }
+
+    # =====================================================
+    # ОБЩАЯ ЛИНИЯ
+    # =====================================================
+    focus = {
+        id = KNO_rebuild_village
+        icon = GFX_goal_generic_construct_civ_factory
+        x = 0
+        y = 0
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            add_political_power = 120
+            add_stability = 0.05
+            country_event = { id = konoha.1 days = 30 }
+        }
+    }
+
+    focus = {
+        id = KNO_academy_reform
+        icon = GFX_goal_generic_scientific_exchange
+        prerequisite = { focus = KNO_rebuild_village }
+        x = 0
+        y = 1
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_research_slot = 1
+            add_ideas = KNO_academy_idea
+        }
+    }
+
+    focus = {
+        id = KNO_third_hokage_death
+        icon = GFX_goal_generic_political_pressure
+        prerequisite = { focus = KNO_academy_reform }
+        x = 0
+        y = 2
+        cost = 15
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            country_event = { id = konoha.4 days = 1 }
+            add_stability = -0.10
+            add_war_support = 0.15
+        }
+    }
+
+    # =====================================================
+    # ВЕТКА 1: ЦУНАДЕ → ОРИГИНАЛЬНЫЙ СЮЖЕТ
+    # x = -8
+    # =====================================================
+    focus = {
+        id = KNO_recall_tsunade
+        icon = GFX_goal_generic_major_alliance
+        prerequisite = { focus = KNO_third_hokage_death }
+        mutually_exclusive = {
+            focus = KNO_promote_kakashi
+            focus = KNO_danzo_coup
+            focus = KNO_sasuke_returns
+            focus = KNO_konohamaru_academy
+        }
+        x = -8
+        y = 3
+        cost = 15
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            set_country_flag = tsunade_path
+            country_event = { id = konoha.5 days = 1 }
+            add_political_power = 50
+        }
+    }
+
+    focus = {
+        id = KNO_tsunade_fifth_hokage
+        icon = GFX_goal_generic_political_pressure
+        prerequisite = { focus = KNO_recall_tsunade }
+        x = -8
+        y = 4
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            country_event = { id = konoha.6 days = 1 }
+            add_ideas = KNO_fifth_hokage_idea
+            add_stability = 0.10
+        }
+    }
+
+    # Левая подветка: медицинская реформа
+    focus = {
+        id = KNO_medical_reform
+        icon = GFX_goal_generic_health
+        prerequisite = { focus = KNO_tsunade_fifth_hokage }
+        x = -10
+        y = 5
+        cost = 10
+        search_filters = { FOCUS_FILTER_MANPOWER }
+        completion_reward = {
+            add_ideas = KNO_medical_reform_idea
+            add_manpower = 10000
+        }
+    }
+
+    # Центральная подветка: обучение Наруто
+    focus = {
+        id = KNO_naruto_training
+        icon = GFX_goal_generic_army_doctrines
+        prerequisite = { focus = KNO_tsunade_fifth_hokage }
+        x = -8
+        y = 5
+        cost = 10
+        search_filters = { FOCUS_FILTER_ARMY_XP }
+        completion_reward = {
+            add_ideas = KNO_naruto_training_idea
+            army_experience = 50
+        }
+    }
+
+    # Правая подветка: вторжение Пейна
+    focus = {
+        id = KNO_pain_invasion
+        icon = GFX_goal_generic_major_war
+        prerequisite = { focus = KNO_tsunade_fifth_hokage }
+        mutually_exclusive = { focus = KNO_handover_kakashi }
+        x = -6
+        y = 5
+        cost = 15
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            country_event = { id = konoha.7 days = 1 }
+            add_stability = -0.15
+            add_war_support = 0.20
+            set_country_flag = pain_invasion_survived
+        }
+    }
+
+    focus = {
+        id = KNO_fourth_shinobi_war
+        icon = GFX_goal_generic_major_war
+        prerequisite = { focus = KNO_pain_invasion }
+        x = -6
+        y = 6
+        cost = 20
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            country_event = { id = konoha.8 days = 1 }
+            add_ideas = KNO_allied_shinobi_force_idea
+            add_war_support = 0.20
+            set_country_flag = fourth_war_started
+        }
+    }
+
+    focus = {
+        id = KNO_allied_shinobi_force
+        icon = GFX_goal_generic_major_alliance
+        prerequisite = { focus = KNO_fourth_shinobi_war }
+        x = -8
+        y = 7
+        cost = 20
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            add_ideas = KNO_shinobi_alliance_idea
+            every_country = {
+                limit = {
+                    OR = { tag = SUN tag = KIR tag = NKU tag = IWA }
+                }
+                add_opinion = { target = KNO value = 50 }
+            }
+        }
+    }
+
+    focus = {
+        id = KNO_war_victory
+        icon = GFX_goal_generic_army_doctrines
+        prerequisite = { focus = KNO_fourth_shinobi_war }
+        x = -5
+        y = 7
+        cost = 20
+        search_filters = { FOCUS_FILTER_ARMY_XP }
+        completion_reward = {
+            add_ideas = KNO_war_victory_idea
+            army_experience = 100
+            add_war_support = 0.15
+        }
+    }
+
+    # ---- ВЫБОР: следовать сюжету или передать Какаши ----
+    focus = {
+        id = KNO_kakashi_sixth_hokage
+        icon = GFX_goal_generic_political_pressure
+        prerequisite = {
+            focus = KNO_war_victory
+            focus = KNO_allied_shinobi_force
+        }
+        x = -7
+        y = 8
+        cost = 15
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            country_event = { id = konoha.9 days = 1 }
+            add_ideas = KNO_sixth_hokage_idea
+            add_stability = 0.15
+            set_country_flag = kakashi_after_tsunade
+        }
+    }
+
+    focus = {
+        id = KNO_peaceful_era
+        icon = GFX_goal_generic_construct_civ_factory
+        prerequisite = { focus = KNO_kakashi_sixth_hokage }
+        x = -7
+        y = 9
+        cost = 15
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            add_ideas = KNO_peaceful_era_idea
+            add_stability = 0.15
+            add_political_power = 200
+        }
+    }
+
+    # =====================================================
+    # ВЕТКА 2: КАКАШИ СРАЗУ ПОСЛЕ ТРЕТЬЕГО
+    # x = -4
+    # =====================================================
+    focus = {
+        id = KNO_promote_kakashi
+        icon = GFX_goal_generic_political_pressure
+        prerequisite = { focus = KNO_third_hokage_death }
+        mutually_exclusive = {
+            focus = KNO_recall_tsunade
+            focus = KNO_danzo_coup
+            focus = KNO_sasuke_returns
+            focus = KNO_konohamaru_academy
+        }
+        x = -4
+        y = 3
+        cost = 15
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            set_country_flag = kakashi_path
+            country_event = { id = konoha.10 days = 1 }
+            add_political_power = 50
+        }
+    }
+
+    focus = {
+        id = KNO_kakashi_hokage
+        icon = GFX_goal_generic_political_pressure
+        prerequisite = { focus = KNO_promote_kakashi }
+        x = -4
+        y = 4
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            add_ideas = KNO_sixth_hokage_idea
+            add_stability = 0.10
+        }
+    }
+
+    focus = {
+        id = KNO_kakashi_anbu_reform
+        icon = GFX_goal_generic_secret_weapon
+        prerequisite = { focus = KNO_kakashi_hokage }
+        x = -5
+        y = 5
+        cost = 10
+        search_filters = { FOCUS_FILTER_ARMY_XP }
+        completion_reward = {
+            add_ideas = KNO_anbu_reform_idea
+            army_experience = 50
+        }
+    }
+
+    focus = {
+        id = KNO_kakashi_war_prep
+        icon = GFX_goal_generic_army_doctrines
+        prerequisite = { focus = KNO_kakashi_hokage }
+        x = -3
+        y = 5
+        cost = 10
+        search_filters = { FOCUS_FILTER_ARMY_XP }
+        completion_reward = {
+            add_ideas = KNO_war_prep_idea
+            add_war_support = 0.10
+            army_experience = 25
+        }
+    }
+
+    focus = {
+        id = KNO_kakashi_war
+        icon = GFX_goal_generic_major_war
+        prerequisite = { focus = KNO_kakashi_war_prep }
+        x = -4
+        y = 6
+        cost = 20
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            country_event = { id = konoha.8 days = 1 }
+            add_ideas = KNO_allied_shinobi_force_idea
+            add_war_support = 0.20
+            set_country_flag = fourth_war_started
+        }
+    }
+
+    focus = {
+        id = KNO_kakashi_victory
+        icon = GFX_goal_generic_army_doctrines
+        prerequisite = { focus = KNO_kakashi_war }
+        x = -4
+        y = 7
+        cost = 20
+        search_filters = { FOCUS_FILTER_ARMY_XP }
+        completion_reward = {
+            add_ideas = KNO_war_victory_idea
+            army_experience = 100
+            add_war_support = 0.15
+            set_country_flag = kakashi_victory
+        }
+    }
+
+    # =====================================================
+    # ВЕТКА 3: ДАНЗО
+    # x = 0
+    # =====================================================
+    focus = {
+        id = KNO_danzo_coup
+        icon = GFX_goal_generic_secret_weapon
+        prerequisite = { focus = KNO_third_hokage_death }
+        mutually_exclusive = {
+            focus = KNO_recall_tsunade
+            focus = KNO_promote_kakashi
+            focus = KNO_sasuke_returns
+            focus = KNO_konohamaru_academy
+        }
+        x = 0
+        y = 3
+        cost = 20
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            set_country_flag = danzo_path
+            country_event = { id = konoha.11 days = 1 }
+            add_war_support = 0.10
+            add_stability = -0.10
+        }
+    }
+
+    focus = {
+        id = KNO_danzo_hokage
+        icon = GFX_goal_generic_political_pressure
+        prerequisite = { focus = KNO_danzo_coup }
+        x = 0
+        y = 4
+        cost = 15
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            add_ideas = KNO_danzo_rule_idea
+            add_political_power = 100
+            set_country_flag = danzo_leader
+        }
+    }
+
+    focus = {
+        id = KNO_root_expansion
+        icon = GFX_goal_generic_intelligence_exchange
+        prerequisite = { focus = KNO_danzo_hokage }
+        x = -1
+        y = 5
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = KNO_root_idea
+            add_research_slot = 1
+        }
+    }
+
+    focus = {
+        id = KNO_suppress_clans
+        icon = GFX_goal_generic_political_pressure
+        prerequisite = { focus = KNO_danzo_hokage }
+        x = 1
+        y = 5
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            add_ideas = KNO_suppression_idea
+            add_stability = -0.05
+            add_war_support = 0.10
+        }
+    }
+
+    focus = {
+        id = KNO_danzo_dictatorship
+        icon = GFX_goal_generic_political_pressure
+        prerequisite = {
+            focus = KNO_root_expansion
+            focus = KNO_suppress_clans
+        }
+        x = 0
+        y = 6
+        cost = 15
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            add_ideas = KNO_dictatorship_idea
+            add_political_power = 200
+            set_country_flag = danzo_dictator
+        }
+    }
+
+    focus = {
+        id = KNO_danzo_war
+        icon = GFX_goal_generic_major_war
+        prerequisite = { focus = KNO_danzo_dictatorship }
+        x = 0
+        y = 7
+        cost = 20
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            country_event = { id = konoha.8 days = 1 }
+            add_ideas = KNO_danzo_war_idea
+            add_war_support = 0.25
+            set_country_flag = fourth_war_started
+        }
+    }
+
+    # =====================================================
+    # ВЕТКА 4: САСКЕ
+    # x = 4
+    # =====================================================
+    focus = {
+        id = KNO_sasuke_returns
+        icon = GFX_goal_generic_secret_weapon
+        prerequisite = { focus = KNO_third_hokage_death }
+        mutually_exclusive = {
+            focus = KNO_recall_tsunade
+            focus = KNO_promote_kakashi
+            focus = KNO_danzo_coup
+            focus = KNO_konohamaru_academy
+        }
+        x = 4
+        y = 3
+        cost = 20
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            set_country_flag = sasuke_path
+            country_event = { id = konoha.12 days = 1 }
+            add_war_support = 0.10
+        }
+    }
+
+    focus = {
+        id = KNO_sasuke_hokage
+        icon = GFX_goal_generic_political_pressure
+        prerequisite = { focus = KNO_sasuke_returns }
+        x = 4
+        y = 4
+        cost = 15
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            add_ideas = KNO_sasuke_rule_idea
+            add_political_power = 150
+            set_country_flag = sasuke_leader
+        }
+    }
+
+    focus = {
+        id = KNO_sasuke_revolution
+        icon = GFX_goal_generic_secret_weapon
+        prerequisite = { focus = KNO_sasuke_hokage }
+        x = 3
+        y = 5
+        cost = 15
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            add_ideas = KNO_revolution_idea
+            add_war_support = 0.15
+            add_stability = -0.10
+        }
+    }
+
+    focus = {
+        id = KNO_sasuke_united_shinobi
+        icon = GFX_goal_generic_major_alliance
+        prerequisite = { focus = KNO_sasuke_hokage }
+        x = 5
+        y = 5
+        cost = 15
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            add_ideas = KNO_united_shinobi_idea
+            every_country = {
+                limit = {
+                    OR = { tag = SUN tag = KIR tag = NKU tag = IWA }
+                }
+                add_opinion = { target = KNO value = 50 }
+            }
+        }
+    }
+
+    focus = {
+        id = KNO_sasuke_rule
+        icon = GFX_goal_generic_political_pressure
+        prerequisite = {
+            focus = KNO_sasuke_revolution
+            focus = KNO_sasuke_united_shinobi
+        }
+        x = 4
+        y = 6
+        cost = 20
+        search_filters = FOCUS_FILTER_POLITICAL
+        completion_reward = {
+            add_ideas = KNO_sasuke_shadow_idea
+            add_political_power = 250
+            army_experience = 100
+            set_country_flag = sasuke_shadow_rule
+        }
+    }
+
+    # =====================================================
+    # ВЕТКА 5: КОНОХАМАРУ
+    # x = 8
+    # =====================================================
+    focus = {
+        id = KNO_konohamaru_academy
+        icon = GFX_goal_generic_scientific_exchange
+        prerequisite = { focus = KNO_third_hokage_death }
+        mutually_exclusive = {
+            focus = KNO_recall_tsunade
+            focus = KNO_promote_kakashi
+            focus = KNO_danzo_coup
+            focus = KNO_sasuke_returns
+        }
+        x = 8
+        y = 3
+        cost = 15
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            set_country_flag = konohamaru_path
+            country_event = { id = konoha.13 days = 1 }
+            add_research_slot = 1
+        }
+    }
+
+    focus = {
+        id = KNO_young_generation
+        icon = GFX_goal_generic_propaganda
+        prerequisite = { focus = KNO_konohamaru_academy }
+        x = 8
+        y = 4
+        cost = 10
+        search_filters = { FOCUS_FILTER_MANPOWER }
+        completion_reward = {
+            add_ideas = KNO_young_generation_idea
+            add_manpower = 15000
+            add_stability = 0.05
+        }
+    }
+
+    focus = {
+        id = KNO_modernization
+        icon = GFX_goal_generic_construct_civ_factory
+        prerequisite = { focus = KNO_young_generation }
+        x = 7
+        y = 5
+        cost = 10
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+        completion_reward = {
+            add_ideas = KNO_modernization_idea
+            add_political_power = 75
+        }
+    }
+
+    focus = {
+        id = KNO_shinobi_reform
+        icon = GFX_goal_generic_army_doctrines
+        prerequisite = { focus = KNO_young_generation }
+        x = 9
+        y = 5
+        cost = 10
+        search_filters = { FOCUS_FILTER_ARMY_XP }
+        completion_reward = {
+            add_ideas = KNO_shinobi_reform_idea
+            army_experience = 50
+        }
+    }
+
+    focus = {
+        id = KNO_konohamaru_hokage
+        icon = GFX_goal_generic_political_pressure
+        prerequisite = {
+            focus = KNO_modernization
+            focus = KNO_shinobi_reform
+        }
+        x = 8
+        y = 6
+        cost = 20
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            add_ideas = KNO_konohamaru_rule_idea
+            add_political_power = 250
+            add_stability = 0.15
+            set_country_flag = konohamaru_leader
+        }
+    }
+
+    focus = {
+        id = KNO_new_konoha
+        icon = GFX_goal_generic_construct_civ_factory
+        prerequisite = { focus = KNO_konohamaru_hokage }
+        x = 8
+        y = 7
+        cost = 20
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            add_ideas = KNO_new_konoha_idea
+            add_stability = 0.20
+            add_political_power = 200
+            add_research_slot = 1
+        }
+    }
+}

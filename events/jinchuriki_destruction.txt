@@ -1,0 +1,68 @@
+################################
+# ИЗВЛЕЧЕНИЕ ЗВЕРЯ
+################################
+
+# ---- Извлечение успешно ----
+country_event = {
+    id = bijuu_extraction.1
+    title = bijuu_extraction.1.t
+    desc = bijuu_extraction.1.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = bijuu_extraction.1.a
+        # Уничтожить дивизию дзинчурики
+        every_owned_division = {
+            limit = {
+                division_template = "Дзинчурики"
+            }
+            delete_unit = yes
+        }
+        remove_ideas = KNO_jinchuriki_present
+        remove_ideas = SUN_jinchuriki_present
+        remove_ideas = KIR_jinchuriki_present
+        remove_ideas = NKU_jinchuriki_present
+        remove_ideas = IWA_jinchuriki_present
+
+        add_stability = -0.30
+        add_war_support = 0.20
+
+        AKA = {
+            add_political_power = 200
+            add_ideas = AKA_bijuu_extracted_idea
+        }
+    }
+}
+
+# ---- Мадара становится дзинчурики Джуби ----
+country_event = {
+    id = bijuu_extraction.100
+    title = bijuu_extraction.100.t
+    desc = bijuu_extraction.100.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = bijuu_extraction.100.a
+        # Создать супер-дивизию Джуби
+        create_division = {
+            division_template = "Дзинчурики Джуби"
+            location = 12351
+            name = "Мадара Учиха — Дзинчурики Джуби"
+            start_experience_factor = 1.0
+            start_equipment_factor = 1.0
+        }
+        add_ideas = AKA_madara_juubi_idea
+        add_war_support = 0.40
+        add_stability = 0.20
+
+        # Мировая реакция
+        every_country = {
+            limit = { NOT = { tag = AKA } }
+            add_stability = -0.20
+        }
+    }
+}

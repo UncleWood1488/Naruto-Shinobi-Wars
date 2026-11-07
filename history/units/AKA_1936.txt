@@ -1,0 +1,111 @@
+#############################
+# ШАБЛОНЫ ДИВИЗИЙ АКАЦУКИ
+#############################
+
+division_template = {
+    name = "Отряд Акацуки"
+    is_locked = no
+
+    regiments = {
+        anbu = { x = 0 y = 0 }
+        anbu = { x = 1 y = 0 }
+        jonin = { x = 0 y = 1 }
+        jonin = { x = 1 y = 1 }
+    }
+
+    support = {
+        recon = { x = 0 y = 0 }
+        engineer = { x = 1 y = 0 }
+    }
+}
+
+division_template = {
+    name = "Элита S-ранга"
+    is_locked = yes
+    priority = 900
+
+    regiments = {
+        anbu = { x = 0 y = 0 }
+        anbu = { x = 1 y = 0 }
+        anbu = { x = 0 y = 1 }
+        anbu = { x = 1 y = 1 }
+    }
+
+    support = {
+        recon = { x = 0 y = 0 }
+        engineer = { x = 1 y = 0 }
+    }
+}
+
+division_template = {
+    name = "Дзинчурики"
+    is_locked = yes
+    priority = 1000
+
+    regiments = {
+        jinchuriki = { x = 0 y = 0 }
+    }
+
+    support = { }
+}
+
+division_template = {
+    name = "Дзинчурики Джуби"
+    is_locked = yes
+    priority = 2000
+
+    regiments = {
+        juubi_jinchuriki = { x = 0 y = 0 }
+    }
+
+    support = { }
+}
+
+#############################
+# СОЗДАННЫЕ ДИВИЗИИ
+#############################
+
+units = {
+
+    division = {
+        name = "Отряд Пейна"
+        location = 187
+        division_template = "Отряд Акацуки"
+        start_experience_factor = 0.9
+    }
+
+    division = {
+        name = "Отряд Конан"
+        location = 187
+        division_template = "Отряд Акацуки"
+        start_experience_factor = 0.9
+    }
+
+    division = {
+        name = "Отряд Итачи и Кисаме"
+        location = 187
+        division_template = "Отряд Акацуки"
+        start_experience_factor = 0.9
+    }
+
+    division = {
+        name = "Отряд Дейдары и Сасори"
+        location = 187
+        division_template = "Отряд Акацуки"
+        start_experience_factor = 0.9
+    }
+
+    division = {
+        name = "Отряд Хидана и Какузу"
+        location = 187
+        division_template = "Отряд Акацуки"
+        start_experience_factor = 0.9
+    }
+
+    division = {
+        name = "Зецу"
+        location = 187
+        division_template = "Элита S-ранга"
+        start_experience_factor = 0.9
+    }
+}

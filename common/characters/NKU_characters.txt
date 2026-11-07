@@ -1,0 +1,16 @@
+characters = {
+    NKU_third_raikage_character = {
+        name = NKU_third_raikage_character
+        portraits = {
+            civilian = {
+                large = GFX_portrait_raikage
+            }
+        }
+        gender = male
+        country_leader = {
+            ideology = despotism
+            desc = NKU_third_raikage_character_desc
+            traits = { }
+        }
+    }
+}

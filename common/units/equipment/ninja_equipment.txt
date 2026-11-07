@@ -1,0 +1,156 @@
+equipments = {
+    # Shared equipment archetypes. Actual models below inherit from these.
+    ninja_equipment = {
+        is_archetype = yes
+        is_buildable = no
+        type = infantry
+        group_by = archetype
+        interface_category = interface_category_land
+        resources = { steel = 1 }
+        build_cost_ic = 0.1
+    }
+
+    puppeteer_equipment_type = {
+        is_archetype = yes
+        is_buildable = no
+        type = artillery
+        group_by = archetype
+        interface_category = interface_category_land
+        resources = { steel = 1 tungsten = 1 }
+        build_cost_ic = 0.1
+    }
+
+    genin_equipment = {
+        year = 1936
+        archetype = ninja_equipment
+        priority = 100
+        active = yes
+        resources = { steel = 1 }
+        soft_attack = 3
+        hard_attack = 1
+        air_attack = 0
+        defense = 8
+        breakthrough = 3
+        ap_attack = 1
+        armor_value = 0
+        hardness = 0.0
+        reliability = 0.90
+        build_cost_ic = 0.43
+    }
+
+    kunai_equipment = {
+        year = 1936
+        archetype = ninja_equipment
+        parent = genin_equipment
+        priority = 50
+        active = no
+        resources = { steel = 2 tungsten = 1 }
+        soft_attack = 1
+        hard_attack = 1
+        defense = 2
+        breakthrough = 1
+        ap_attack = 2
+        reliability = 0.90
+        build_cost_ic = 0.20
+    }
+
+    ninja_sword = {
+        year = 1936
+        archetype = ninja_equipment
+        parent = kunai_equipment
+        priority = 60
+        active = no
+        resources = { steel = 3 tungsten = 1 }
+        soft_attack = 3
+        hard_attack = 2
+        defense = 3
+        breakthrough = 4
+        ap_attack = 3
+        reliability = 0.90
+        build_cost_ic = 0.55
+    }
+
+    chakra_armor = {
+        year = 1938
+        archetype = ninja_equipment
+        parent = ninja_sword
+        priority = 70
+        active = no
+        resources = { steel = 5 tungsten = 3 chromium = 2 }
+        soft_attack = 2
+        defense = 12
+        breakthrough = 2
+        armor_value = 4
+        hardness = 0.10
+        reliability = 0.85
+        build_cost_ic = 1.20
+    }
+
+    anbu_equipment = {
+        year = 1936
+        archetype = ninja_equipment
+        parent = chakra_armor
+        priority = 80
+        active = no
+        resources = { steel = 3 tungsten = 2 chromium = 1 }
+        soft_attack = 6
+        hard_attack = 3
+        defense = 10
+        breakthrough = 6
+        armor_value = 2
+        ap_attack = 4
+        reliability = 0.90
+        build_cost_ic = 1.50
+    }
+
+    puppet_equipment = {
+        year = 1936
+        archetype = puppeteer_equipment_type
+        priority = 90
+        active = yes
+        resources = { steel = 4 tungsten = 2 rubber = 1 }
+        soft_attack = 20
+        hard_attack = 3
+        defense = 5
+        breakthrough = 5
+        ap_attack = 2
+        reliability = 0.85
+        build_cost_ic = 3.00
+    }
+
+    jinchuriki_equipment = {
+        year = 1936
+        archetype = ninja_equipment
+        parent = genin_equipment
+        priority = 200
+        active = yes
+        resources = { steel = 5 tungsten = 5 chromium = 5 }
+        soft_attack = 50
+        hard_attack = 30
+        defense = 30
+        breakthrough = 40
+        armor_value = 10
+        ap_attack = 15
+        hardness = 0.30
+        reliability = 0.75
+        build_cost_ic = 5.00
+    }
+
+    jinchuriki_equipment_2 = {
+        year = 1941
+        archetype = ninja_equipment
+        parent = jinchuriki_equipment
+        priority = 210
+        active = no
+        resources = { steel = 8 tungsten = 8 chromium = 8 }
+        soft_attack = 80
+        hard_attack = 60
+        defense = 55
+        breakthrough = 70
+        armor_value = 20
+        ap_attack = 30
+        hardness = 0.40
+        reliability = 0.75
+        build_cost_ic = 8.00
+    }
+}

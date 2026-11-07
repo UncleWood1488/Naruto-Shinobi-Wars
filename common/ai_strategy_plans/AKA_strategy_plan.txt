@@ -1,0 +1,51 @@
+AKA_aggressive_plan = {
+    name = "AKA_aggressive_plan"
+    desc = "Akatsuki aggressively hunts the jinchuriki"
+
+    strategy = { type = role_ratio id = elite value = 60 }
+    strategy = { type = role_ratio id = special_forces value = 30 }
+    strategy = { type = role_ratio id = infantry value = 10 }
+
+    strategy = {
+        type = dont_produce_unit
+        id = jinchuriki
+        value = yes
+    }
+
+    strategy = {
+        type = dont_produce_unit
+        id = juubi_jinchuriki
+        value = yes
+    }
+
+    # Агрессия против деревень
+    strategy = {
+        type = invade
+        id = KNO
+        value = 100
+    }
+
+    strategy = {
+        type = invade
+        id = SUN
+        value = 100
+    }
+
+    strategy = {
+        type = invade
+        id = NKU
+        value = 100
+    }
+
+    strategy = {
+        type = invade
+        id = KIR
+        value = 100
+    }
+
+    strategy = {
+        type = invade
+        id = IWA
+        value = 100
+    }
+}

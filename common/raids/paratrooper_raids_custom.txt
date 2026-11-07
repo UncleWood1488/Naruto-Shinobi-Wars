@@ -1,0 +1,3 @@
+# Naruto Shinobi Wars
+# Исторические парашютные рейды отключены: ванильные country/state/province ID не соответствуют Naruto-карте.
+types = { }

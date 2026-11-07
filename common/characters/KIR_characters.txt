@@ -1,0 +1,16 @@
+characters = {
+    KIR_third_mizukage_character = {
+        name = KIR_third_mizukage_character
+        portraits = {
+            civilian = {
+                large = GFX_portrait_yagura
+            }
+        }
+        gender = male
+        country_leader = {
+            ideology = despotism
+            desc = KIR_third_mizukage_character_desc
+            traits = { }
+        }
+    }
+}

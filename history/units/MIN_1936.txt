@@ -1,0 +1,30 @@
+#############################
+# СТАРТОВАЯ АРМИЯ МАЛЫХ СТРАН ШИНОБИ
+# Базовый шаблон использует существующий тип genin.
+#############################
+
+division_template = {
+    name = "Отряд малых стран"
+    is_locked = no
+    regiments = {
+        genin = { x = 0 y = 0 }
+        genin = { x = 1 y = 0 }
+        genin = { x = 0 y = 1 }
+    }
+    support = {
+        engineer = { x = 0 y = 0 }
+    }
+}
+
+units = {
+    division = {
+        name = "Оборонительный отряд малых стран"
+        location = 161
+        division_template = "Отряд малых стран"
+    }
+    division = {
+        name = "Резервный отряд малых стран"
+        location = 161
+        division_template = "Отряд малых стран"
+    }
+}

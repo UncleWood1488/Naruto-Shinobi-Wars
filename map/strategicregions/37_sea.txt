@@ -1,0 +1,21 @@
+strategic_region = {
+    id = 37
+    name = "STRATEGICREGION_37"
+    provinces = { 372 385 386 389 390 391 392 393 394 397 398 402 403 404 406 407 408 409 412 413 415 418 424 426 430 432 435 436 442 443 446 447 448 449 450 }
+    naval_terrain = water_shallow_sea
+    weather = {
+    period = {
+        between = { 0.0 30.11 }
+        temperature = { 9.1 24.1 }
+        no_phenomenon = 0.550
+        rain_light = 0.220
+        rain_heavy = 0.070
+        snow = 0.000
+        blizzard = 0.010
+        arctic_water = 0.000
+        mud = 0.120
+        sandstorm = 0.020
+        min_snow_level = 0.000
+    }
+}
+}

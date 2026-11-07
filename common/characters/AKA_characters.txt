@@ -1,0 +1,122 @@
+characters = {
+
+    AKA_pain_character = {
+        name = AKA_pain_character
+        portraits = {
+            civilian = {
+                large = "GFX_portrait_pain"
+                small = "GFX_portrait_pain_small"
+            }
+        
+        army = {
+            small = "GFX_portrait_pain_small"
+        }
+    }
+
+        gender = male
+
+        country_leader = {
+            ideology = despotism
+            traits = { }
+        }
+
+        corps_commander = {
+            skill = 8
+            attack_skill = 7
+            defense_skill = 8
+            planning_skill = 7
+            logistics_skill = 5
+            traits = {
+                trait_war_hero
+                trait_trickster
+            }
+        }
+    }
+
+    AKA_itachi_character = {
+        name = "Итачи Учиха"
+        portraits = {
+            civilian = {
+                small = "GFX_portrait_itachi_small"
+            }
+        
+        army = {
+            small = "GFX_portrait_itachi_small"
+        }
+    }
+
+        gender = male
+
+
+        corps_commander = {
+            skill = 6
+            attack_skill = 7
+            defense_skill = 6
+            planning_skill = 7
+            logistics_skill = 4
+            traits = { trait_trickster }
+        }
+    }
+
+    AKA_kisame_character = {
+        name = "Кисаме Хосигаки"
+        portraits = {
+            civilian = {
+                small = "GFX_portrait_kisame_small"
+            }
+        
+        army = {
+            small = "GFX_portrait_kisame_small"
+        }
+    }
+
+        gender = male
+
+        corps_commander = {
+            skill = 6
+            attack_skill = 7
+            defense_skill = 5
+            planning_skill = 4
+            logistics_skill = 5
+            traits = { trait_ruthless }
+        }
+    }
+
+    AKA_madara_character = {
+        name = "Мадара Учиха"
+        portraits = {
+            civilian = {
+                large = "GFX_portrait_madara"
+                small = "GFX_portrait_madara_small"
+            }
+        
+        army = {
+            small = "GFX_portrait_madara_small"
+        }
+    }
+
+        gender = male
+
+        country_leader = {
+            ideology = fascism_ideology
+            traits = { }
+            allowed = {
+                original_tag = AKA
+                has_country_flag = madara_leader
+            }
+        }
+
+        corps_commander = {
+            skill = 9
+            attack_skill = 9
+            defense_skill = 9
+            planning_skill = 9
+            logistics_skill = 7
+            traits = {
+                trait_war_hero
+                trait_trickster
+                trait_organiser
+            }
+        }
+    }
+}

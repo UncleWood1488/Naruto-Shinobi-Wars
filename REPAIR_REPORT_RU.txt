@@ -1,0 +1,19 @@
+Naruto Shinobi Wars — отчёт следующего этапа исправлений
+
+Исправлено:
+1. common/military_industrial_organization/organizations/KNO_MIO.txt — убран лишний FROM из country-scope условий visible/available; проверены tag/flag условия.
+2. common/military_industrial_organization/organizations/jinchuriki_MIO.txt — убран лишний FROM из country-scope условий; исправлены условия пяти специальных черт, где при редактировании обнаружилась неполная обёртка.
+3. common/military_industrial_organization/policies/KNO_MIO_policies.txt и jinchuriki_MIO_policies.txt — условия available переведены на прямой country scope без FROM.
+4. events/itachi_events.txt и обе локализации itachi_danzo_council — устранено дублирование ключа itachi.5.d: описание события теперь itachi.5.desc, вариант ответа остаётся itachi.5.d.
+5. В common/units/jinchuriki.txt и juubi_jinchuriki.txt выровнено оформление блока categories. Параметр map_icon_category оставлен: без подтверждения, что он недопустим для целевой версии, удалять его было бы необоснованно.
+
+Не изменялось намеренно:
+- 33 пустых файла. Пустой файл сам по себе не является ошибкой парсинга; часть из них — пустые заглушки/не реализованный контент. Заполнять их выдуманным содержимым или удалять без анализа зависимостей рискованно.
+- map/ и даты seasons.txt: этот этап посвящён найденным проблемам MIO и локализации, а доказанной причины C0000094 пока нет.
+
+Проверки после изменений:
+- скобки сбалансированы в четырёх файлах MIO, двух файлах подразделений и events/itachi_events.txt;
+- дубли локализационных ключей в YAML больше не обнаружены;
+- архив ZIP проверен на целостность.
+
+Ограничение: HOI4 1.19.x не запускалась в этой среде. Это статический ремонт, не подтверждение успешного запуска.

@@ -1,0 +1,20 @@
+strategic_region = {
+    id = 9
+    name = "STRATEGICREGION_9"
+    provinces = { 4 13 17 37 40 58 76 88 93 103 107 }
+    weather = {
+    period = {
+        between = { 0.0 30.11 }
+        temperature = { 19.8 34.8 }
+        no_phenomenon = 0.550
+        rain_light = 0.220
+        rain_heavy = 0.070
+        snow = 0.000
+        blizzard = 0.010
+        arctic_water = 0.000
+        mud = 0.120
+        sandstorm = 0.220
+        min_snow_level = 0.000
+    }
+}
+}

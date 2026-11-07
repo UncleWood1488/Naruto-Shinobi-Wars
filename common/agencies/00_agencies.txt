@@ -1,0 +1,146 @@
+agency = {
+    icons = {
+        GFX_agency_kno
+        GFX_agency_kno_2
+    }
+
+    operative_slots = 3
+    intel_network_gain_factor = 0.5
+    intel_network_gain = 0.25
+    intel_network_max_factor = 0.25
+    intel_network_decay = 0.02
+    intel_network_decay_factor = 0.5
+    infiltration_gain_factor = 0.5
+    infiltration_gain = 0.25
+    infiltration_max_factor = 0.25
+    infiltration_decay = 0.02
+    infiltration_decay_factor = 0.5
+    defensive_factor = 0.5
+    offensive_factor = 0.5
+}
+
+agency = {
+    icons = {
+        GFX_agency_sun
+        GFX_agency_sun_2
+    }
+
+    operative_slots = 2
+    intel_network_gain_factor = 0.4
+    intel_network_gain = 0.25
+    intel_network_max_factor = 0.25
+    intel_network_decay = 0.02
+    intel_network_decay_factor = 0.5
+    infiltration_gain_factor = 0.4
+    infiltration_gain = 0.25
+    infiltration_max_factor = 0.25
+    infiltration_decay = 0.02
+    infiltration_decay_factor = 0.5
+    defensive_factor = 0.6
+    offensive_factor = 0.4
+}
+
+agency = {
+    icons = {
+        GFX_agency_kir
+        GFX_agency_kir_2
+    }
+
+    operative_slots = 3
+    intel_network_gain_factor = 0.4
+    intel_network_gain = 0.25
+    intel_network_max_factor = 0.3
+    intel_network_decay = 0.02
+    intel_network_decay_factor = 0.5
+    infiltration_gain_factor = 0.7
+    infiltration_gain = 0.25
+    infiltration_max_factor = 0.3
+    infiltration_decay = 0.02
+    infiltration_decay_factor = 0.5
+    defensive_factor = 0.4
+    offensive_factor = 0.7
+}
+
+agency = {
+    icons = {
+        GFX_agency_kum
+        GFX_agency_kum_2
+    }
+
+    operative_slots = 3
+    intel_network_gain_factor = 0.5
+    intel_network_gain = 0.25
+    intel_network_max_factor = 0.25
+    intel_network_decay = 0.02
+    intel_network_decay_factor = 0.5
+    infiltration_gain_factor = 0.5
+    infiltration_gain = 0.25
+    infiltration_max_factor = 0.25
+    infiltration_decay = 0.02
+    infiltration_decay_factor = 0.5
+    defensive_factor = 0.5
+    offensive_factor = 0.6
+}
+
+agency = {
+    icons = {
+        GFX_agency_iwa
+        GFX_agency_iwa_2
+    }
+
+    operative_slots = 2
+    intel_network_gain_factor = 0.4
+    intel_network_gain = 0.25
+    intel_network_max_factor = 0.25
+    intel_network_decay = 0.02
+    intel_network_decay_factor = 0.5
+    infiltration_gain_factor = 0.4
+    infiltration_gain = 0.25
+    infiltration_max_factor = 0.25
+    infiltration_decay = 0.02
+    infiltration_decay_factor = 0.5
+    defensive_factor = 0.7
+    offensive_factor = 0.4
+}
+
+agency = {
+    icons = {
+        GFX_agency_oto
+        GFX_agency_oto_2
+    }
+
+    operative_slots = 3
+    intel_network_gain_factor = 0.6
+    intel_network_gain = 0.25
+    intel_network_max_factor = 0.3
+    intel_network_decay = 0.02
+    intel_network_decay_factor = 0.5
+    infiltration_gain_factor = 0.6
+    infiltration_gain = 0.25
+    infiltration_max_factor = 0.3
+    infiltration_decay = 0.02
+    infiltration_decay_factor = 0.5
+    defensive_factor = 0.3
+    offensive_factor = 0.7
+}
+
+agency = {
+    icons = {
+        GFX_agency_aka
+        GFX_agency_aka_2
+    }
+
+    operative_slots = 4
+    intel_network_gain_factor = 0.7
+    intel_network_gain = 0.25
+    intel_network_max_factor = 0.35
+    intel_network_decay = 0.02
+    intel_network_decay_factor = 0.5
+    infiltration_gain_factor = 0.7
+    infiltration_gain = 0.25
+    infiltration_max_factor = 0.35
+    infiltration_decay = 0.02
+    infiltration_decay_factor = 0.5
+    defensive_factor = 0.4
+    offensive_factor = 0.8
+}

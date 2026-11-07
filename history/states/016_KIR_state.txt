@@ -1,0 +1,17 @@
+state = {
+    id = 16
+    name = "STATE_16"
+    manpower = 25000
+    state_category = rural
+    history = {
+        owner = KIR
+        controller = KIR
+        add_core_of = KIR
+        buildings = {
+            infrastructure = 1
+        }
+            victory_points = { 91 2 }
+    }
+    provinces = { 91 200 }
+    local_supplies = 2.0
+}

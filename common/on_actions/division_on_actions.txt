@@ -1,0 +1,30 @@
+on_actions = {
+
+    # ============================================================
+    # ЕЖЕМЕСЯЧНО — поддержание лимитов дзинчурики
+    # ============================================================
+    on_monthly = {
+        effect = {
+
+            # Восстановление дзинчурики (уже было)
+            if = {
+                limit = {
+                    tag = KNO
+                    NOT = { has_country_flag = lost_kurama }
+                    NOT = { has_idea = KNO_jinchuriki_present }
+                }
+                add_ideas = KNO_jinchuriki_present
+            }
+
+            # Тренировка джонинов
+            every_country = {
+                limit = {
+                    has_idea = jonin_recruited_idea
+                    NOT = { has_country_flag = jonin_training_active }
+                }
+                add_ideas = jonin_training_idea
+                set_country_flag = jonin_training_active
+            }
+        }
+    }
+}

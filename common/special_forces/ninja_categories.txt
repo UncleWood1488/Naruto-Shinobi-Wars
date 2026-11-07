@@ -1,0 +1,15 @@
+special_forces = {
+
+    jonin_category = {
+        cap = 0.05          # 5% от армии
+        cap_flat = 10
+        unit_types = { jonin }
+        terrain = { forest = 0.10 }
+    }
+
+    anbu_category = {
+        cap = 0.02
+        cap_flat = 5
+        unit_types = { anbu }
+    }
+}

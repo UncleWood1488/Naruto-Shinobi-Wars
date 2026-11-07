@@ -1,0 +1,49 @@
+buildings = {
+    KNO_medical_facility = {
+        base_cost = 12000
+        infrastructure_construction_effect = no
+        value = 1
+        level_cap = {
+            state_max = 5
+            shares_slots = no
+        }
+        country_modifiers = {
+            enable_for_controllers = { KNO }
+            modifiers = {
+                research_speed_factor = 0.05
+            }
+        }
+    }
+
+    KNO_sealing_facility = {
+        base_cost = 15000
+        infrastructure_construction_effect = no
+        value = 1
+        level_cap = {
+            state_max = 3
+            shares_slots = no
+        }
+        country_modifiers = {
+            enable_for_controllers = { KNO }
+            modifiers = {
+                research_speed_factor = 0.05
+            }
+        }
+    }
+
+    OTO_lab_facility = {
+        base_cost = 18000
+        infrastructure_construction_effect = no
+        value = 1
+        level_cap = {
+            state_max = 5
+            shares_slots = no
+        }
+        country_modifiers = {
+            enable_for_controllers = { OTO }
+            modifiers = {
+                research_speed_factor = 0.10
+            }
+        }
+    }
+}

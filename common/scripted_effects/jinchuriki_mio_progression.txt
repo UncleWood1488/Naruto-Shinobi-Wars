@@ -1,0 +1,60 @@
+#############################
+# ПРОГРЕССИЯ MIO ДЗИНЧУРИКИ
+#############################
+
+# Активация MIO дзинчурики
+unlock_jinchuriki_mio = {
+    set_country_flag = jinchuriki_mio_unlocked
+    if = {
+        limit = { NOT = { has_military_industrial_organization = jinchuriki_mio } }
+        add_military_industrial_organization = jinchuriki_mio
+    }
+}
+
+# Ветка "Сила"
+unlock_jinchuriki_power_branch = {
+    set_country_flag = jinchuriki_aggressive
+}
+
+unlock_jinchuriki_bombardment = {
+    set_country_flag = jinchuriki_bombardment_unlocked
+}
+
+unlock_jinchuriki_transformation = {
+    set_country_flag = jinchuriki_transformation_unlocked
+}
+
+# Ветка "Контроль"
+unlock_jinchuriki_partnership = {
+    set_country_flag = jinchuriki_partnership
+}
+
+unlock_jinchuriki_perfect_form = {
+    set_country_flag = jinchuriki_perfect_form
+}
+
+unlock_jinchuriki_sage_mode = {
+    set_country_flag = jinchuriki_sage_mode
+}
+
+# Ветка "Защита"
+unlock_jinchuriki_shield = {
+    set_country_flag = jinchuriki_shield
+}
+
+unlock_jinchuriki_regeneration = {
+    set_country_flag = jinchuriki_regeneration
+}
+
+# Ветка "Спец"
+unlock_jinchuriki_bb = {
+    set_country_flag = jinchuriki_bb_unlocked
+}
+
+unlock_jinchuriki_chakra_chain = {
+    set_country_flag = jinchuriki_chakra_chain
+}
+
+unlock_jinchuriki_link = {
+    set_country_flag = jinchuriki_link_unlocked
+}

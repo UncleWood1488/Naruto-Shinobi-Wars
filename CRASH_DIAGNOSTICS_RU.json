@@ -1,0 +1,294 @@
+{
+  "mod_name": "Naruto Shinobi Wars",
+  "game_version_from_crash": "1.19.4.1.99a5",
+  "country_capital_fixes": {
+    "AKA - Akatsuki.txt": {
+      "old_province_id": 187,
+      "new_state_id": 21
+    },
+    "IWA - Land of Earth.txt": {
+      "old_province_id": 44,
+      "new_state_id": 13
+    },
+    "KIR - Land of Water.txt": {
+      "old_province_id": 195,
+      "new_state_id": 18
+    },
+    "KNO - Land of Fire.txt": {
+      "old_province_id": 85,
+      "new_state_id": 1
+    },
+    "MIN - Minor Shinobi Nations.txt": {
+      "old_province_id": 161,
+      "new_state_id": 27
+    },
+    "NKU - Land of Lightning.txt": {
+      "old_province_id": 109,
+      "new_state_id": 15
+    },
+    "OTO - Land of Sound.txt": {
+      "old_province_id": 79,
+      "new_state_id": 20
+    },
+    "SUN - Land of Wind.txt": {
+      "old_province_id": 77,
+      "new_state_id": 7
+    }
+  },
+  "naval_base_fixes": {
+    "11": {
+      "province_id": 87,
+      "pixel": [
+        817,
+        305
+      ],
+      "adjacent_sea": 347,
+      "height": 17.4
+    },
+    "25": {
+      "province_id": 119,
+      "pixel": [
+        73,
+        975
+      ],
+      "adjacent_sea": 451,
+      "height": 11.1
+    }
+  },
+  "weather_position_fixes": [
+    {
+      "region": 12,
+      "kind": "small",
+      "old_pixel": [
+        1249,
+        265
+      ],
+      "new_pixel": [
+        1228,
+        261
+      ],
+      "province": 218
+    },
+    {
+      "region": 12,
+      "kind": "large",
+      "old_pixel": [
+        1252,
+        262
+      ],
+      "new_pixel": [
+        1228,
+        261
+      ],
+      "province": 218
+    },
+    {
+      "region": 16,
+      "kind": "small",
+      "old_pixel": [
+        1565,
+        476
+      ],
+      "new_pixel": [
+        1570,
+        492
+      ],
+      "province": 200
+    },
+    {
+      "region": 16,
+      "kind": "large",
+      "old_pixel": [
+        1568,
+        473
+      ],
+      "new_pixel": [
+        1570,
+        492
+      ],
+      "province": 200
+    },
+    {
+      "region": 19,
+      "kind": "small",
+      "old_pixel": [
+        1675,
+        896
+      ],
+      "new_pixel": [
+        1675,
+        895
+      ],
+      "province": 176
+    },
+    {
+      "region": 22,
+      "kind": "small",
+      "old_pixel": [
+        1398,
+        88
+      ],
+      "new_pixel": [
+        1397,
+        87
+      ],
+      "province": 199
+    },
+    {
+      "region": 22,
+      "kind": "large",
+      "old_pixel": [
+        1401,
+        85
+      ],
+      "new_pixel": [
+        1399,
+        85
+      ],
+      "province": 199
+    },
+    {
+      "region": 29,
+      "kind": "small",
+      "old_pixel": [
+        1205,
+        1354
+      ],
+      "new_pixel": [
+        1220,
+        1369
+      ],
+      "province": 196
+    },
+    {
+      "region": 29,
+      "kind": "large",
+      "old_pixel": [
+        1208,
+        1351
+      ],
+      "new_pixel": [
+        1222,
+        1367
+      ],
+      "province": 196
+    },
+    {
+      "region": 30,
+      "kind": "small",
+      "old_pixel": [
+        1219,
+        178
+      ],
+      "new_pixel": [
+        1200,
+        189
+      ],
+      "province": 266
+    },
+    {
+      "region": 30,
+      "kind": "large",
+      "old_pixel": [
+        1222,
+        175
+      ],
+      "new_pixel": [
+        1200,
+        189
+      ],
+      "province": 266
+    }
+  ],
+  "russian_localisation_bom_added": [
+    "villages_l_russian.yml",
+    "itachi_danzo_council_l_russian.yml",
+    "ninjutsu_l_russian.yml",
+    "naruto_tech_l_russian.yml",
+    "naruto_map_l_russian.yml",
+    "kage_council_l_russian.yml",
+    "danzo_agencies_l_russian.yml",
+    "jinchuriki_mio_l_russian.yml",
+    "naruto_calendar_l_russian.yml",
+    "konoha_l_russian.yml",
+    "divisions_l_russian.yml",
+    "konoha_focus_l_russian.yml",
+    "naruto_mio_l_russian.yml",
+    "jinchuriki_unique_l_russian.yml"
+  ],
+  "extra_fixes": [
+    "replace_path history/countries in both descriptors",
+    "minimal tutorial override to avoid references to removed vanilla state IDs",
+    "corrected FROM scope in two MIO available triggers"
+  ],
+  "limitations": [
+    "The archive has not been run inside HOI4 in this environment; the exact divide-by-zero fault cannot be confirmed resolved without a new game launch."
+  ],
+  "weather_marker_separation_fixes": [
+    [
+      12,
+      "large",
+      [
+        1228.0,
+        1274.0
+      ],
+      [
+        1228,
+        1278
+      ],
+      218
+    ],
+    [
+      16,
+      "large",
+      [
+        1570.0,
+        1043.0
+      ],
+      [
+        1574,
+        1043
+      ],
+      200
+    ],
+    [
+      22,
+      "large",
+      [
+        1399.0,
+        1450.0
+      ],
+      [
+        1399,
+        1452
+      ],
+      199
+    ],
+    [
+      29,
+      "large",
+      [
+        1222.0,
+        168.0
+      ],
+      [
+        1224,
+        168
+      ],
+      196
+    ],
+    [
+      30,
+      "large",
+      [
+        1200.0,
+        1346.0
+      ],
+      [
+        1196,
+        1346
+      ],
+      266
+    ]
+  ]
+}

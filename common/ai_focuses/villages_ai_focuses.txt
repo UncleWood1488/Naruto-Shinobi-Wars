@@ -1,0 +1,39 @@
+SUN_ai_focuses = {
+    ai_focus = { focus = SUN_gaara_reform value = 100 }
+    ai_focus = { focus = SUN_kazekage_election value = 90 }
+    ai_focus = { focus = SUN_military_reform value = 80 }
+    ai_focus = { focus = SUN_puppet_mastery value = 75 }
+    ai_focus = { focus = SUN_alliance_konoha value = 70 }
+}
+
+KIR_ai_focuses = {
+    ai_focus = { focus = KIR_overthrow_yagura value = 100 }
+    ai_focus = { focus = KIR_mei_reforms value = 90 }
+    ai_focus = { focus = KIR_hunter_reform value = 85 }
+    ai_focus = { focus = KIR_seven_swordsmen value = 80 }
+    ai_focus = { focus = KIR_bloody_mist_end value = 70 }
+}
+
+NKU_ai_focuses = {
+    ai_focus = { focus = NKU_raikage_consolidation value = 100 }
+    ai_focus = { focus = NKU_lightning_army value = 90 }
+    ai_focus = { focus = NKU_killer_b_training value = 85 }
+    ai_focus = { focus = NKU_war_preparation value = 75 }
+    ai_focus = { focus = NKU_cloud_expansion value = 70 }
+}
+
+IWA_ai_focuses = {
+    ai_focus = { focus = IWA_tsuchikage_rule value = 100 }
+    ai_focus = { focus = IWA_earth_army value = 90 }
+    ai_focus = { focus = IWA_explosion_corps value = 85 }
+    ai_focus = { focus = IWA_roshi_control value = 80 }
+    ai_focus = { focus = IWA_mountain_defense value = 75 }
+}
+
+OTO_ai_focuses = {
+    ai_focus = { focus = OTO_orochimaru_rise value = 100 }
+    ai_focus = { focus = OTO_sound_village value = 90 }
+    ai_focus = { focus = OTO_forbidden_research value = 85 }
+    ai_focus = { focus = OTO_attack_konoha value = 70 }
+    ai_focus = { focus = OTO_immortality_quest value = 65 }
+}

@@ -1,0 +1,308 @@
+################################
+# ИВЕНТЫ ДЕРЕВЕНЬ — SUN, KIR, NKU, IWA, OTO
+################################
+
+# ============================================================
+# СУНА (SUN)
+# ============================================================
+
+country_event = {
+    id = villages_sun.1
+    title = villages_sun.1.t
+    desc = villages_sun.1.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = no
+    fire_only_once = yes
+
+    trigger = {
+        tag = SUN
+        date > 1936.3.1
+    }
+    mean_time_to_happen = { days = 90 }
+
+    option = {
+        name = villages_sun.1.a
+        add_political_power = 50
+        add_stability = 0.05
+        set_country_flag = sun_gaara_reform
+    }
+    option = {
+        name = villages_sun.1.b
+        add_war_support = 0.10
+        add_stability = -0.05
+    }
+}
+
+country_event = {
+    id = villages_sun.2
+    title = villages_sun.2.t
+    desc = villages_sun.2.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    trigger = { tag = SUN }
+    mean_time_to_happen = { days = 30 }
+
+    option = {
+        name = villages_sun.2.a
+        add_political_power = 100
+        add_stability = 0.10
+        set_country_flag = sun_kazekage_gaara
+        set_country_leader = {
+            name = "Гаара"
+            desc = "Пятый Казекаге"
+            picture = "GFX_portrait_generic_asia_1"
+            ideology = democratic
+        }
+    }
+}
+
+# ============================================================
+# КИРИ (KIR)
+# ============================================================
+
+country_event = {
+    id = villages_kiri.1
+    title = villages_kiri.1.t
+    desc = villages_kiri.1.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = no
+    fire_only_once = yes
+
+    trigger = {
+        tag = KIR
+        date > 1936.2.1
+    }
+    mean_time_to_happen = { days = 60 }
+
+    option = {
+        name = villages_kiri.1.a # Убить Ягуру
+        add_stability = -0.15
+        add_war_support = 0.15
+        set_country_flag = kiri_civil_war
+        set_country_leader = {
+            name = "Мэй Теруми"
+            desc = "Пятая Мизукаге"
+            picture = "GFX_portrait_generic_asia_2"
+            ideology = democratic
+        }
+    }
+    option = {
+        name = villages_kiri.1.b # Оставить Ягуру
+        add_stability = 0.05
+        add_war_support = 0.05
+    }
+}
+
+country_event = {
+    id = villages_kiri.2
+    title = villages_kiri.2.t
+    desc = villages_kiri.2.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = no
+    fire_only_once = yes
+
+    trigger = {
+        tag = KIR
+        has_country_flag = kiri_civil_war
+        date > 1937.1.1
+    }
+    mean_time_to_happen = { days = 120 }
+
+    option = {
+        name = villages_kiri.2.a
+        add_stability = 0.20
+        add_political_power = 100
+        add_ideas = KIR_reform_idea
+    }
+}
+
+# ============================================================
+# КУМО (NKU)
+# ============================================================
+
+country_event = {
+    id = villages_kum.1
+    title = villages_kum.1.t
+    desc = villages_kum.1.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = no
+    fire_only_once = yes
+
+    trigger = {
+        tag = NKU
+        date > 1936.4.1
+    }
+    mean_time_to_happen = { days = 60 }
+
+    option = {
+        name = villages_kum.1.a
+        add_political_power = 75
+        add_ideas = NKU_raikage_idea
+        add_war_support = 0.05
+    }
+}
+
+country_event = {
+    id = villages_kum.2
+    title = villages_kum.2.t
+    desc = villages_kum.2.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = no
+    fire_only_once = yes
+
+    trigger = {
+        tag = NKU
+        date > 1937.6.1
+    }
+    mean_time_to_happen = { days = 90 }
+
+    option = {
+        name = villages_kum.2.a # Подготовка к войне
+        add_war_support = 0.15
+        army_experience = 50
+        add_ideas = NKU_war_prep_idea
+    }
+    option = {
+        name = villages_kum.2.b # Мирный путь
+        add_stability = 0.10
+        add_political_power = 50
+    }
+}
+
+# ============================================================
+# ИВА (IWA)
+# ============================================================
+
+country_event = {
+    id = villages_iwa.1
+    title = villages_iwa.1.t
+    desc = villages_iwa.1.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = no
+    fire_only_once = yes
+
+    trigger = {
+        tag = IWA
+        date > 1936.5.1
+    }
+    mean_time_to_happen = { days = 90 }
+
+    option = {
+        name = villages_iwa.1.a
+        add_political_power = 50
+        add_stability = 0.05
+        add_ideas = IWA_tsuchikage_idea
+    }
+}
+
+country_event = {
+    id = villages_iwa.2
+    title = villages_iwa.2.t
+    desc = villages_iwa.2.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = no
+    fire_only_once = yes
+
+    trigger = {
+        tag = IWA
+        date > 1938.1.1
+    }
+    mean_time_to_happen = { days = 120 }
+
+    option = {
+        name = villages_iwa.2.a # Мобилизация
+        add_war_support = 0.15
+        add_manpower = 15000
+        add_ideas = IWA_mobilization_idea
+    }
+    option = {
+        name = villages_iwa.2.b # Экономика
+        add_political_power = 100
+        add_ideas = IWA_economy_idea
+    }
+}
+
+# ============================================================
+# ОТО (OTO) — ОРОЧИМАРУ
+# ============================================================
+
+country_event = {
+    id = villages_oto.1
+    title = villages_oto.1.t
+    desc = villages_oto.1.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = no
+    fire_only_once = yes
+
+    trigger = {
+        tag = OTO
+        date > 1936.1.1
+    }
+    mean_time_to_happen = { days = 30 }
+
+    option = {
+        name = villages_oto.1.a
+        add_ideas = OTO_orochimaru_idea
+        add_war_support = 0.10
+        add_political_power = 50
+    }
+}
+
+country_event = {
+    id = villages_oto.2
+    title = villages_oto.2.t
+    desc = villages_oto.2.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = no
+    fire_only_once = yes
+
+    trigger = {
+        tag = OTO
+        date > 1937.3.1
+        KNO = { exists = yes }
+    }
+    mean_time_to_happen = { days = 60 }
+
+    option = {
+        name = villages_oto.2.a # Атаковать Коноху
+        add_war_support = 0.15
+        create_wargoal = {
+            type = annex_everything
+            target = KNO
+        }
+    }
+    option = {
+        name = villages_oto.2.b # Готовиться
+        add_stability = 0.05
+        add_political_power = 75
+        army_experience = 25
+    }
+}
+
+country_event = {
+    id = villages_oto.3
+    title = villages_oto.3.t
+    desc = villages_oto.3.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = no
+    fire_only_once = yes
+
+    trigger = {
+        tag = OTO
+        date > 1938.6.1
+    }
+    mean_time_to_happen = { days = 120 }
+
+    option = {
+        name = villages_oto.3.a # Бессмертие
+        add_ideas = OTO_immortality_idea
+        army_experience = 50
+    }
+    option = {
+        name = villages_oto.3.b # Армия
+        add_manpower = 10000
+        add_war_support = 0.10
+    }
+}

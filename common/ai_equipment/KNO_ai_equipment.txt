@@ -1,0 +1,38 @@
+KNO_ai_equipment = {
+    ai_equipment = {
+        name = "Konoha - Genin Gear"
+        priority = 100
+        allowed = { always = yes }
+        equipment = genin_equipment
+        production_factor = 1.0
+    }
+
+    ai_equipment = {
+        name = "Konoha - Kunai"
+        priority = 90
+        allowed = { always = yes }
+        equipment = kunai_equipment
+        production_factor = 0.8
+    }
+
+    ai_equipment = {
+        name = "Konoha - Ninja Swords"
+        priority = 80
+        allowed = {
+            always = yes
+        }
+        equipment = ninja_sword
+        production_factor = 0.6
+    }
+
+    ai_equipment = {
+        name = "Konoha - ANBU Gear"
+        priority = 70
+        allowed = {
+            always = yes
+            has_country_flag = anbu_active
+        }
+        equipment = anbu_equipment
+        production_factor = 0.5
+    }
+}

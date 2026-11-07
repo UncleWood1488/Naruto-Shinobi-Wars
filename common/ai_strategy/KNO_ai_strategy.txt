@@ -1,0 +1,39 @@
+KNO_ai_strategy = {
+    ai_strategy = {
+        type = role_ratio
+        id = infantry
+        value = 60
+    }
+
+    ai_strategy = {
+        type = role_ratio
+        id = elite
+        value = 25
+    }
+
+    ai_strategy = {
+        type = role_ratio
+        id = special_forces
+        value = 15
+    }
+
+    # AI никогда не пытается создать дзинчурики
+    ai_strategy = {
+        type = dont_produce_unit
+        id = jinchuriki
+        value = yes
+    }
+
+    ai_strategy = {
+        type = dont_produce_unit
+        id = juubi_jinchuriki
+        value = yes
+    }
+
+    # AI не строит лишних инженеров
+    ai_strategy = {
+        type = avoid_army_buildup
+        id = jinchuriki
+        value = yes
+    }
+}

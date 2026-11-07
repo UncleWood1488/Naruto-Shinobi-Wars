@@ -1,0 +1,138 @@
+﻿l_russian:
+ # Суна
+ villages_sun.1.t:0 "Реформы в Суне"
+ villages_sun.1.d:0 "Новое поколение Песчаной деревни требует перемен."
+ villages_sun.1.a:0 "Поддержать реформы"
+ villages_sun.1.b:0 "Сохранить традиции"
+
+ villages_sun.2.t:0 "Гаара — Пятый Казекаге"
+ villages_sun.2.d:0 "Гаара становится лидером Песчаной деревни."
+ villages_sun.2.a:0 "Новая эра Суны"
+
+ # Кири
+ villages_kiri.1.t:0 "Кризис в Кири"
+ villages_kiri.1.d:0 "Туманная деревня на грани гражданской войны. Ягура должен уйти."
+ villages_kiri.1.a:0 "Свергнуть Ягуру"
+ villages_kiri.1.b:0 "Оставить всё как есть"
+
+ villages_kiri.2.t:0 "Реформы Мэй"
+ villages_kiri.2.d:0 "Мэй Теруми проводит реформы в Туманной деревне."
+ villages_kiri.2.a:0 "Новая Кири"
+
+ # Кумо
+ villages_kum.1.t:0 "Райкаге укрепляет власть"
+ villages_kum.1.d:0 "Райкаге проводит реформы в Облачной деревне."
+ villages_kum.1.a:0 "Сильная Кумо"
+
+ villages_kum.2.t:0 "Выбор Кумо"
+ villages_kum.2.d:0 "Деревня готовится к грядущему конфликту."
+ villages_kum.2.a:0 "Готовиться к войне"
+ villages_kum.2.b:0 "Мирный путь"
+
+ # Ива
+ villages_iwa.1.t:0 "Цучикаге укрепляет власть"
+ villages_iwa.1.d:0 "Цучикаге реформирует Каменную деревню."
+ villages_iwa.1.a:0 "Новая Ива"
+
+ villages_iwa.2.t:0 "Путь Ивы"
+ villages_iwa.2.d:0 "Деревня выбирает между войной и экономикой."
+ villages_iwa.2.a:0 "Мобилизация"
+ villages_iwa.2.b:0 "Экономическое развитие"
+
+ # Ото
+ villages_oto.1.t:0 "Орочимару строит Ото"
+ villages_oto.1.d:0 "Орочимару создаёт деревню Звука."
+ villages_oto.1.a:0 "Деревня Звука растёт"
+
+ villages_oto.2.t:0 "Ото смотрит на Коноху"
+ villages_oto.2.d:0 "Орочимару готовит нападение на Коноху."
+ villages_oto.2.a:0 "Атаковать Коноху"
+ villages_oto.2.b:0 "Продолжать подготовку"
+
+ villages_oto.3.t:0 "Поиски бессмертия"
+ villages_oto.3.d:0 "Орочимару продолжает исследования."
+ villages_oto.3.a:0 "Бессмертие"
+ villages_oto.3.b:0 "Армия прежде всего"
+
+ # Предательство Акацуки
+ akatsuki_betrayal.1.t:0 "Обито против Мадары"
+ akatsuki_betrayal.1.d:0 "Внутри Акацуки зреет конфликт. Обито не желает подчиняться Мадаре."
+ akatsuki_betrayal.1.a:0 "Мадара побеждает"
+ akatsuki_betrayal.1.b:0 "Обито свергает Мадару"
+ akatsuki_betrayal.1.c:0 "Договориться"
+
+ akatsuki_betrayal.2.t:0 "Пейн против Обито"
+ akatsuki_betrayal.2.d:0 "Пейн понимает истинные намерения Обито."
+ akatsuki_betrayal.2.a:0 "Пейн сохраняет власть"
+ akatsuki_betrayal.2.b:0 "Обито свергает Пейна"
+
+ akatsuki_betrayal.3.t:0 "Орочимару ищет союзников"
+ akatsuki_betrayal.3.d:0 "Орочимару предлагает Акацуки союз против Конохи."
+ akatsuki_betrayal.3.a:0 "Союз с Акацуки"
+ akatsuki_betrayal.3.b:0 "Действовать в одиночку"
+
+ # Финалы
+ akatsuki_ending.1.t:0 "Мадара — бог"
+ akatsuki_ending.1.d:0 "Бесконечное Цукуёми завершено. Мадара Учиха правит миром снов."
+ akatsuki_ending.1.a:0 "Мир во сне"
+
+ akatsuki_ending.1.target.t:0 "Вечный сон"
+ akatsuki_ending.1.target.d:0 "Мы погружены в Бесконечное Цукуёми."
+ akatsuki_ending.1.target.a:0 "Сдаться снам..."
+
+ akatsuki_ending.2.t:0 "Мировое господство Акацуки"
+ akatsuki_ending.2.d:0 "Все земли захвачены. Акацуки правят миром силой дзинчурики."
+ akatsuki_ending.2.a:0 "Новая мировая империя"
+
+ akatsuki_ending.2.target.t:0 "Акацуки требуют подчинения"
+ akatsuki_ending.2.target.d:0 "Акацуки захватили наши земли и требуют полной капитуляции."
+ akatsuki_ending.2.target.a:0 "Подчиниться"
+ akatsuki_ending.2.target.b:0 "Сражаться до конца"
+
+ akatsuki_ending.100.t:0 "Акацуки разгромлены"
+ akatsuki_ending.100.d:0 "Силы Акацуки разбиты. Организация на грани краха."
+ akatsuki_ending.100.a:0 "Мы проиграли"
+
+ akatsuki_ending.101.t:0 "Победа в Четвёртой мировой войне"
+ akatsuki_ending.101.d:0 "Акацуки повержены. Мир восстановлен."
+ akatsuki_ending.101.a:0 "Мир наступил"
+
+ # Идеи
+ KIR_reform_idea:0 "Реформы Мэй"
+ KIR_reform_idea_desc:0 "Туманная деревня реформируется."
+ NKU_raikage_idea:0 "Райкаге"
+ NKU_raikage_idea_desc:0 "Райкаге укрепляет Облачную деревню."
+ NKU_war_prep_idea:0 "Военная подготовка"
+ NKU_war_prep_idea_desc:0 "Кумо готова к войне."
+ IWA_tsuchikage_idea:0 "Цучикаге"
+ IWA_tsuchikage_idea_desc:0 "Цучикаге ведёт Каменную деревню."
+ IWA_mobilization_idea:0 "Мобилизация"
+ IWA_mobilization_idea_desc:0 "Ива мобилизует силы."
+ IWA_economy_idea:0 "Экономический рост"
+ IWA_economy_idea_desc:0 "Ива развивает экономику."
+ OTO_orochimaru_idea:0 "Орочимару"
+ OTO_orochimaru_idea_desc:0 "Орочимару строит деревню Звука."
+ OTO_immortality_idea:0 "Поиски бессмертия"
+ OTO_immortality_idea_desc:0 "Исследования Орочимару."
+ OTO_akatsuki_alliance_idea:0 "Союз с Акацуки"
+ OTO_akatsuki_alliance_idea_desc:0 "Ото в союзе с Акацуки."
+ AKA_madara_prevails_idea:0 "Победа Мадары"
+ AKA_madara_prevails_idea_desc:0 "Мадара подавил предательство."
+ AKA_obito_prevails_idea:0 "Победа Обито"
+ AKA_obito_prevails_idea_desc:0 "Обито возглавил Акацуки."
+ AKA_dual_leadership_idea:0 "Двоевластие"
+ AKA_dual_leadership_idea_desc:0 "Мадара и Обито правят вместе."
+ AKA_pain_prevails_idea:0 "Победа Пейна"
+ AKA_pain_prevails_idea_desc:0 "Пейн сохранил власть."
+ AKA_god_emperor_idea:0 "Бог-император"
+ AKA_god_emperor_idea_desc:0 "Мадара — бог нового мира."
+ AKA_world_emperor_idea:0 "Мировой император"
+ AKA_world_emperor_idea_desc:0 "Акацуки правят всем."
+ dreaming_under_tsukuyomi_idea:0 "Сон под Цукуёми"
+ dreaming_under_tsukuyomi_idea_desc:0 "Мы видим вечный сон."
+ conquered_by_akatsuki_idea:0 "Завоёваны Акацуки"
+ conquered_by_akatsuki_idea_desc:0 "Мы под властью Акацуки."
+ last_stand_idea:0 "Последний рубеж"
+ last_stand_idea_desc:0 "Мы будем сражаться до конца."
+ KNO_victory_idea:0 "Победа в войне"
+ KNO_victory_idea_desc:0 "Коноха победила Акацуки."

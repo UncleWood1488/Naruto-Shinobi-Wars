@@ -1,0 +1,29 @@
+KNO_faction_ai = {
+    ai_strategy = {
+        type = faction_leader_score
+        id = KNO
+        value = 100
+    }
+
+    ai_strategy = {
+        type = join_faction
+        id = KNO
+        value = 100
+    }
+
+    ai_strategy = {
+        type = faction_leader_score
+        id = SUN
+        value = 50
+    }
+
+    # Не создавать фракцию до 4-й войны
+    ai_strategy = {
+        type = dont_create_faction
+        id = yes
+        value = yes
+        trigger = {
+            NOT = { has_country_flag = fourth_war_started }
+        }
+    }
+}

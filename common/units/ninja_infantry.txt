@@ -1,0 +1,246 @@
+sub_units = {
+
+    # ============================================================
+    # ГЕНИН — базовый юнит
+    # ============================================================
+    genin = {
+        sprite = infantry
+        type = { infantry }
+        group = infantry
+categories = {
+    category_all_infantry
+}
+        active = yes
+        combat_width = 2
+
+        max_strength = 20
+        max_organisation = 50
+        default_morale = 0.45
+        manpower = 1000
+        training_time = 90
+        weight = 1
+        supply_consumption = 0.05
+
+        need = { ninja_equipment = 1 }
+
+        soft_attack = 4
+        hard_attack = 1
+        defense = 18
+        breakthrough = 3
+        hardness = 0.0
+        armor_value = 0
+        ap_attack = 1
+    }
+
+    # ============================================================
+    # ЧУНИН — мобильная пехота
+    # ============================================================
+    chunin = {
+        sprite = motorized
+        type = { infantry motorized }
+        group = mobile
+categories = {
+    category_all_infantry
+}
+        active = yes
+        combat_width = 2
+
+        max_strength = 22
+        max_organisation = 55
+        default_morale = 0.50
+        manpower = 1000
+        training_time = 120
+        weight = 2
+        supply_consumption = 0.10
+        fuel_consumption = 0.05
+
+        need = { ninja_equipment = 1 }
+
+        soft_attack = 6
+        hard_attack = 2
+        defense = 20
+        breakthrough = 5
+        hardness = 0.05
+        armor_value = 0
+        ap_attack = 2
+
+        plains = { attack = 0.10 }
+        urban = { attack = -0.10 }
+    }
+
+    # ============================================================
+    # ДЖОНИН — элитная пехота
+    # ============================================================
+    jonin = {
+        sprite = infantry
+        type = { infantry }
+        group = infantry
+categories = {
+    category_all_infantry
+    category_special_forces
+}
+        active = yes
+        combat_width = 2
+
+        max_strength = 25
+        max_organisation = 60
+        default_morale = 0.55
+        manpower = 500
+        training_time = 180
+        weight = 1
+        supply_consumption = 0.08
+
+        need = { ninja_equipment = 1 }
+
+        soft_attack = 12
+        hard_attack = 4
+        defense = 25
+        breakthrough = 10
+        hardness = 0.05
+        armor_value = 2
+        ap_attack = 4
+
+        forest = { attack = 0.10 }
+        urban = { attack = 0.05 }
+        mountain = { attack = 0.05 }
+
+        special_forces = yes
+    }
+
+    # ============================================================
+    # АНБУ — спецназ
+    # ============================================================
+    anbu = {
+        sprite = infantry
+        type = { infantry }
+        group = infantry
+categories = {
+    category_all_infantry
+    category_special_forces
+}
+        active = yes
+        combat_width = 1
+
+        max_strength = 30
+        max_organisation = 70
+        default_morale = 0.60
+        manpower = 500
+        training_time = 240
+        weight = 1
+        supply_consumption = 0.10
+
+        need = { ninja_equipment = 1 }
+
+        soft_attack = 15
+        hard_attack = 5
+        defense = 28
+        breakthrough = 12
+        hardness = 0.10
+        armor_value = 3
+        ap_attack = 6
+
+        forest = { attack = 0.15 }
+        urban = { attack = 0.10 }
+
+        special_forces = yes
+    }
+
+
+    # ============================================================
+    # ШИНОБИ-РЕЙДЕР — специализированный батальон для рейдовых операций
+    # ============================================================
+    nsw_ninja_raider = {
+        sprite = infantry
+        type = { infantry }
+        group = infantry
+        categories = {
+            category_all_infantry
+            category_special_forces
+        }
+        active = yes
+        combat_width = 1
+        max_strength = 20
+        max_organisation = 55
+        default_morale = 0.55
+        manpower = 500
+        training_time = 180
+        weight = 1
+        supply_consumption = 0.08
+        need = { ninja_equipment = 1 }
+        soft_attack = 8
+        hard_attack = 2
+        defense = 20
+        breakthrough = 8
+        hardness = 0.0
+        armor_value = 0
+        ap_attack = 2
+        special_forces = yes
+        marines = yes
+        can_exfiltrate_from_coast = yes
+        can_be_parachuted = yes
+    }
+
+    # ============================================================
+    # САМУРАЙ — тяжёлая пехота
+    # ============================================================
+    samurai = {
+        sprite = infantry
+        type = { infantry }
+        group = infantry
+categories = {
+    category_all_infantry
+}
+        active = yes
+        combat_width = 2
+
+        max_strength = 35
+        max_organisation = 45
+        default_morale = 0.65
+        manpower = 1000
+        training_time = 200
+        weight = 2
+        supply_consumption = 0.15
+
+        need = { ninja_equipment = 1 }
+
+        soft_attack = 14
+        hard_attack = 6
+        defense = 22
+        breakthrough = 15
+        hardness = 0.20
+        armor_value = 8
+        ap_attack = 10
+    }
+
+    # ============================================================
+    # КУКОЛЬЩИК — артиллерия Суны
+    # ============================================================
+    puppeteer = {
+        sprite = artillery
+        type = { artillery }
+        group = infantry
+categories = {
+    category_artillery
+}
+        active = yes
+        combat_width = 2
+
+        max_strength = 15
+        max_organisation = 40
+        default_morale = 0.40
+        manpower = 500
+        training_time = 150
+        weight = 3
+        supply_consumption = 0.20
+
+        need = { puppeteer_equipment_type = 1 }
+
+        soft_attack = 30
+        hard_attack = 5
+        defense = 15
+        breakthrough = 8
+        hardness = 0.05
+        armor_value = 2
+        ap_attack = 3
+    }
+}

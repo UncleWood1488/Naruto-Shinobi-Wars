@@ -1,0 +1,111 @@
+################################
+# MIO ДЗИНЧУРИКИ — СОБЫТИЯ
+################################
+
+# ---- Разблокировка MIO ----
+country_event = {
+    id = jinchuriki_mio.1
+    title = jinchuriki_mio.1.t
+    desc = jinchuriki_mio.1.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = no
+    fire_only_once = yes
+    major = yes
+
+    trigger = {
+        OR = { tag = KNO tag = SUN tag = KIR tag = NKU tag = IWA }
+        has_idea = KNO_jinchuriki_present
+        date > 1936.6.1
+    }
+    mean_time_to_happen = { days = 60 }
+
+    option = {
+        name = jinchuriki_mio.1.a # Разблокировать MIO
+        unlock_jinchuriki_mio = yes
+        add_political_power = 50
+        add_research_slot = 1
+    }
+}
+
+# ---- Выбор ветки ----
+country_event = {
+    id = jinchuriki_mio.2
+    title = jinchuriki_mio.2.t
+    desc = jinchuriki_mio.2.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = no
+    fire_only_once = yes
+    major = yes
+
+    trigger = {
+        has_country_flag = jinchuriki_mio_unlocked
+        date > 1938.1.1
+    }
+    mean_time_to_happen = { days = 180 }
+
+    option = {
+        name = jinchuriki_mio.2.a # Ветка «Сила»
+        unlock_jinchuriki_power_branch = yes
+        army_experience = 50
+        add_ideas = jinchuriki_path_power_idea
+    }
+
+    option = {
+        name = jinchuriki_mio.2.b # Ветка «Контроль»
+        unlock_jinchuriki_partnership = yes
+        add_stability = 0.05
+        add_ideas = jinchuriki_path_control_idea
+    }
+
+    option = {
+        name = jinchuriki_mio.2.c # Ветка «Защита»
+        unlock_jinchuriki_shield = yes
+        add_manpower = 5000
+        add_ideas = jinchuriki_path_defense_idea
+    }
+}
+
+# ---- Наруто — партнёрство с Курамой ----
+country_event = {
+    id = jinchuriki_mio.10
+    title = jinchuriki_mio.10.t
+    desc = jinchuriki_mio.10.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = no
+    fire_only_once = yes
+    major = yes
+
+    trigger = {
+        tag = KNO
+        has_country_flag = jinchuriki_partnership
+        date > 1941.1.1
+    }
+    mean_time_to_happen = { days = 120 }
+
+    option = {
+        name = jinchuriki_mio.10.a # Наруто подружился с Курамой
+        unlock_jinchuriki_perfect_form = yes
+        set_country_flag = naruto_special_unlocked
+        add_ideas = KNO_naruto_kurama_bond_idea
+        add_political_power = 200
+        add_stability = 0.10
+    }
+}
+
+# ---- Мадара — Джуби ----
+country_event = {
+    id = jinchuriki_mio.20
+    title = jinchuriki_mio.20.t
+    desc = jinchuriki_mio.20.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = jinchuriki_mio.20.a
+        unlock_jinchuriki_perfect_form = yes
+        set_country_flag = jinchuriki_perfect_form
+        add_ideas = AKA_madara_perfect_bijuu_idea
+        add_war_support = 0.30
+    }
+}

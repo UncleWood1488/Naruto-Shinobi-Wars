@@ -1,0 +1,1 @@
+# Settlement names and victory point markers are defined in history/states and unitstacks.txt.

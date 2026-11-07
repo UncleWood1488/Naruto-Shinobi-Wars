@@ -1,0 +1,164 @@
+################################
+# РАСШИРЕННЫЙ ДАНЗО
+################################
+
+# ============================================================
+# ДАНЗО ИСПОЛЬЗУЕТ ИЗАНАГИ
+# ============================================================
+country_event = {
+    id = danzo.1
+    title = danzo.1.t
+    desc = danzo.1.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = no
+    fire_only_once = yes
+    major = yes
+
+    trigger = {
+        tag = KNO
+        has_country_flag = danzo_leader
+        date > 1938.1.1
+    }
+    mean_time_to_happen = { days = 90 }
+
+    option = {
+        name = danzo.1.a # Изанаги — вторая жизнь
+        add_political_power = 200
+        add_stability = 0.05
+        set_country_flag = danzo_izanagi_used
+        add_ideas = KNO_danzo_survives_idea
+    }
+
+    option = {
+        name = danzo.1.b # Конохамацуками — контроль над Каге
+        add_political_power = 100
+        add_stability = 0.10
+        set_country_flag = danzo_kotoamatsukami
+        every_country = {
+            limit = {
+                OR = { tag = SUN tag = KIR tag = NKU tag = IWA }
+                is_in_faction_with = KNO
+            }
+            add_opinion = { target = KNO value = 100 }
+        }
+        add_ideas = KNO_danzo_puppetmaster_idea
+    }
+
+    option = {
+        name = danzo.1.c # Данзо раскрыт и свергнут
+        add_stability = -0.20
+        add_war_support = -0.10
+        remove_ideas = KNO_danzo_rule_idea
+        remove_ideas = KNO_dictatorship_idea
+        set_country_flag = danzo_exposed
+        set_country_leader = {
+            name = "Какаши Хатаке"
+            desc = "Шестой Хокаге"
+            picture = "GFX_portrait_generic_asia_2"
+            ideology = democratic
+        }
+        country_event = { id = danzo.2 days = 1 }
+    }
+}
+
+# ============================================================
+# ПОСЛЕДСТВИЯ СВЕРЖЕНИЯ ДАНЗО
+# ============================================================
+country_event = {
+    id = danzo.2
+    title = danzo.2.t
+    desc = danzo.2.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = yes
+
+    option = {
+        name = danzo.2.a # Судить Данзо
+        add_stability = 0.15
+        add_political_power = 100
+        set_country_flag = danzo_executed
+        add_ideas = KNO_justice_idea
+    }
+
+    option = {
+        name = danzo.2.b # Изгнать Данзо
+        add_stability = 0.05
+        add_political_power = 50
+        set_country_flag = danzo_exiled
+        # Данзо может появиться в Ото или Акацуки
+        OTO = { add_ideas = OTO_danzo_refugee_idea }
+    }
+}
+
+# ============================================================
+# СМЕРТЬ ДАНЗО ОТ РУК САСКЕ — РАСШИРЕНИЕ
+# ============================================================
+country_event = {
+    id = danzo.3
+    title = danzo.3.t
+    desc = danzo.3.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = danzo.3.a # Данзо активирует Изанаги — выживает
+        add_stability = -0.10
+        add_war_support = 0.10
+        set_country_flag = danzo_survives_sasuke
+        set_country_flag = danzo_hides
+        add_ideas = KNO_danzo_underground_idea
+        # Через время Данзо может вернуться
+        country_event = { id = danzo.4 days = 180 }
+    }
+
+    option = {
+        name = danzo.3.b # Данзо умирает — правда раскрыта
+        add_stability = 0.10
+        add_political_power = 150
+        set_country_flag = danzo_dead_by_sasuke
+        set_country_flag = uchiha_massacre_revealed
+        add_ideas = KNO_uchiha_truth_idea
+    }
+
+    option = {
+        name = danzo.3.c # Данзо бежит к Орочимару
+        add_stability = -0.05
+        OTO = {
+            add_ideas = OTO_danzo_refugee_idea
+            add_political_power = 100
+        }
+        set_country_flag = danzo_fled_to_oto
+    }
+}
+
+# ============================================================
+# ВОЗВРАЩЕНИЕ ДАНЗО
+# ============================================================
+country_event = {
+    id = danzo.4
+    title = danzo.4.t
+    desc = danzo.4.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = yes
+    major = yes
+
+    trigger = {
+        tag = KNO
+        has_country_flag = danzo_hides
+    }
+
+    option = {
+        name = danzo.4.a # Данзо пытается вернуть власть
+        add_stability = -0.15
+        add_war_support = 0.10
+        set_country_flag = danzo_civil_war_threat
+        add_ideas = KNO_danzo_returns_idea
+    }
+
+    option = {
+        name = danzo.4.b # Данзо скрывается навсегда
+        add_stability = 0.05
+        add_political_power = 50
+        set_country_flag = danzo_gone_forever
+    }
+}

@@ -1,0 +1,249 @@
+################################
+# ИТАЧИ — ДВОЙНОЙ АГЕНТ
+################################
+
+# ============================================================
+# НАЧАЛО: Итачи выходит на связь с Конохой
+# ============================================================
+country_event = {
+    id = itachi_da.1
+    title = itachi_da.1.t
+    desc = itachi_da.1.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = no
+    fire_only_once = yes
+    major = yes
+
+    trigger = {
+        tag = KNO
+        AKA = { exists = yes }
+        has_country_flag = anbu_active
+        date > 1938.6.1
+    }
+    mean_time_to_happen = { days = 90 }
+
+    option = {
+        name = itachi_da.1.a # Принять Итачи как двойного агента
+        add_political_power = 100
+        set_country_flag = itachi_double_agent
+        set_country_flag = kno_itachi_network
+        add_ideas = KNO_itachi_double_agent_idea
+
+        AKA = {
+            country_event = { id = itachi_da.1.aka days = 1 }
+        }
+
+        # Открываем доступ к особым операциям
+        unlock_decision_tier = {
+            decision = anbu_extract_itachi
+            tier = 1
+        }
+    }
+
+    option = {
+        name = itachi_da.1.b # Отказаться — Итачи предатель
+        add_stability = -0.05
+        set_country_flag = itachi_enemy
+        add_ideas = KNO_itachi_enemy_idea
+    }
+
+    option = {
+        name = itachi_da.1.c # Использовать, но готовить ликвидацию
+        add_political_power = 50
+        set_country_flag = itachi_double_agent
+        set_country_flag = itachi_expendable
+        add_ideas = KNO_itachi_double_agent_idea
+    }
+}
+
+# ---- Реакция Акацуки (они не знают) ----
+country_event = {
+    id = itachi_da.1.aka
+    title = itachi_da.1.aka.t
+    desc = itachi_da.1.aka.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = yes
+
+    option = {
+        name = itachi_da.1.aka.a
+        add_stability = 0.03
+        # Акацуки ничего не подозревают
+    }
+}
+
+# ============================================================
+# ПЕРВАЯ ПЕРЕДАЧА РАЗВЕДДАННЫХ
+# ============================================================
+country_event = {
+    id = itachi_da.2
+    title = itachi_da.2.t
+    desc = itachi_da.2.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = no
+    fire_only_once = no
+    major = no
+
+    trigger = {
+        tag = KNO
+        has_country_flag = itachi_double_agent
+        date > 1939.1.1
+    }
+    mean_time_to_happen = { days = 120 }
+
+    option = {
+        name = itachi_da.2.a # Получить данные о планах Акацуки
+        add_decryption = 150
+        add_political_power = 50
+        add_ideas = KNO_itachi_intel_idea
+        set_country_flag = intel_from_itachi
+    }
+
+    option = {
+        name = itachi_da.2.b # Попросить Итачи о большей помощи
+        add_political_power = 25
+        set_country_flag = itachi_pressed
+        add_ideas = KNO_itachi_risk_idea
+    }
+
+    option = {
+        name = itachi_da.2.c # Ничего не делать
+        add_stability = 0.02
+    }
+}
+
+# ============================================================
+# АКАЦУКИ ПОДОЗРЕВАЕТ
+# ============================================================
+country_event = {
+    id = itachi_da.3
+    title = itachi_da.3.t
+    desc = itachi_da.3.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = no
+    fire_only_once = yes
+    major = yes
+
+    trigger = {
+        tag = AKA
+        KNO = { has_country_flag = itachi_double_agent }
+        date > 1940.6.1
+    }
+    mean_time_to_happen = { days = 180 }
+
+    option = {
+        name = itachi_da.3.a # Оставить Итачи — проверка
+        add_stability = 0.03
+        set_country_flag = itachi_under_suspicion
+        KNO = { country_event = { id = itachi_da.3.warning days = 1 } }
+    }
+
+    option = {
+        name = itachi_da.3.b # Арестовать Итачи
+        add_stability = -0.05
+        add_war_support = 0.05
+        set_country_flag = itachi_arrested
+        KNO = { country_event = { id = itachi_da.3.arrested days = 1 } }
+    }
+
+    option = {
+        name = itachi_da.3.c # Использовать Итачи против Конохи
+        add_political_power = 100
+        set_country_flag = itachi_turned
+        add_ideas = AKA_itachi_turned_idea
+        KNO = { country_event = { id = itachi_da.3.turned days = 1 } }
+    }
+}
+
+country_event = {
+    id = itachi_da.3.warning
+    title = itachi_da.3.warning.t
+    desc = itachi_da.3.warning.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = yes
+
+    option = {
+        name = itachi_da.3.warning.a # Свернуть сеть
+        remove_ideas = KNO_itachi_double_agent_idea
+        remove_country_flag = itachi_double_agent
+        add_stability = 0.05
+        add_political_power = 50
+    }
+
+    option = {
+        name = itachi_da.3.warning.b # Продолжать рисковать
+        add_war_support = 0.05
+        set_country_flag = itachi_high_risk
+        add_ideas = KNO_itachi_high_risk_idea
+    }
+
+    option = {
+        name = itachi_da.3.warning.c # Эвакуировать Итачи в Коноху
+        set_country_flag = itachi_extracted
+        add_ideas = KNO_itachi_home_idea
+        add_political_power = 100
+    }
+}
+
+country_event = {
+    id = itachi_da.3.arrested
+    title = itachi_da.3.arrested.t
+    desc = itachi_da.3.arrested.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = yes
+
+    option = {
+        name = itachi_da.3.arrested.a
+        remove_ideas = KNO_itachi_double_agent_idea
+        remove_country_flag = itachi_double_agent
+        add_stability = -0.10
+        add_political_power = 50
+        set_country_flag = itachi_captured
+    }
+}
+
+country_event = {
+    id = itachi_da.3.turned
+    title = itachi_da.3.turned.t
+    desc = itachi_da.3.turned.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = yes
+
+    option = {
+        name = itachi_da.3.turned.a
+        remove_ideas = KNO_itachi_double_agent_idea
+        remove_country_flag = itachi_double_agent
+        add_stability = -0.15
+        add_war_support = 0.10
+        set_country_flag = itachi_turned_against_kno
+    }
+}
+
+# ============================================================
+# ФИНАЛ: ИТАЧИ ПОМОГАЕТ ПОБЕДИТЬ
+# ============================================================
+country_event = {
+    id = itachi_da.100
+    title = itachi_da.100.t
+    desc = itachi_da.100.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = no
+    fire_only_once = yes
+    major = yes
+
+    trigger = {
+        tag = KNO
+        has_country_flag = itachi_double_agent
+        has_country_flag = akatsuki_defeated
+        date > 1945.1.1
+    }
+    mean_time_to_happen = { days = 30 }
+
+    option = {
+        name = itachi_da.100.a # Итачи вернулся героем
+        add_stability = 0.20
+        add_political_power = 300
+        remove_ideas = KNO_itachi_double_agent_idea
+        add_ideas = KNO_itachi_hero_idea
+        set_country_flag = itachi_hero
+    }
+}

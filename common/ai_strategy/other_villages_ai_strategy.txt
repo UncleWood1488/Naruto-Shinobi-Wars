@@ -1,0 +1,46 @@
+SUN_ai_strategy = {
+    ai_strategy = { type = role_ratio id = infantry value = 50 }
+    ai_strategy = { type = role_ratio id = artillery value = 35 }
+    ai_strategy = { type = role_ratio id = elite value = 15 }
+    ai_strategy = { type = dont_produce_unit id = jinchuriki value = yes }
+    ai_strategy = { type = dont_produce_unit id = juubi_jinchuriki value = yes }
+}
+
+KIR_ai_strategy = {
+    ai_strategy = { type = role_ratio id = infantry value = 50 }
+    ai_strategy = { type = role_ratio id = elite value = 40 }
+    ai_strategy = { type = role_ratio id = special_forces value = 10 }
+    ai_strategy = { type = dont_produce_unit id = jinchuriki value = yes }
+    ai_strategy = { type = dont_produce_unit id = juubi_jinchuriki value = yes }
+}
+
+NKU_ai_strategy = {
+    ai_strategy = { type = role_ratio id = infantry value = 70 }
+    ai_strategy = { type = role_ratio id = elite value = 20 }
+    ai_strategy = { type = role_ratio id = special_forces value = 10 }
+    ai_strategy = { type = dont_produce_unit id = jinchuriki value = yes }
+    ai_strategy = { type = dont_produce_unit id = juubi_jinchuriki value = yes }
+}
+
+IWA_ai_strategy = {
+    ai_strategy = { type = role_ratio id = infantry value = 55 }
+    ai_strategy = { type = role_ratio id = elite value = 30 }
+    ai_strategy = { type = role_ratio id = special_forces value = 15 }
+    ai_strategy = { type = dont_produce_unit id = jinchuriki value = yes }
+    ai_strategy = { type = dont_produce_unit id = juubi_jinchuriki value = yes }
+}
+
+OTO_ai_strategy = {
+    ai_strategy = { type = role_ratio id = infantry value = 60 }
+    ai_strategy = { type = role_ratio id = elite value = 30 }
+    ai_strategy = { type = role_ratio id = special_forces value = 10 }
+    ai_strategy = { type = dont_produce_unit id = jinchuriki value = yes }
+    ai_strategy = { type = dont_produce_unit id = juubi_jinchuriki value = yes }
+}
+
+AKA_ai_strategy = {
+    ai_strategy = { type = role_ratio id = elite value = 70 }
+    ai_strategy = { type = role_ratio id = special_forces value = 30 }
+    ai_strategy = { type = dont_produce_unit id = jinchuriki value = yes }
+    ai_strategy = { type = dont_produce_unit id = juubi_jinchuriki value = yes }
+}

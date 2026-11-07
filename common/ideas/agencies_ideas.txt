@@ -1,0 +1,303 @@
+ideas = {
+    country = {
+
+        # ============================================================
+        # КОНОХА — АНБУ / КОРЕНЬ
+        # ============================================================
+        KNO_anbu_agency_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                operative_slots = 2
+                encryption_factor = 0.25
+                decryption_factor = 0.25
+                intelligence_agency_upgrade_time = -0.10
+            }
+        }
+
+        KNO_root_agency_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                operative_slots = 3
+                encryption_factor = 0.35
+                decryption_factor = 0.35
+                special_forces_cap_flat = 1
+                political_power_gain = -0.05
+            }
+        }
+
+        KNO_anbu_hunter_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                operative_slots = 2
+                decryption_factor = 0.30
+                army_attack_factor = 0.05
+            }
+        }
+
+        KNO_anbu_found_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                decryption_factor = 0.15
+                war_support_factor = 0.05
+            }
+        }
+
+        # ============================================================
+        # СУНА — КУКОЛЬНАЯ БРИГАДА
+        # ============================================================
+        SUN_puppet_brigade_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                operative_slots = 2
+                encryption_factor = 0.20
+                decryption_factor = 0.20
+                army_attack_factor = 0.03
+            }
+        }
+
+        SUN_puppet_masters_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                operative_slots = 3
+                army_attack_factor = 0.08
+                army_defence_factor = 0.05
+            }
+        }
+
+        # ============================================================
+        # КИРИ — ОХОТНИКИ-НИНДЗЯ
+        # ============================================================
+        KIR_hunter_nin_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                operative_slots = 2
+                encryption_factor = 0.20
+                decryption_factor = 0.30
+                army_attack_factor = 0.05
+            }
+        }
+
+        KIR_seven_swordsmen_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                operative_slots = 2
+                army_attack_factor = 0.15
+                army_breakthrough_factor = 0.10
+                special_forces_cap_flat = 1
+            }
+        }
+
+        # ============================================================
+        # КУМО — ОТРЯД КИНКАКУ
+        # ============================================================
+        NKU_kinkaku_force_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                operative_slots = 2
+                encryption_factor = 0.25
+                decryption_factor = 0.15
+                army_attack_factor = 0.05
+            }
+        }
+
+        NKU_cloud_anbu_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                operative_slots = 3
+                army_attack_factor = 0.08
+                army_defence_factor = 0.08
+                conscription_factor = 0.05
+            }
+        }
+
+        # ============================================================
+        # ИВА — КОРПУС ВЗРЫВА
+        # ============================================================
+        IWA_explosion_corps_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                operative_slots = 2
+                decryption_factor = 0.20
+                army_attack_factor = 0.05
+            }
+        }
+
+        IWA_earth_anbu_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                operative_slots = 3
+                army_defence_factor = 0.10
+                encryption_factor = 0.20
+                decryption_factor = 0.20
+            }
+        }
+
+        # ============================================================
+        # ОТО — ЧЕТВЁРКА ЗВУКА
+        # ============================================================
+        OTO_sound_four_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                operative_slots = 2
+                encryption_factor = 0.25
+                decryption_factor = 0.25
+                research_speed_factor = 0.05
+            }
+        }
+
+        OTO_sound_intel_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                operative_slots = 3
+                research_speed_factor = 0.10
+                encryption_factor = 0.15
+                decryption_factor = 0.15
+            }
+        }
+
+        # ============================================================
+        # АКАЦУКИ — СЕТЬ ЗЕЦУ
+        # ============================================================
+        AKA_zetsu_intel_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                operative_slots = 3
+                encryption_factor = 0.30
+                decryption_factor = 0.40
+                justify_war_goal_time = -0.20
+            }
+        }
+
+        AKA_spy_master_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                operative_slots = 4
+                encryption_factor = 0.40
+                decryption_factor = 0.40
+                army_attack_factor = 0.05
+            }
+        }
+
+        # ============================================================
+        # ДАНЗО — СОЮЗ С АКАЦУКИ / ПРОТИВ АКАЦУКИ
+        # ============================================================
+        KNO_danzo_akatsuki_pact_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                operative_slots = 2
+                encryption_factor = 0.20
+                decryption_factor = 0.20
+                stability_factor = -0.05
+                army_attack_factor = 0.05
+            }
+        }
+
+        AKA_konoha_pact_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                operative_slots = 1
+                encryption_factor = 0.15
+                decryption_factor = 0.15
+            }
+        }
+
+        KNO_danzo_bijuu_research_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                research_speed_factor = 0.10
+                special_forces_cap_flat = 1
+            }
+        }
+
+        AKA_konoha_bijuu_share_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                research_speed_factor = 0.05
+                army_attack_factor = 0.03
+            }
+        }
+
+        KNO_danzo_joint_war_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                war_support_factor = 0.15
+                army_attack_factor = 0.10
+                special_forces_cap_flat = 1
+            }
+        }
+
+        KNO_danzo_anti_akatsuki_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                war_support_factor = 0.15
+                encryption_factor = 0.15
+                decryption_factor = 0.15
+            }
+        }
+
+        KNO_danzo_counter_intel_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                encryption_factor = 0.30
+                decryption_factor = 0.30
+                operative_slots = 1
+            }
+        }
+
+        KNO_united_front_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                stability_factor = 0.10
+                war_support_factor = 0.10
+                army_attack_factor = 0.05
+                army_defence_factor = 0.05
+            }
+        }
+
+        KNO_danzo_victory_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                stability_factor = 0.20
+                war_support_factor = 0.15
+                army_attack_factor = 0.10
+                political_power_gain = 0.15
+            }
+        }
+
+        KNO_danzo_hero_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                stability_factor = 0.15
+                political_power_gain = 0.20
+                army_attack_factor = 0.10
+                army_defence_factor = 0.10
+            }
+        }
+    }
+}

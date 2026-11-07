@@ -1,0 +1,16 @@
+SUN_ai_equipment = {
+    ai_equipment = {
+        name = "Suna - Genin Gear"
+        priority = 100
+        equipment = genin_equipment
+        production_factor = 1.0
+    }
+
+    ai_equipment = {
+        name = "Suna - Puppet Equipment"
+        priority = 80
+        allowed = { always = yes }
+        equipment = puppet_equipment
+        production_factor = 1.0
+    }
+}

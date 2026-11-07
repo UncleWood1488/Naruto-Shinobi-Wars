@@ -1,0 +1,188 @@
+focus_tree = {
+    id = danzo_akatsuki_tree
+
+    country = {
+        factor = 0
+        modifier = {
+            add = 1000
+            tag = KNO
+        }
+    }
+
+    # =====================================================
+    # КОРЕНЬ — только при Данзо у власти
+    # =====================================================
+    focus = {
+        id = KNO_danzo_and_akatsuki
+        icon = GFX_goal_generic_secret_weapon
+        x = 0
+        y = 0
+        cost = 15
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        available = {
+            has_country_flag = danzo_leader
+            AKA = { exists = yes }
+            NOT = { has_country_flag = danzo_akatsuki_resolved }
+        }
+        completion_reward = {
+            add_political_power = 50
+            country_event = { id = danzo_akatsuki.1 days = 1 }
+        }
+    }
+
+    # =====================================================
+    # ВЕТКА A: СОЮЗ С АКАЦУКИ
+    # =====================================================
+    focus = {
+        id = KNO_danzo_pact_with_akatsuki
+        icon = GFX_goal_generic_major_alliance
+        prerequisite = { focus = KNO_danzo_and_akatsuki }
+        mutually_exclusive = { focus = KNO_danzo_war_akatsuki }
+        x = -2
+        y = 1
+        cost = 20
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            set_country_flag = danzo_akatsuki_alliance
+            set_country_flag = danzo_akatsuki_resolved
+            add_ideas = KNO_danzo_akatsuki_pact_idea
+            AKA = {
+                add_opinion = { target = KNO value = 100 }
+                add_ideas = AKA_konoha_pact_idea
+            }
+            add_political_power = 100
+        }
+    }
+
+    focus = {
+        id = KNO_danzo_share_bijuu
+        icon = GFX_goal_generic_secret_weapon
+        prerequisite = { focus = KNO_danzo_pact_with_akatsuki }
+        x = -3
+        y = 2
+        cost = 20
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        available = {
+            has_country_flag = danzo_akatsuki_alliance
+        }
+        completion_reward = {
+            add_ideas = KNO_danzo_bijuu_research_idea
+            AKA = { add_ideas = AKA_konoha_bijuu_share_idea }
+            add_research_slot = 1
+        }
+    }
+
+    focus = {
+        id = KNO_danzo_secret_war
+        icon = GFX_goal_generic_major_war
+        prerequisite = { focus = KNO_danzo_pact_with_akatsuki }
+        x = -1
+        y = 2
+        cost = 20
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        available = {
+            has_country_flag = danzo_akatsuki_alliance
+        }
+        completion_reward = {
+            # Совместная война против других деревень
+            add_ideas = KNO_danzo_joint_war_idea
+            every_country = {
+                limit = {
+                    OR = { tag = SUN tag = KIR tag = NKU tag = IWA }
+                    NOT = { is_in_faction_with = KNO }
+                }
+                AKA = { create_wargoal = { type = annex_everything target = PREV } }
+            }
+        }
+    }
+
+    # =====================================================
+    # ВЕТКА B: ВОЙНА С АКАЦУКИ
+    # =====================================================
+    focus = {
+        id = KNO_danzo_war_akatsuki
+        icon = GFX_goal_generic_major_war
+        prerequisite = { focus = KNO_danzo_and_akatsuki }
+        mutually_exclusive = { focus = KNO_danzo_pact_with_akatsuki }
+        x = 2
+        y = 1
+        cost = 20
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            set_country_flag = danzo_akatsuki_enemy
+            set_country_flag = danzo_akatsuki_resolved
+            add_ideas = KNO_danzo_anti_akatsuki_idea
+            add_war_support = 0.15
+            AKA = { add_opinion = { target = KNO value = -100 } }
+        }
+    }
+
+    focus = {
+        id = KNO_danzo_counter_intel
+        icon = GFX_goal_generic_intelligence_exchange
+        prerequisite = { focus = KNO_danzo_war_akatsuki }
+        x = 1
+        y = 2
+        cost = 15
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        completion_reward = {
+            add_ideas = KNO_danzo_counter_intel_idea
+            operative_slots = 1
+            encryption_factor = 0.20
+        }
+    }
+
+    focus = {
+        id = KNO_danzo_hunt_akatsuki
+        icon = GFX_goal_generic_secret_weapon
+        prerequisite = { focus = KNO_danzo_war_akatsuki }
+        x = 3
+        y = 2
+        cost = 20
+        search_filters = { FOCUS_FILTER_ARMY_XP }
+        completion_reward = {
+            add_ideas = KNO_anbu_hunter_idea
+            set_country_flag = kno_hunts_akatsuki
+            # Каждый месяц — шанс найти члена Акацуки
+            set_country_flag = akatsuki_hunt_active
+        }
+    }
+
+    focus = {
+        id = KNO_danzo_united_front
+        icon = GFX_goal_generic_major_alliance
+        prerequisite = { focus = KNO_danzo_hunt_akatsuki }
+        x = 3
+        y = 3
+        cost = 25
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        completion_reward = {
+            add_ideas = KNO_united_front_idea
+            every_country = {
+                limit = {
+                    OR = { tag = SUN tag = KIR tag = NKU tag = IWA }
+                }
+                add_opinion = { target = KNO value = 75 }
+            }
+        }
+    }
+
+    focus = {
+        id = KNO_danzo_akatsuki_defeat
+        icon = GFX_goal_generic_army_doctrines
+        prerequisite = { focus = KNO_danzo_united_front }
+        x = 3
+        y = 4
+        cost = 25
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        available = {
+            has_country_flag = akatsuki_defeated
+        }
+        completion_reward = {
+            add_ideas = KNO_danzo_victory_idea
+            add_stability = 0.20
+            add_political_power = 200
+            set_country_flag = danzo_defeated_akatsuki
+        }
+    }
+}

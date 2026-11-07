@@ -1,0 +1,96 @@
+#############################
+# ШАБЛОНЫ ДИВИЗИЙ ОТО
+#############################
+
+division_template = {
+    name = "Генинский отряд Ото"
+    is_locked = no
+
+    regiments = {
+        genin = { x = 0 y = 0 }
+        genin = { x = 1 y = 0 }
+    }
+
+    support = { }
+}
+
+division_template = {
+    name = "Чунинская бригада Ото"
+    is_locked = no
+
+    regiments = {
+        chunin = { x = 0 y = 0 }
+        chunin = { x = 1 y = 0 }
+        chunin = { x = 0 y = 1 }
+    }
+
+    support = {
+        recon = { x = 0 y = 0 }
+    }
+}
+
+division_template = {
+    name = "Отряд Звука"
+    is_locked = no
+
+    regiments = {
+        jonin = { x = 0 y = 0 }
+        jonin = { x = 1 y = 0 }
+        anbu = { x = 0 y = 1 }
+    }
+
+    support = {
+        recon = { x = 0 y = 0 }
+        engineer = { x = 1 y = 0 }
+    }
+}
+
+division_template = {
+    name = "Четвёрка Звука"
+    is_locked = yes
+    priority = 800
+
+    regiments = {
+        anbu = { x = 0 y = 0 }
+        anbu = { x = 1 y = 0 }
+        anbu = { x = 0 y = 1 }
+        anbu = { x = 1 y = 1 }
+    }
+
+    support = {
+        recon = { x = 0 y = 0 }
+        engineer = { x = 1 y = 0 }
+    }
+}
+
+#############################
+# СОЗДАННЫЕ ДИВИЗИИ
+#############################
+
+units = {
+
+    division = {
+        name = "1-й Генинский отряд Ото"
+        location = 79
+        division_template = "Генинский отряд Ото"
+    }
+
+    division = {
+        name = "Чунинская бригада Ото"
+        location = 79
+        division_template = "Чунинская бригада Ото"
+    }
+
+    division = {
+        name = "Отряд Звука"
+        location = 79
+        division_template = "Отряд Звука"
+    }
+
+    division = {
+        name = "Четвёрка Звука"
+        location = 79
+        division_template = "Четвёрка Звука"
+        start_experience_factor = 0.8
+    }
+}

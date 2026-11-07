@@ -1,0 +1,95 @@
+combat_tactics = {
+
+    # ============================================================
+    # ТАКТИКИ НИНДЗЯ
+    # ============================================================
+    ninja_ambush = {
+        name = ninja_ambush
+        phases = { close_combat }
+        days = 3
+
+        tactic_modifiers = {
+            soft_attack = 0.20
+            breakthrough = 0.20
+            hardness = 0.10
+        }
+
+        attacker = yes
+        defender = no
+    }
+
+    ninja_substitution = {
+        name = ninja_substitution
+        phases = { close_combat }
+        days = 2
+
+        tactic_modifiers = {
+            defense = 0.30
+            hardness = 0.10
+        }
+
+        attacker = no
+        defender = yes
+    }
+
+    genjutsu_illusion = {
+        name = genjutsu_illusion
+        phases = { close_combat }
+        days = 4
+
+        tactic_modifiers = {
+            soft_attack = -0.30
+            defense = -0.30
+            breakthrough = -0.20
+        }
+
+        attacker = no
+        defender = yes
+        counter = ninja_ambush
+    }
+
+    shadow_clone_swarm = {
+        name = shadow_clone_swarm
+        phases = { close_combat }
+        days = 3
+
+        tactic_modifiers = {
+            soft_attack = 0.30
+            defense = 0.20
+        }
+
+        attacker = yes
+        defender = yes
+    }
+
+    bijuu_bombardment = {
+        name = bijuu_bombardment
+        phases = { close_combat }
+        days = 2
+
+        tactic_modifiers = {
+            soft_attack = 0.50
+            hard_attack = 0.40
+            breakthrough = 0.50
+        }
+
+        attacker = yes
+        defender = no
+        requires_jinchuriki = yes
+    }
+
+    sealing_formation = {
+        name = sealing_formation
+        phases = { close_combat }
+        days = 5
+
+        tactic_modifiers = {
+            defense = 0.40
+            hardness = 0.20
+            soft_attack = -0.10
+        }
+
+        attacker = no
+        defender = yes
+    }
+}

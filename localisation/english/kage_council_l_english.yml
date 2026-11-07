@@ -1,0 +1,59 @@
+l_english:
+ kage_council_category:0 "Council of Kage"
+ kage_council_category_desc:0 "Diplomatic actions related to the Council of the Five Kage."
+
+ kage_call_council:0 "Call the Council of Five Kage"
+ kage_call_council_desc:0 "Gather all Kage to discuss the future of the shinobi world."
+
+ kage_council.1.t:0 "Council of Five Kage"
+ kage_council.1.d:0 "All Kage have gathered. The time has come to decide the future."
+ kage_council.1.a:0 "Unite all Kage"
+ kage_council.1.b:0 "Sasuke attacks the Council"
+ kage_council.1.c:0 "Postpone the Council"
+
+ kage_council.2.t:0 "Invitation to the Council"
+ kage_council.2.d:0 "We are invited to the Council of Five Kage."
+ kage_council.2.a:0 "Join the Council"
+ kage_council.2.b:0 "Refuse"
+
+ kage_council.3.t:0 "Massacre at the Council"
+ kage_council.3.d:0 "Sasuke Uchiha has stormed the Kage Summit. Blood will be spilled."
+ kage_council.3.a:0 "Kill all Kage"
+ kage_council.3.b:0 "Kill only Danzo"
+
+ kage_council.3.target.t:0 "The Kage Is Dead"
+ kage_council.3.target.d:0 "Sasuke Uchiha killed our Kage. The village is in chaos."
+ kage_council.3.target.a:0 "We will have revenge"
+
+ kage_council.3.danzo_dies.t:0 "Danzo's Death"
+ kage_council.3.danzo_dies.d:0 "Sasuke Uchiha killed Danzo Shimura. Konoha welcomes a new Hokage."
+ kage_council.3.danzo_dies.a:0 "Long live the Hokage"
+
+ shinobi_alliance.1.t:0 "The Shinobi Alliance"
+ shinobi_alliance.1.d:0 "The Akatsuki have captured the last jinchuriki. The world must unite."
+ shinobi_alliance.1.a:0 "Create the Shinobi Alliance"
+ shinobi_alliance.1.b:0 "Fight alone"
+
+ shinobi_alliance.2.t:0 "Invitation to the Shinobi Alliance"
+ shinobi_alliance.2.d:0 "We are invited to join the Shinobi Alliance."
+ shinobi_alliance.2.a:0 "Join"
+ shinobi_alliance.2.b:0 "Refuse"
+
+ shinobi_alliance.3.t:0 "The Akatsuki Declare World War"
+ shinobi_alliance.3.d:0 "The Akatsuki have gone on the offensive against the entire shinobi world."
+ shinobi_alliance.3.a:0 "Begin the war"
+
+ shinobi_alliance.4.t:0 "The Strength of the Alliance"
+ shinobi_alliance.4.d:0 "The combined forces of the shinobi give us an advantage."
+ shinobi_alliance.4.a:0 "Together we are stronger"
+
+ shinobi_alliance.100.t:0 "The Alliance Crumbles"
+ shinobi_alliance.100.d:0 "The Ten-Tails is awakened. The Shinobi Alliance breaks under the Akatsuki onslaught."
+ shinobi_alliance.100.a:0 "We are losing"
+
+ shinobi_alliance_idea:0 "Shinobi Alliance"
+ shinobi_alliance_idea_desc:0 "The combined forces of the five villages."
+ alliance_broken_idea:0 "Broken Alliance"
+ alliance_broken_idea_desc:0 "The alliance has fallen. We stand alone."
+ village_chaos_idea:0 "Chaos in the Village"
+ village_chaos_idea_desc:0 "The Kage's murder has plunged the village into chaos."

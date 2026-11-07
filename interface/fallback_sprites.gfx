@@ -1,0 +1,12 @@
+spriteTypes = {
+    # Temporary fallbacks: custom textures were absent from the uploaded archive.
+    spriteType = { name = "GFX_building_medical" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_building_sealing" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_building_lab" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_facility_medical" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_facility_sealing" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_facility_orochimaru" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_project_edo_tensei" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_project_rinnegan" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_project_sealing" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+}

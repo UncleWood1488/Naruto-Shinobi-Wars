@@ -1,0 +1,119 @@
+AKA_ai_focuses = {
+    ai_focus = {
+        focus = AKA_emerge_from_shadows
+        value = 100
+    }
+
+    ai_focus = {
+        focus = AKA_recruit_s_rank
+        value = 90
+    }
+
+    ai_focus = {
+        focus = AKA_akatsuki_army
+        value = 85
+    }
+
+    # ---- Путь Пейна ----
+    ai_focus = {
+        focus = AKA_pain_leadership
+        value = 60
+        modifier = {
+            base = 30
+            has_country_flag = pain_available
+        }
+    }
+
+    ai_focus = {
+        focus = AKA_gedo_mazo
+        value = 70
+    }
+
+    ai_focus = {
+        focus = AKA_rinnegan_path
+        value = 65
+    }
+
+    # ---- Путь Обито (ИИ предпочитает) ----
+    ai_focus = {
+        focus = AKA_obito_leadership
+        value = 75
+        modifier = {
+            base = 50
+            has_country_flag = obito_available
+        }
+    }
+
+    ai_focus = {
+        focus = AKA_moon_eye_plan
+        value = 80
+    }
+
+    ai_focus = {
+        focus = AKA_infiltrate_konoha
+        value = 60
+    }
+
+    # ---- Общие ----
+    ai_focus = {
+        focus = AKA_zetsu_network
+        value = 85
+    }
+
+    ai_focus = {
+        focus = AKA_cloaks_and_rings
+        value = 70
+    }
+
+    ai_focus = {
+        focus = AKA_mercenary_economy
+        value = 65
+    }
+
+    ai_focus = {
+        focus = AKA_begin_hunt
+        value = 95
+    }
+
+    # ---- Охота ----
+    ai_focus = {
+        focus = AKA_hunt_shukaku
+        value = 90
+    }
+
+    ai_focus = {
+        focus = AKA_hunt_matatabi
+        value = 85
+    }
+
+    ai_focus = {
+        focus = AKA_hunt_isobu
+        value = 80
+    }
+
+    ai_focus = {
+        focus = AKA_hunt_songoku
+        value = 80
+    }
+
+    ai_focus = {
+        focus = AKA_hunt_kurama
+        value = 100
+    }
+
+    ai_focus = {
+        focus = AKA_summon_juubi
+        value = 100
+    }
+
+    # ---- Финалы ----
+    ai_focus = {
+        focus = AKA_juubi_jinchuriki
+        value = 70
+    }
+
+    ai_focus = {
+        focus = AKA_tsukuyomi_plan
+        value = 70
+    }
+}

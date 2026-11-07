@@ -1,0 +1,499 @@
+################################
+# ОХОТА АНБУ НА АКАЦУКИ
+################################
+
+# ============================================================
+# ДЕЙДАРА
+# ============================================================
+country_event = {
+    id = anbu_hunt.1
+    title = anbu_hunt.1.t
+    desc = anbu_hunt.1.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = anbu_hunt.1.a # Казнить
+        add_war_support = 0.10
+        add_political_power = 100
+        set_country_flag = deidara_captured
+        add_ideas = KNO_deidara_killed_idea
+        AKA = { remove_ideas = AKA_deidara_idea }
+    }
+
+    option = {
+        name = anbu_hunt.1.b # Допросить
+        add_political_power = 200
+        add_decryption = 200
+        set_country_flag = deidara_captured
+        add_ideas = KNO_deidara_intel_idea
+        AKA = { remove_ideas = AKA_deidara_idea }
+    }
+
+    option = {
+        name = anbu_hunt.1.c # Попытаться переубедить
+        add_political_power = 100
+        set_country_flag = deidara_captured
+        set_country_flag = deidara_defected
+        add_ideas = KNO_deidara_ally_idea
+        AKA = { remove_ideas = AKA_deidara_idea }
+    }
+}
+
+country_event = {
+    id = anbu_hunt.1.fail
+    title = anbu_hunt.1.fail.t
+    desc = anbu_hunt.1.fail.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = yes
+
+    option = {
+        name = anbu_hunt.1.fail.a
+        add_stability = -0.03
+        add_war_support = 0.05
+    }
+}
+
+# ============================================================
+# САСОРИ
+# ============================================================
+country_event = {
+    id = anbu_hunt.2
+    title = anbu_hunt.2.t
+    desc = anbu_hunt.2.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = anbu_hunt.2.a # Казнить
+        add_war_support = 0.10
+        add_political_power = 150
+        set_country_flag = sasori_captured
+        add_ideas = KNO_sasori_killed_idea
+        AKA = { remove_ideas = AKA_sasori_idea }
+    }
+
+    option = {
+        name = anbu_hunt.2.b # Использовать его куклы
+        add_political_power = 100
+        add_research_slot = 1
+        set_country_flag = sasori_captured
+        add_ideas = KNO_sasori_puppets_idea
+        AKA = { remove_ideas = AKA_sasori_idea }
+    }
+
+    option = {
+        name = anbu_hunt.2.c # Отпустить с условием
+        add_political_power = 200
+        set_country_flag = sasori_captured
+        set_country_flag = sasori_defected
+        add_ideas = KNO_sasori_ally_idea
+        AKA = { remove_ideas = AKA_sasori_idea }
+    }
+}
+
+country_event = {
+    id = anbu_hunt.2.fail
+    title = anbu_hunt.2.fail.t
+    desc = anbu_hunt.2.fail.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = yes
+
+    option = {
+        name = anbu_hunt.2.fail.a
+        add_stability = -0.03
+        add_war_support = 0.05
+    }
+}
+
+# ============================================================
+# ХИДАН
+# ============================================================
+country_event = {
+    id = anbu_hunt.3
+    title = anbu_hunt.3.t
+    desc = anbu_hunt.3.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = anbu_hunt.3.a # Закопать навечно
+        add_war_support = 0.10
+        add_political_power = 100
+        set_country_flag = hidan_captured
+        add_ideas = KNO_hidan_buried_idea
+        AKA = { remove_ideas = AKA_hidan_idea }
+    }
+
+    option = {
+        name = anbu_hunt.3.b # Изучить его бессмертие
+        add_research_slot = 1
+        add_political_power = 50
+        set_country_flag = hidan_captured
+        add_ideas = KNO_hidan_research_idea
+        AKA = { remove_ideas = AKA_hidan_idea }
+    }
+}
+
+country_event = {
+    id = anbu_hunt.3.fail
+    title = anbu_hunt.3.fail.t
+    desc = anbu_hunt.3.fail.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = yes
+
+    option = {
+        name = anbu_hunt.3.fail.a
+        add_stability = -0.05
+        add_war_support = 0.05
+    }
+}
+
+# ============================================================
+# КАКУЗУ
+# ============================================================
+country_event = {
+    id = anbu_hunt.4
+    title = anbu_hunt.4.t
+    desc = anbu_hunt.4.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = anbu_hunt.4.a # Казнить
+        add_war_support = 0.10
+        add_political_power = 150
+        set_country_flag = kakuzu_captured
+        add_ideas = KNO_kakuzu_killed_idea
+        AKA = { remove_ideas = AKA_kakuzu_idea }
+    }
+
+    option = {
+        name = anbu_hunt.4.b # Забрать его сердца
+        add_manpower = 5000
+        add_political_power = 100
+        set_country_flag = kakuzu_captured
+        add_ideas = KNO_kakuzu_hearts_idea
+        AKA = { remove_ideas = AKA_kakuzu_idea }
+    }
+}
+
+country_event = {
+    id = anbu_hunt.4.fail
+    title = anbu_hunt.4.fail.t
+    desc = anbu_hunt.4.fail.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = yes
+
+    option = {
+        name = anbu_hunt.4.fail.a
+        add_stability = -0.03
+        add_war_support = 0.05
+    }
+}
+
+# ============================================================
+# КИСАМЕ
+# ============================================================
+country_event = {
+    id = anbu_hunt.5
+    title = anbu_hunt.5.t
+    desc = anbu_hunt.5.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = anbu_hunt.5.a # Убить
+        add_war_support = 0.15
+        add_political_power = 150
+        set_country_flag = kisame_captured
+        add_ideas = KNO_kisame_killed_idea
+        AKA = { remove_ideas = AKA_kisame_idea }
+    }
+
+    option = {
+        name = anbu_hunt.5.b # Забрать Самехаду
+        add_political_power = 200
+        set_country_flag = kisame_captured
+        add_ideas = KNO_samehada_idea
+        AKA = { remove_ideas = AKA_kisame_idea }
+    }
+
+    option = {
+        name = anbu_hunt.5.c # Попытаться переубедить
+        add_political_power = 100
+        set_country_flag = kisame_captured
+        set_country_flag = kisame_defected
+        add_ideas = KNO_kisame_ally_idea
+        AKA = { remove_ideas = AKA_kisame_idea }
+    }
+}
+
+country_event = {
+    id = anbu_hunt.5.fail
+    title = anbu_hunt.5.fail.t
+    desc = anbu_hunt.5.fail.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = yes
+
+    option = {
+        name = anbu_hunt.5.fail.a
+        add_stability = -0.05
+        add_war_support = 0.10
+    }
+}
+
+# ============================================================
+# КОНАН
+# ============================================================
+country_event = {
+    id = anbu_hunt.6
+    title = anbu_hunt.6.t
+    desc = anbu_hunt.6.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = anbu_hunt.6.a # Казнить
+        add_war_support = 0.10
+        add_political_power = 100
+        set_country_flag = konan_captured
+        add_ideas = KNO_konan_killed_idea
+        AKA = { remove_ideas = AKA_konan_idea }
+    }
+
+    option = {
+        name = anbu_hunt.6.b # Использовать её бумажные техники
+        add_research_slot = 1
+        add_political_power = 150
+        set_country_flag = konan_captured
+        add_ideas = KNO_konan_paper_idea
+        AKA = { remove_ideas = AKA_konan_idea }
+    }
+
+    option = {
+        name = anbu_hunt.6.c # Переубедить — она знает Пейна
+        add_political_power = 200
+        add_decryption = 200
+        set_country_flag = konan_captured
+        set_country_flag = konan_ally
+        add_ideas = KNO_konan_ally_idea
+        AKA = { remove_ideas = AKA_konan_idea }
+    }
+}
+
+country_event = {
+    id = anbu_hunt.6.fail
+    title = anbu_hunt.6.fail.t
+    desc = anbu_hunt.6.fail.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = yes
+
+    option = {
+        name = anbu_hunt.6.fail.a
+        add_stability = -0.03
+        add_war_support = 0.05
+    }
+}
+
+# ============================================================
+# ЗЕЦУ
+# ============================================================
+country_event = {
+    id = anbu_hunt.7
+    title = anbu_hunt.7.t
+    desc = anbu_hunt.7.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = anbu_hunt.7.a # Уничтожить
+        add_war_support = 0.10
+        add_political_power = 100
+        set_country_flag = zetsu_captured
+        add_ideas = KNO_zetsu_killed_idea
+        AKA = { remove_ideas = AKA_zetsu_intel_idea }
+    }
+
+    option = {
+        name = anbu_hunt.7.b # Изучить технологию Зецу
+        add_research_slot = 1
+        add_political_power = 100
+        set_country_flag = zetsu_captured
+        add_ideas = KNO_zetsu_research_idea
+    }
+
+    option = {
+        name = anbu_hunt.7.c # Использовать как двойного агента
+        add_political_power = 150
+        add_decryption = 250
+        set_country_flag = zetsu_captured
+        set_country_flag = zetsu_double_agent
+        add_ideas = KNO_zetsu_double_idea
+    }
+}
+
+country_event = {
+    id = anbu_hunt.7.fail
+    title = anbu_hunt.7.fail.t
+    desc = anbu_hunt.7.fail.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = yes
+
+    option = {
+        name = anbu_hunt.7.fail.a
+        add_stability = -0.03
+        add_war_support = 0.05
+    }
+}
+
+# ============================================================
+# ПЕЙН
+# ============================================================
+country_event = {
+    id = anbu_hunt.8
+    title = anbu_hunt.8.t
+    desc = anbu_hunt.8.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = anbu_hunt.8.a # Убить Пейна
+        add_war_support = 0.20
+        add_political_power = 200
+        set_country_flag = pain_captured
+        add_ideas = KNO_pain_killed_idea
+        AKA = { remove_ideas = AKA_pain_leadership_idea }
+    }
+
+    option = {
+        name = anbu_hunt.8.b # Переубедить — Нагато меняет путь
+        add_political_power = 300
+        add_stability = 0.15
+        add_ideas = KNO_nagato_ally_idea
+        set_country_flag = pain_captured
+        set_country_flag = nagato_redeemed
+
+        # Нагато воскрешает павших
+        every_country = {
+            limit = { has_country_flag = lost_kurama }
+            add_manpower = 20000
+        }
+    }
+
+    option = {
+        name = anbu_hunt.8.c # Забрать Риннеган
+        add_research_slot = 2
+        add_political_power = 250
+        set_country_flag = pain_captured
+        add_ideas = KNO_rinnegan_captured_idea
+    }
+}
+
+country_event = {
+    id = anbu_hunt.8.fail
+    title = anbu_hunt.8.fail.t
+    desc = anbu_hunt.8.fail.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = yes
+
+    option = {
+        name = anbu_hunt.8.fail.a
+        add_stability = -0.10
+        add_war_support = 0.15
+    }
+}
+
+# ============================================================
+# ОБИТО
+# ============================================================
+country_event = {
+    id = anbu_hunt.9
+    title = anbu_hunt.9.t
+    desc = anbu_hunt.9.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = anbu_hunt.9.a # Убить Обито
+        add_war_support = 0.25
+        add_political_power = 300
+        set_country_flag = obito_captured
+        add_ideas = KNO_obito_killed_idea
+        AKA = { remove_ideas = AKA_obito_leadership_idea }
+    }
+
+    option = {
+        name = anbu_hunt.9.b # Раскрыть его личность публично
+        add_political_power = 400
+        add_stability = 0.20
+        set_country_flag = obito_captured
+        set_country_flag = obito_revealed
+        add_ideas = KNO_obito_revealed_idea
+        AKA = {
+            add_stability = -0.20
+            remove_ideas = AKA_obito_leadership_idea
+        }
+    }
+
+    option = {
+        name = anbu_hunt.9.c # Переубедить — вернуть Обито
+        add_political_power = 250
+        set_country_flag = obito_captured
+        set_country_flag = obito_redeemed
+        add_ideas = KNO_obito_ally_idea
+    }
+}
+
+country_event = {
+    id = anbu_hunt.9.fail
+    title = anbu_hunt.9.fail.t
+    desc = anbu_hunt.9.fail.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = yes
+
+    option = {
+        name = anbu_hunt.9.fail.a
+        add_stability = -0.10
+        add_war_support = 0.15
+    }
+}
+
+# ============================================================
+# ФИНАЛЬНЫЙ ИВЕНТ: АКАЦУКИ УНИЧТОЖЕНЫ
+# ============================================================
+country_event = {
+    id = anbu_hunt.100
+    title = anbu_hunt.100.t
+    desc = anbu_hunt.100.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = no
+    fire_only_once = yes
+    major = yes
+
+    trigger = {
+        tag = KNO
+        has_country_flag = pain_captured
+        has_country_flag = obito_captured
+        has_country_flag = kisame_captured
+        date > 1942.1.1
+    }
+    mean_time_to_happen = { days = 30 }
+
+    option = {
+        name = anbu_hunt.100.a
+        add_stability = 0.25
+        add_political_power = 500
+        add_ideas = KNO_anbu_legend_idea
+        set_country_flag = akatsuki_destroyed_by_anbu
+    }
+}

@@ -1,0 +1,202 @@
+ideas = {
+    country = {
+
+        KNO_sasuke_revenge_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                army_attack_factor = 0.10
+                army_breakthrough_factor = 0.10
+                war_support_factor = 0.10
+            }
+        }
+
+        KNO_itachi_ally_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                army_attack_factor = 0.10
+                army_defence_factor = 0.10
+                special_forces_cap_flat = 1
+                research_speed_factor = 0.05
+            }
+        }
+
+        KNO_itachi_advisor_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                encryption_factor = 0.25
+                decryption_factor = 0.25
+                political_power_gain = 0.10
+                research_speed_factor = 0.05
+            }
+        }
+
+        KNO_itachi_general_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                army_attack_factor = 0.15
+                army_breakthrough_factor = 0.15
+                army_speed_factor = 0.10
+                special_forces_cap_flat = 1
+            }
+        }
+
+        KNO_uchiha_legacy_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                stability_factor = 0.05
+                research_speed_factor = 0.05
+                army_attack_factor = 0.05
+            }
+        }
+
+        KNO_united_against_obito_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                war_support_factor = 0.15
+                stability_factor = 0.10
+                army_attack_factor = 0.10
+                army_defence_factor = 0.10
+            }
+        }
+
+        KNO_itachi_martyr_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                war_support_factor = 0.20
+                army_attack_factor = 0.15
+                stability_factor = -0.05
+            }
+        }
+
+        KNO_triumvirate_broken_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                stability_factor = -0.10
+                political_power_gain = -0.15
+            }
+        }
+
+        KNO_triumvirate_kakashi_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                army_attack_factor = 0.15
+                army_defence_factor = 0.10
+                special_forces_cap_flat = 1
+                war_support_factor = 0.10
+            }
+        }
+
+        KNO_triumvirate_naruto_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                stability_factor = 0.15
+                conscription_factor = 0.10
+                army_attack_factor = 0.10
+                special_forces_cap_flat = 1
+            }
+        }
+
+        KNO_triumvirate_sakura_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                recovery_rate = 0.15
+                research_speed_factor = 0.10
+                stability_factor = 0.05
+            }
+        }
+
+        KNO_triumvirate_hokage_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                political_power_gain = 0.20
+                stability_factor = 0.15
+                army_attack_factor = 0.10
+                army_defence_factor = 0.10
+                special_forces_cap_flat = 1
+            }
+        }
+
+        KNO_danzo_survives_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                political_power_gain = 0.15
+                army_defence_factor = 0.10
+                encryption_factor = 0.20
+                decryption_factor = 0.20
+            }
+        }
+
+        KNO_danzo_puppetmaster_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                political_power_gain = 0.25
+                encryption_factor = 0.30
+                decryption_factor = 0.30
+                operative_slots = 1
+            }
+        }
+
+        KNO_danzo_underground_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                encryption_factor = 0.30
+                decryption_factor = 0.30
+                stability_factor = -0.10
+            }
+        }
+
+        KNO_danzo_returns_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                stability_factor = -0.15
+                war_support_factor = 0.10
+                political_power_gain = -0.20
+            }
+        }
+
+        KNO_justice_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                stability_factor = 0.15
+                political_power_gain = 0.10
+            }
+        }
+
+        KNO_uchiha_truth_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                stability_factor = -0.05
+                army_attack_factor = 0.10
+                political_power_gain = 0.15
+            }
+        }
+
+        OTO_danzo_refugee_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                research_speed_factor = 0.10
+                encryption_factor = 0.15
+                decryption_factor = 0.15
+            }
+        }
+    }
+}

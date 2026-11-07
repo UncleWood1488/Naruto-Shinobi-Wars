@@ -1,0 +1,18 @@
+state = {
+    id = 12
+    name = "STATE_12"
+    manpower = 25000
+    state_category = town
+    history = {
+        owner = IWA
+        controller = IWA
+        add_core_of = IWA
+        buildings = {
+            infrastructure = 1
+        }
+            victory_points = { 84 4 }
+            victory_points = { 218 2 }
+    }
+    provinces = { 9 67 84 190 191 192 218 }
+    local_supplies = 2.0
+}

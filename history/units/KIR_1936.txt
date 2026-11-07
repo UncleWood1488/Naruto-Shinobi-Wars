@@ -1,0 +1,127 @@
+#############################
+# ШАБЛОНЫ ДИВИЗИЙ КИРИ
+#############################
+
+division_template = {
+    name = "Генинский отряд"
+    is_locked = no
+
+    regiments = {
+        genin = { x = 0 y = 0 }
+        genin = { x = 1 y = 0 }
+        genin = { x = 0 y = 1 }
+    }
+
+    support = {
+        engineer = { x = 0 y = 0 }
+    }
+}
+
+division_template = {
+    name = "Чунинская бригада"
+    is_locked = no
+
+    regiments = {
+        chunin = { x = 0 y = 0 }
+        chunin = { x = 1 y = 0 }
+        chunin = { x = 0 y = 1 }
+        puppeteer = { x = 1 y = 1 }
+    }
+
+    support = {
+        engineer = { x = 0 y = 0 }
+        recon = { x = 1 y = 0 }
+    }
+}
+
+division_template = {
+    name = "Охотники-ниндзя"
+    is_locked = no
+
+    regiments = {
+        jonin = { x = 0 y = 0 }
+        jonin = { x = 1 y = 0 }
+        chunin = { x = 0 y = 1 }
+    }
+
+    support = {
+        recon = { x = 0 y = 0 }
+        military_police = { x = 1 y = 0 }
+    }
+}
+
+division_template = {
+    name = "Семь мечников"
+    is_locked = yes
+    priority = 500
+
+    regiments = {
+        jonin = { x = 0 y = 0 }
+        jonin = { x = 1 y = 0 }
+        anbu = { x = 0 y = 1 }
+    }
+
+    support = {
+        recon = { x = 0 y = 0 }
+        engineer = { x = 1 y = 0 }
+    }
+}
+
+division_template = {
+    name = "Дзинчурики"
+    is_locked = yes
+    priority = 1000
+
+    regiments = {
+        jinchuriki = { x = 0 y = 0 }
+    }
+
+    support = { }
+}
+
+#############################
+# СОЗДАННЫЕ ДИВИЗИИ
+#############################
+
+units = {
+
+    division = {
+        name = "1-й Генинский отряд Кири"
+        location = 195
+        division_template = "Генинский отряд"
+    }
+
+    division = {
+        name = "2-й Генинский отряд Кири"
+        location = 195
+        division_template = "Генинский отряд"
+    }
+
+    division = {
+        name = "1-я Чунинская бригада Кири"
+        location = 195
+        division_template = "Чунинская бригада"
+    }
+
+    division = {
+        name = "Охотники-ниндзя Кири"
+        location = 195
+        division_template = "Охотники-ниндзя"
+    }
+
+    division = {
+        name = "Семь мечников Тумана"
+        location = 195
+        division_template = "Семь мечников"
+        start_experience_factor = 0.7
+    }
+
+    # Дзинчурики Кири — Югито
+    division = {
+        name = "Югито Нии"
+        location = 195
+        division_template = "Дзинчурики"
+        start_experience_factor = 0.5
+        start_equipment_factor = 1.0
+    }
+}

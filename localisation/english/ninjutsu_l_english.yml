@@ -1,0 +1,13 @@
+l_english:
+ kunai_1:0 "Kunai and Basic Ninja Tools"
+ kunai_1_desc:0 "Make basic ninja equipment available for production."
+ ninja_sword_1:0 "Shinobi Swords"
+ ninja_sword_1_desc:0 "Improve close-combat equipment for trained shinobi."
+ chakra_armor_1:0 "Chakra-Reinforced Armour"
+ chakra_armor_1_desc:0 "Introduce armour reinforced with chakra."
+ anbu_gear_1:0 "ANBU Equipment"
+ anbu_gear_1_desc:0 "Equip elite ANBU units with specialist gear."
+ jinchuriki_gear_1:0 "Jinchuriki Equipment"
+ jinchuriki_gear_1_desc:0 "Standardise equipment for jinchuriki units."
+ jinchuriki_gear_2:0 "Advanced Jinchuriki Equipment"
+ jinchuriki_gear_2_desc:0 "Develop improved equipment for jinchuriki units."

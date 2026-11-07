@@ -1,0 +1,30 @@
+# Naruto Shinobi Wars — собственные категории рейдов.
+# Ванильные исторические категории не используются.
+categories = {
+    nsw_air_raids = {
+        intel_source = air
+        visible = { has_dlc = "Gotterdammerung" }
+        available = { has_dlc = "Gotterdammerung" }
+    }
+    nsw_land_raids = {
+        intel_source = army
+        visible = { has_dlc = "Gotterdammerung" }
+        available = { has_dlc = "Gotterdammerung" }
+    }
+    nsw_naval_raids = {
+        intel_source = naval
+        visible = { has_dlc = "Gotterdammerung" }
+        available = { has_dlc = "Gotterdammerung" }
+    }
+    nsw_paratrooper_raids = {
+        intel_source = air
+        visible = { has_dlc = "Gotterdammerung" }
+        available = { has_dlc = "Gotterdammerung" }
+    }
+    nuclear_raids = {
+        intel_source = air
+        visible = { always = no }
+        available = { always = no }
+        free_targeting = yes
+    }
+}

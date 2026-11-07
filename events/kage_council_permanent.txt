@@ -1,0 +1,156 @@
+################################
+# ПОСТОЯННЫЙ СОВЕТ КАГЕ — ПЕРИОДИЧЕСКИЕ ИВЕНТЫ
+################################
+
+# ============================================================
+# ЗАСЕДАНИЕ СОВЕТА — каждые 6 месяцев
+# ============================================================
+country_event = {
+    id = kage_council_permanent.1
+    title = kage_council_permanent.1.t
+    desc = kage_council_permanent.1.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = no
+    fire_only_once = no
+    major = yes
+
+    trigger = {
+        has_country_flag = in_kage_council
+        NOT = { has_country_flag = kage_council_disbanded }
+        date > 1937.1.1
+    }
+    mean_time_to_happen = {
+        months = 6
+    }
+
+    option = {
+        name = kage_council_permanent.1.a # Поддержать решения Совета
+        add_political_power = 25
+        add_stability = 0.02
+    }
+
+    option = {
+        name = kage_council_permanent.1.b # Продвинуть свои интересы
+        add_political_power = 50
+        add_stability = -0.02
+        set_country_flag = council_selfish
+    }
+}
+
+# ============================================================
+# КРИЗИС В СОВЕТЕ — раз в год
+# ============================================================
+country_event = {
+    id = kage_council_permanent.2
+    title = kage_council_permanent.2.t
+    desc = kage_council_permanent.2.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = no
+    fire_only_once = no
+    major = yes
+
+    trigger = {
+        has_country_flag = in_kage_council
+        NOT = { has_country_flag = kage_council_disbanded }
+        has_country_flag = kage_council_active
+        date > 1938.1.1
+    }
+    mean_time_to_happen = {
+        months = 12
+    }
+
+    option = {
+        name = kage_council_permanent.2.a # Решить кризис дипломатией
+        add_political_power = 75
+        add_stability = 0.05
+        set_country_flag = council_resolved_crisis
+    }
+
+    option = {
+        name = kage_council_permanent.2.b # Обострить конфликт
+        add_war_support = 0.10
+        add_stability = -0.05
+        set_country_flag = council_crisis
+    }
+
+    option = {
+        name = kage_council_permanent.2.c # Выйти из Совета
+        add_stability = -0.10
+        remove_ideas = kage_council_active_idea
+        remove_ideas = kage_council_strong_idea
+        remove_country_flag = in_kage_council
+        set_country_flag = left_kage_council
+    }
+}
+
+# ============================================================
+# УКРЕПЛЕНИЕ СОВЕТА — предложение раз в 2 года
+# ============================================================
+country_event = {
+    id = kage_council_permanent.3
+    title = kage_council_permanent.3.t
+    desc = kage_council_permanent.3.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = no
+    fire_only_once = no
+    major = yes
+
+    trigger = {
+        has_country_flag = in_kage_council
+        has_country_flag = kage_council_active
+        NOT = { has_country_flag = kage_council_strong }
+        NOT = { has_country_flag = kage_council_disbanded }
+        date > 1939.1.1
+    }
+    mean_time_to_happen = {
+        months = 24
+    }
+
+    option = {
+        name = kage_council_permanent.3.a # Укрепить Совет
+        add_political_power = 100
+        set_country_flag = voted_strong_council
+
+        # Если большинство проголосовало — Совет становится сильным
+        if = {
+            limit = {
+                any_country = {
+                    has_country_flag = voted_strong_council
+                    count = 3
+                }
+            }
+            every_country = {
+                limit = { has_country_flag = in_kage_council }
+                remove_ideas = kage_council_active_idea
+                add_ideas = kage_council_strong_idea
+                set_country_flag = kage_council_strong
+                clr_country_flag = voted_strong_council
+            }
+        }
+    }
+
+    option = {
+        name = kage_council_permanent.3.b # Оставить как есть
+        add_stability = 0.03
+    }
+}
+
+# ============================================================
+# СОВЕТ РАСПУЩЕН — уведомление членам
+# ============================================================
+country_event = {
+    id = kage_council_permanent.100
+    title = kage_council_permanent.100.t
+    desc = kage_council_permanent.100.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = yes
+
+    option = {
+        name = kage_council_permanent.100.a
+        remove_ideas = kage_council_active_idea
+        remove_ideas = kage_council_strong_idea
+        remove_ideas = kage_council_weakened_idea
+        remove_country_flag = in_kage_council
+        add_stability = -0.05
+    }
+}

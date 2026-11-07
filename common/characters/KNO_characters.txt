@@ -1,0 +1,299 @@
+characters = {
+    KNO_hiruzen_character = {
+        name = KNO_hiruzen_character
+        portraits = {
+            civilian = {
+                large = GFX_portrait_hiruzen
+            }
+        }
+        gender = male
+        country_leader = {
+            ideology = despotism
+            desc = KNO_hiruzen_character_desc
+            traits = { }
+        }
+    }
+
+
+    KNO_itachi_character = {
+        name = "Итачи Учиха"
+        portraits = {
+            civilian = {
+                large = "GFX_portrait_itachi"
+                small = "GFX_portrait_itachi_small"
+            }
+            army = {
+                large = "GFX_portrait_itachi"
+            
+                small = "GFX_portrait_itachi_small"
+            }
+        }
+
+        gender = male
+
+        advisor = {
+            slot = political_advisor
+            idea_token = KNO_itachi_advisor
+            ledger = army
+            allowed = {
+                original_tag = KNO
+                has_country_flag = itachi_advisor_available
+            }
+            visible = {
+                has_country_flag = itachi_advisor_available
+            }
+            traits = {
+                KNO_itachi_advisor_trait
+            }
+            cost = 150
+        }
+
+        # Оперативник (La Résistance)
+
+        # Командир дивизии
+        corps_commander = {
+            skill = 6
+            attack_skill = 6
+            defense_skill = 5
+            planning_skill = 7
+            logistics_skill = 4
+            traits = {
+                trait_trickster
+                trait_organiser
+            }
+            allowed = {
+                original_tag = KNO
+            }
+        }
+
+        country_leader = {
+            ideology = fascism_ideology
+            traits = { }
+            allowed = {
+                original_tag = KNO
+                has_country_flag = itachi_leader
+            }
+        }
+    }
+
+    KNO_kakashi_character = {
+        name = "Какаши Хатаке"
+        portraits = {
+            civilian = {
+                large = "GFX_portrait_kakashi"
+                small = "GFX_portrait_kakashi_small"
+            }
+        
+        army = {
+            small = "GFX_portrait_kakashi_small"
+        }
+    }
+
+        gender = male
+
+        advisor = {
+            slot = army_chief
+            idea_token = KNO_kakashi_army_chief
+            ledger = army
+            allowed = { original_tag = KNO }
+            visible = { original_tag = KNO }
+            traits = { army_chief_offensive_1 }
+            cost = 100
+        }
+
+        corps_commander = {
+            skill = 5
+            attack_skill = 5
+            defense_skill = 5
+            planning_skill = 5
+            logistics_skill = 5
+            traits = {
+                trait_organiser
+                trait_commando
+            }
+        }
+
+        country_leader = {
+            ideology = conservatism
+            traits = { }
+        }
+    }
+
+    KNO_naruto_character = {
+        name = "Наруто Узумаки"
+        portraits = {
+            civilian = {
+                large = "GFX_portrait_naruto"
+                small = "GFX_portrait_naruto"
+            }
+        
+        army = {
+            small = "GFX_portrait_naruto"
+        }
+    }
+
+        gender = male
+
+        corps_commander = {
+            skill = 7
+            attack_skill = 8
+            defense_skill = 6
+            planning_skill = 4
+            logistics_skill = 5
+            traits = {
+                trait_trickster
+                trait_war_hero
+                trait_ruthless
+            }
+            allowed = {
+                original_tag = KNO
+                has_country_flag = naruto_jonin
+            }
+        }
+
+        country_leader = {
+            ideology = conservatism
+            traits = { }
+            allowed = {
+                original_tag = KNO
+                has_country_flag = naruto_hokage
+            }
+        }
+    }
+
+    KNO_sasuke_character = {
+        name = "Саске Учиха"
+        portraits = {
+            civilian = {
+                large = "GFX_portrait_sasuke"
+                small = "GFX_portrait_sasuke"
+            }
+        
+        army = {
+            small = "GFX_portrait_sasuke"
+        }
+    }
+
+        gender = male
+
+        corps_commander = {
+            skill = 6
+            attack_skill = 8
+            defense_skill = 5
+            planning_skill = 6
+            logistics_skill = 3
+            traits = {
+                trait_trickster
+                trait_ruthless
+            }
+        }
+
+        country_leader = {
+            ideology = fascism_ideology
+            traits = { }
+            allowed = {
+                original_tag = KNO
+                has_country_flag = sasuke_leader
+            }
+        }
+    }
+
+    KNO_tsunade_character = {
+        name = "Цунаде Сенджу"
+        portraits = {
+            civilian = {
+                large = "GFX_portrait_tsunade"
+                small = "GFX_portrait_tsunade"
+            }
+        }
+
+        gender = female
+
+        advisor = {
+            slot = high_command
+            idea_token = KNO_tsunade_high_command
+            ledger = army
+            allowed = { original_tag = KNO }
+            visible = { original_tag = KNO }
+            traits = { army_chief_organisational_1 }
+            cost = 100
+        }
+
+        country_leader = {
+            ideology = conservatism
+            traits = { }
+            allowed = {
+                original_tag = KNO
+                has_country_flag = tsunade_hokage
+            }
+        }
+    }
+
+    KNO_danzo_character = {
+        name = "Данзо Симура"
+        portraits = {
+            civilian = {
+                large = "GFX_portrait_danzo"
+                small = "GFX_portrait_danzo_small"
+            }
+        }
+
+        gender = male
+
+        advisor = {
+            slot = political_advisor
+            idea_token = KNO_danzo_advisor
+            ledger = army
+            allowed = { original_tag = KNO }
+            visible = { original_tag = KNO }
+            traits = { KNO_danzo_trait }
+            cost = 150
+        }
+
+        country_leader = {
+            ideology = fascism_ideology
+            traits = { }
+            allowed = {
+                original_tag = KNO
+                has_country_flag = danzo_leader
+            }
+        }
+    }
+
+    KNO_yamato_character = {
+        name = "Ямато"
+        portraits = {
+            civilian = {
+                small = "GFX_portrait_yamato_small"
+            }
+        
+        army = {
+            small = "GFX_portrait_yamato_small"
+        }
+    }
+
+        gender = male
+
+
+        corps_commander = {
+            skill = 4
+            attack_skill = 4
+            defense_skill = 5
+            planning_skill = 5
+            logistics_skill = 4
+            traits = { trait_engineer }
+        }
+    }
+
+    KNO_sai_character = {
+        name = "Сай"
+        portraits = {
+            civilian = {
+                small = "GFX_portrait_sai_small"
+            }
+        }
+
+        gender = male
+
+    }
+}

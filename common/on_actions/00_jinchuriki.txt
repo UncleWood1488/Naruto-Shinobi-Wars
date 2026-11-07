@@ -1,0 +1,299 @@
+on_actions = {
+
+    # ============================================================
+    # ПРИ СТАРТЕ — создать дзинчурики у всех, кому положено
+    # ============================================================
+    on_startup = {
+        effect = {
+
+            # KNO — Наруто
+            if = {
+                limit = {
+                    KNO = {
+                        exists = yes
+                        has_idea = KNO_jinchuriki_present
+                    }
+                }
+                KNO = {
+                    if = {
+                        limit = {
+                            NOT = {
+                                any_owned_division = {
+                                    division_template = "Дзинчурики"
+                                }
+                            }
+                        }
+                        create_division = {
+                            division_template = "Дзинчурики"
+                            location = 3838
+                            name = "Наруто Узумаки"
+                            start_experience_factor = 0.5
+                            start_equipment_factor = 1.0
+                        }
+                    }
+                }
+            }
+
+            # SUN — Гаара
+            if = {
+                limit = {
+                    SUN = {
+                        exists = yes
+                        has_idea = SUN_jinchuriki_present
+                    }
+                }
+                SUN = {
+                    if = {
+                        limit = {
+                            NOT = {
+                                any_owned_division = {
+                                    division_template = "Дзинчурики"
+                                }
+                            }
+                        }
+                        create_division = {
+                            division_template = "Дзинчурики"
+                            location = 12346
+                            name = "Гаара"
+                            start_experience_factor = 0.5
+                            start_equipment_factor = 1.0
+                        }
+                    }
+                }
+            }
+
+            # KIR — Югито
+            if = {
+                limit = {
+                    KIR = {
+                        exists = yes
+                        has_idea = KIR_jinchuriki_present
+                    }
+                }
+                KIR = {
+                    if = {
+                        limit = {
+                            NOT = {
+                                any_owned_division = {
+                                    division_template = "Дзинчурики"
+                                }
+                            }
+                        }
+                        create_division = {
+                            division_template = "Дзинчурики"
+                            location = 12347
+                            name = "Югито Нии"
+                            start_experience_factor = 0.5
+                            start_equipment_factor = 1.0
+                        }
+                    }
+                }
+            }
+
+            # NKU — Киллер Би
+            if = {
+                limit = {
+                    NKU = {
+                        exists = yes
+                        has_idea = NKU_jinchuriki_present
+                    }
+                }
+                NKU = {
+                    if = {
+                        limit = {
+                            NOT = {
+                                any_owned_division = {
+                                    division_template = "Дзинчурики"
+                                }
+                            }
+                        }
+                        create_division = {
+                            division_template = "Дзинчурики"
+                            location = 12348
+                            name = "Киллер Би"
+                            start_experience_factor = 0.5
+                            start_equipment_factor = 1.0
+                        }
+                    }
+                }
+            }
+
+            # IWA — Роши
+            if = {
+                limit = {
+                    IWA = {
+                        exists = yes
+                        has_idea = IWA_jinchuriki_present
+                    }
+                }
+                IWA = {
+                    if = {
+                        limit = {
+                            NOT = {
+                                any_owned_division = {
+                                    division_template = "Дзинчурики"
+                                }
+                            }
+                        }
+                        create_division = {
+                            division_template = "Дзинчурики"
+                            location = 12349
+                            name = "Роши"
+                            start_experience_factor = 0.5
+                            start_equipment_factor = 1.0
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    # ============================================================
+    # ЕЖЕМЕСЯЧНО — восстановление, если удалили
+    # ============================================================
+    on_monthly = {
+        effect = {
+
+            # Восстановление идеи + дивизии для каждой деревни
+            every_country = {
+                limit = {
+                    OR = { tag = KNO tag = SUN tag = KIR tag = NKU tag = IWA }
+                }
+
+                # Идея пропала — вернуть
+                if = {
+                    limit = {
+                        tag = KNO
+                        NOT = { has_country_flag = lost_kurama }
+                        NOT = { has_idea = KNO_jinchuriki_present }
+                    }
+                    add_ideas = KNO_jinchuriki_present
+                }
+                if = {
+                    limit = {
+                        tag = SUN
+                        NOT = { has_country_flag = lost_shukaku }
+                        NOT = { has_idea = SUN_jinchuriki_present }
+                    }
+                    add_ideas = SUN_jinchuriki_present
+                }
+                if = {
+                    limit = {
+                        tag = KIR
+                        NOT = { has_country_flag = lost_isobu }
+                        NOT = { has_idea = KIR_jinchuriki_present }
+                    }
+                    add_ideas = KIR_jinchuriki_present
+                }
+                if = {
+                    limit = {
+                        tag = NKU
+                        NOT = { has_country_flag = lost_matatabi }
+                        NOT = { has_idea = NKU_jinchuriki_present }
+                    }
+                    add_ideas = NKU_jinchuriki_present
+                }
+                if = {
+                    limit = {
+                        tag = IWA
+                        NOT = { has_country_flag = lost_songoku }
+                        NOT = { has_idea = IWA_jinchuriki_present }
+                    }
+                    add_ideas = IWA_jinchuriki_present
+                }
+
+                # Дивизия пропала, но идея есть — восстановить
+                if = {
+                    limit = {
+                        has_idea = KNO_jinchuriki_present
+                        NOT = { has_country_flag = lost_kurama }
+                        NOT = {
+                            any_owned_division = {
+                                division_template = "Дзинчурики"
+                            }
+                        }
+                    }
+                    create_division = {
+                        division_template = "Дзинчурики"
+                        location = 3838
+                        name = "Возрождённый Наруто"
+                        start_experience_factor = 0.3
+                        start_equipment_factor = 1.0
+                    }
+                }
+                if = {
+                    limit = {
+                        has_idea = SUN_jinchuriki_present
+                        NOT = { has_country_flag = lost_shukaku }
+                        NOT = {
+                            any_owned_division = {
+                                division_template = "Дзинчурики"
+                            }
+                        }
+                    }
+                    create_division = {
+                        division_template = "Дзинчурики"
+                        location = 12346
+                        name = "Возрождённый Гаара"
+                        start_experience_factor = 0.3
+                        start_equipment_factor = 1.0
+                    }
+                }
+                if = {
+                    limit = {
+                        has_idea = KIR_jinchuriki_present
+                        NOT = { has_country_flag = lost_isobu }
+                        NOT = {
+                            any_owned_division = {
+                                division_template = "Дзинчурики"
+                            }
+                        }
+                    }
+                    create_division = {
+                        division_template = "Дзинчурики"
+                        location = 12347
+                        name = "Возрождённый Югито"
+                        start_experience_factor = 0.3
+                        start_equipment_factor = 1.0
+                    }
+                }
+                if = {
+                    limit = {
+                        has_idea = NKU_jinchuriki_present
+                        NOT = { has_country_flag = lost_matatabi }
+                        NOT = {
+                            any_owned_division = {
+                                division_template = "Дзинчурики"
+                            }
+                        }
+                    }
+                    create_division = {
+                        division_template = "Дзинчурики"
+                        location = 12348
+                        name = "Возрождённый Киллер Би"
+                        start_experience_factor = 0.3
+                        start_equipment_factor = 1.0
+                    }
+                }
+                if = {
+                    limit = {
+                        has_idea = IWA_jinchuriki_present
+                        NOT = { has_country_flag = lost_songoku }
+                        NOT = {
+                            any_owned_division = {
+                                division_template = "Дзинчурики"
+                            }
+                        }
+                    }
+                    create_division = {
+                        division_template = "Дзинчурики"
+                        location = 12349
+                        name = "Возрождённый Роши"
+                        start_experience_factor = 0.3
+                        start_equipment_factor = 1.0
+                    }
+                }
+            }
+        }
+    }
+}

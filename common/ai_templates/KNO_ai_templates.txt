@@ -1,0 +1,81 @@
+KNO_ai_templates = {
+    ai_template = {
+        name = "AI Konoha Infantry"
+        priority = 100
+        role = infantry
+        allowed = { always = yes }
+
+        regiments = {
+            genin = { x = 0 y = 0 }
+            genin = { x = 1 y = 0 }
+            genin = { x = 0 y = 1 }
+        }
+
+        support = {
+            engineer = { x = 0 y = 0 }
+        }
+    }
+
+    ai_template = {
+        name = "AI Konoha Chunin"
+        priority = 200
+        role = infantry
+        allowed = {
+            always = yes
+        }
+
+        regiments = {
+            chunin = { x = 0 y = 0 }
+            chunin = { x = 1 y = 0 }
+            chunin = { x = 0 y = 1 }
+            puppeteer = { x = 1 y = 1 }
+        }
+
+        support = {
+            engineer = { x = 0 y = 0 }
+            recon = { x = 1 y = 0 }
+        }
+    }
+
+    ai_template = {
+        name = "AI Konoha Jonin"
+        priority = 300
+        role = elite
+        allowed = {
+            always = yes
+        }
+
+        regiments = {
+            jonin = { x = 0 y = 0 }
+            jonin = { x = 1 y = 0 }
+            chunin = { x = 0 y = 1 }
+            chunin = { x = 1 y = 1 }
+        }
+
+        support = {
+            engineer = { x = 0 y = 0 }
+            recon = { x = 1 y = 0 }
+            field_hospital = { x = 2 y = 0 }
+        }
+    }
+
+    ai_template = {
+        name = "AI Konoha ANBU"
+        priority = 400
+        role = special_forces
+        allowed = {
+            always = yes
+            has_country_flag = anbu_active
+        }
+
+        regiments = {
+            anbu = { x = 0 y = 0 }
+            anbu = { x = 1 y = 0 }
+        }
+
+        support = {
+            recon = { x = 0 y = 0 }
+            military_police = { x = 1 y = 0 }
+        }
+    }
+}

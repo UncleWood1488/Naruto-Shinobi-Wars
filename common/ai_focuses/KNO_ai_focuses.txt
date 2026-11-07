@@ -1,0 +1,210 @@
+KNO_ai_focuses = {
+    ai_focus = {
+        focus = KNO_rebuild_village
+        value = 100
+    }
+
+    ai_focus = {
+        focus = KNO_academy_reform
+        value = 95
+    }
+
+    ai_focus = {
+        focus = KNO_third_hokage_death
+        value = 90
+    }
+
+    # ---- Ветка Цунаде (для ИИ — приоритетная) ----
+    ai_focus = {
+        focus = KNO_recall_tsunade
+        value = 80
+        modifier = {
+            base = 40
+            has_country_flag = tsunade_available
+        }
+    }
+
+    ai_focus = {
+        focus = KNO_tsunade_fifth_hokage
+        value = 85
+    }
+
+    ai_focus = {
+        focus = KNO_medical_reform
+        value = 70
+    }
+
+    ai_focus = {
+        focus = KNO_naruto_training
+        value = 75
+    }
+
+    ai_focus = {
+        focus = KNO_pain_invasion
+        value = 80
+    }
+
+    ai_focus = {
+        focus = KNO_fourth_shinobi_war
+        value = 90
+    }
+
+    ai_focus = {
+        focus = KNO_allied_shinobi_force
+        value = 85
+    }
+
+    ai_focus = {
+        focus = KNO_war_victory
+        value = 80
+    }
+
+    ai_focus = {
+        focus = KNO_kakashi_sixth_hokage
+        value = 70
+    }
+
+    ai_focus = {
+        focus = KNO_peaceful_era
+        value = 60
+    }
+
+    # ---- Ветка Какаши ----
+    ai_focus = {
+        focus = KNO_promote_kakashi
+        value = 60
+        modifier = {
+            base = 30
+            has_country_flag = kakashi_available
+        }
+    }
+
+    ai_focus = {
+        focus = KNO_kakashi_hokage
+        value = 65
+    }
+
+    ai_focus = {
+        focus = KNO_kakashi_anbu_reform
+        value = 55
+    }
+
+    ai_focus = {
+        focus = KNO_kakashi_war_prep
+        value = 60
+    }
+
+    ai_focus = {
+        focus = KNO_kakashi_war
+        value = 70
+    }
+
+    ai_focus = {
+        focus = KNO_kakashi_victory
+        value = 65
+    }
+
+    # ---- Ветка Данзо (только если ИИ агрессивен) ----
+    ai_focus = {
+        focus = KNO_danzo_coup
+        value = 30
+        modifier = {
+            base = 50
+            has_country_flag = danzo_available
+        }
+        modifier = {
+            base = 70
+            has_war = yes
+        }
+    }
+
+    ai_focus = {
+        focus = KNO_danzo_hokage
+        value = 40
+    }
+
+    ai_focus = {
+        focus = KNO_root_expansion
+        value = 45
+    }
+
+    ai_focus = {
+        focus = KNO_suppress_clans
+        value = 35
+    }
+
+    ai_focus = {
+        focus = KNO_danzo_dictatorship
+        value = 40
+    }
+
+    ai_focus = {
+        focus = KNO_danzo_war
+        value = 50
+    }
+
+    # ---- Ветка Саске ----
+    ai_focus = {
+        focus = KNO_sasuke_returns
+        value = 25
+        modifier = {
+            base = 50
+            has_country_flag = sasuke_path_available
+        }
+    }
+
+    ai_focus = {
+        focus = KNO_sasuke_hokage
+        value = 35
+    }
+
+    ai_focus = {
+        focus = KNO_sasuke_revolution
+        value = 30
+    }
+
+    ai_focus = {
+        focus = KNO_sasuke_united_shinobi
+        value = 40
+    }
+
+    ai_focus = {
+        focus = KNO_sasuke_rule
+        value = 30
+    }
+
+    # ---- Ветка Конохамару ----
+    ai_focus = {
+        focus = KNO_konohamaru_academy
+        value = 20
+        modifier = {
+            base = 40
+            has_country_flag = konohamaru_available
+        }
+    }
+
+    ai_focus = {
+        focus = KNO_young_generation
+        value = 30
+    }
+
+    ai_focus = {
+        focus = KNO_modernization
+        value = 40
+    }
+
+    ai_focus = {
+        focus = KNO_shinobi_reform
+        value = 35
+    }
+
+    ai_focus = {
+        focus = KNO_konohamaru_hokage
+        value = 30
+    }
+
+    ai_focus = {
+        focus = KNO_new_konoha
+        value = 25
+    }
+}

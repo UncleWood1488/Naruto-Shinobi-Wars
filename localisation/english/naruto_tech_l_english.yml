@@ -1,0 +1,13 @@
+l_english:
+ ninja_training_1:0 "Shinobi Training"
+ ninja_training_1_desc:0 "Basic training for the shinobi forces."
+ ninjutsu_1:0 "Basic Ninjutsu"
+ ninjutsu_1_desc:0 "Foundational techniques and controlled chakra use."
+ ninjutsu_2:0 "Advanced Ninjutsu"
+ ninjutsu_2_desc:0 "More advanced techniques for specialized shinobi."
+ ninjutsu_3:0 "Mastered Ninjutsu"
+ ninjutsu_3_desc:0 "Highly developed ninjutsu techniques."
+ sharingan:0 "Sharingan Research"
+ sharingan_desc:0 "Research into the abilities of the Sharingan."
+ mangekyou:0 "Mangekyō Research"
+ mangekyou_desc:0 "Advanced research into the Mangekyō Sharingan."

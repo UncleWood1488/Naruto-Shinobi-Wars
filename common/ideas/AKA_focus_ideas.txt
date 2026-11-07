@@ -1,0 +1,133 @@
+ideas = {
+    country = {
+
+        AKA_s_rank_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                special_forces_cap_flat = 1
+                army_attack_factor = 0.05
+                army_defence_factor = 0.05
+            }
+        }
+
+        AKA_army_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                training_time_factor = -0.10
+                conscription_factor = 0.05
+            }
+        }
+
+        AKA_pain_leadership_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                war_support_factor = 0.05
+                justify_war_goal_time = -0.25
+                stability_factor = 0.05
+            }
+        }
+
+        AKA_obito_leadership_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                war_support_factor = 0.10
+                army_attack_factor = 0.05
+            }
+        }
+
+        AKA_zetsu_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                research_speed_factor = 0.05
+                encryption_factor = 0.20
+                decryption_factor = 0.20
+            }
+        }
+
+        AKA_gedo_mazo_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                army_attack_factor = 0.10
+                army_defence_factor = 0.10
+                special_forces_cap_flat = 1
+            }
+        }
+
+        AKA_rinnegan_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                research_speed_factor = 0.10
+                army_breakthrough_factor = 0.10
+                army_attack_factor = 0.05
+            }
+        }
+
+        AKA_moon_eye_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                war_support_factor = 0.10
+                stability_factor = 0.05
+            }
+        }
+
+        AKA_infiltration_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                justify_war_goal_time = -0.30
+                operative_slots = 1
+            }
+        }
+
+        AKA_cloaks_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                army_attack_factor = 0.05
+                army_defence_factor = 0.05
+                special_forces_cap_flat = 1
+            }
+        }
+
+        AKA_mercenary_economy_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                consumer_goods_factor = -0.05
+                industrial_capacity_factory = 0.05
+                industrial_capacity_dockyard = 0.05
+            }
+        }
+
+        AKA_juubi_jinchuriki_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                army_attack_factor = 0.30
+                army_defence_factor = 0.30
+                army_breakthrough_factor = 0.30
+                special_forces_cap_flat = 3
+                war_support_factor = 0.20
+            }
+        }
+
+        AKA_tsukuyomi_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                stability_factor = 0.25
+                political_power_gain = 0.25
+                war_support_factor = 0.15
+                army_defence_factor = 0.15
+            }
+        }
+    }
+}

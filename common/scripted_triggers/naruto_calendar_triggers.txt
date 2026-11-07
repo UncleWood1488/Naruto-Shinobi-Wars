@@ -1,0 +1,48 @@
+#############################
+# ТРИГГЕРЫ КАЛЕНДАРЯ
+#############################
+
+naruto_canon_started = {
+    # Начало канона — год 60
+    date > 1936.1.1
+}
+
+naruto_chunin_exams = {
+    # Экзамен на чунина
+    date > 1936.7.1
+    date < 1937.1.1
+}
+
+naruto_sasuke_defection = {
+    # Саске уходит к Орочимару
+    date > 1939.1.1
+}
+
+naruto_shippuden_started = {
+    # Начало Shippuden
+    date > 1941.1.1
+}
+
+naruto_pain_invasion = {
+    # Вторжение Пейна
+    date > 1942.1.1
+}
+
+naruto_fourth_war = {
+    # 4-я мировая война
+    date > 1942.6.1
+}
+
+naruto_post_war = {
+    # Послевоенный период
+    date > 1945.1.1
+}
+
+# Проверка текущего года Конохи. Вызов: is_konoha_year = { year = 60 }
+is_konoha_year = {
+    check_variable = {
+        var = konoha_year
+        value = $year$
+        compare = equals
+    }
+}

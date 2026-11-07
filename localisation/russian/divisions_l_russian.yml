@@ -1,0 +1,83 @@
+﻿l_russian:
+ # Юниты
+ genin:0 "Генин"
+ genin_desc:0 "Базовый синоби-выпускник Академии. Лёгкая пехота."
+ chunin:0 "Чунин"
+ chunin_desc:0 "Опытный синоби среднего ранга. Мобильная пехота."
+ jonin:0 "Джонин"
+ jonin_desc:0 "Элитный синоби. Ограниченный отряд."
+ anbu:0 "АНБУ"
+ anbu_desc:0 "Спецназ Конохи. Скрытные операции."
+ samurai:0 "Самурай"
+ samurai_desc:0 "Тяжёлая пехота Страны Железа."
+ puppeteer:0 "Кукольщик"
+ puppeteer_desc:0 "Мастер кукол Суны. Артиллерийская поддержка."
+ jinchuriki:0 "Дзинчурики"
+ jinchuriki_desc:0 "Живое воплощение хвостатого зверя."
+
+ # Папки технологий
+ ninja_equipment_folder:0 "Снаряжение синоби"
+ ninja_equipment_folder_desc:0 "Технологии оружия и брони синоби."
+ ninja_weapons_folder:0 "Оружие синоби"
+ jinchuriki_equipment_folder:0 "Снаряжение дзинчурики"
+
+ # Технологии
+ kunai_1:0 "Кунаи и сюрикены"
+ kunai_1_desc:0 "Базовое метательное оружие."
+ ninja_sword_1:0 "Мечи синоби"
+ ninja_sword_1_desc:0 "Клинковое оружие."
+ chakra_armor_1:0 "Чакра-броня"
+ chakra_armor_1_desc:0 "Доспехи, усиленные чакрой."
+ anbu_gear_1:0 "Снаряжение АНБУ"
+ anbu_gear_1_desc:0 "Специальное снаряжение спецназа."
+ jinchuriki_gear_1:0 "Снаряжение дзинчурики I"
+ jinchuriki_gear_1_desc:0 "Базовое снаряжение хвостатых."
+ jinchuriki_gear_2:0 "Снаряжение дзинчурики II"
+ jinchuriki_gear_2_desc:0 "Улучшенное снаряжение хвостатых."
+
+ # Доктрины
+ ninja_doctrines_folder:0 "Доктрины ниндзя"
+ ninja_training_doctrine:0 "Тренировка синоби"
+ genjutsu_doctrine:0 "Доктрина гендзюцу"
+ jinchuriki_doctrine:0 "Доктрина дзинчурики"
+ sealing_doctrine:0 "Доктрина печатей"
+
+ ninja_training_1:0 "Основы тренировки"
+ ninja_training_1_desc:0 "Базовая подготовка синоби."
+ ninja_training_2:0 "Тени и клоны"
+ ninja_training_2_desc:0 "Техники клонирования."
+ ninja_training_3:0 "Засады"
+ ninja_training_3_desc:0 "Тактика засад и скрытности."
+ genjutsu_doctrine_1:0 "Иллюзии"
+ genjutsu_doctrine_1_desc:0 "Изучение гендзюцу."
+ jinchuriki_doctrine_1:0 "Сила хвостатых"
+ jinchuriki_doctrine_1_desc:0 "Использование силы зверей в бою."
+ sealing_doctrine_1:0 "Барьеры и печати"
+ sealing_doctrine_1_desc:0 "Защитные формации."
+
+ # Тактики
+ ninja_ambush:0 "Засада ниндзя"
+ ninja_substitution:0 "Техника подмены"
+ genjutsu_illusion:0 "Иллюзия гендзюцу"
+ shadow_clone_swarm:0 "Рой теневых клонов"
+ bijuu_bombardment:0 "Атака хвостатого"
+ sealing_formation:0 "Формация печатей"
+
+ # Решения
+ division_management:0 "Управление войсками"
+ division_management_desc:0 "Решения по формированию дивизий."
+ recruit_jonin_squad:0 "Создать джонинский отряд"
+ recruit_jonin_squad_desc:0 "Отобрать лучших синоби."
+ form_anbu_squad:0 "Сформировать отряд АНБУ"
+ form_anbu_squad_desc:0 "Создать элитный спецотряд."
+ activate_jinchuriki:0 "Активировать дзинчурики"
+ activate_jinchuriki_desc:0 "Вывести хвостатого в бой."
+ form_mixed_brigade:0 "Смешанная бригада"
+ form_mixed_brigade_desc:0 "Объединить разные типы синоби."
+
+ # Идеи
+ jonin_recruited_idea:0 "Отряд джонинов"
+ anbu_formed_idea:0 "Сформировано АНБУ"
+ jinchuriki_active_idea:0 "Дзинчурики в бою"
+ jinchuriki_active_idea_desc:0 "Хвостатый зверь действует."
+ mixed_brigade_idea:0 "Смешанная бригада"

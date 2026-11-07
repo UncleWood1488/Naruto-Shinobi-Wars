@@ -1,0 +1,166 @@
+# Organization for tailed-beast hosts; compatible with HOI4 1.19.x MIO syntax.
+jinchuriki_mio = {
+    name = jinchuriki_mio
+    allowed = { OR = { tag = KNO tag = SUN tag = KIR tag = NKU tag = IWA tag = AKA } }
+    visible = { FROM = { has_country_flag = jinchuriki_mio_unlocked } }
+    available = { OR = { FROM = { tag = KNO } FROM = { tag = SUN } FROM = { tag = KIR } FROM = { tag = NKU } FROM = { tag = IWA } FROM = { tag = AKA } } }
+
+    equipment_type = { infantry }
+    research_categories = { mio_cat_tech_all_infantry }
+    research_bonus = 0.05
+    task_capacity = 2
+
+    initial_trait = {
+        name = bijuu_traditional_bond
+        production_bonus = { production_efficiency_gain_factor = 0.05 }
+        equipment_bonus = { soft_attack = 0.02 defense = 0.02 }
+    }
+
+    # POWER branch
+    trait = {
+        token = raw_power
+        name = bijuu_raw_power
+        position = { x = 0 y = 0 }
+        visible = { always = yes }
+        available = { FROM = { has_country_flag = jinchuriki_aggressive } }
+        equipment_bonus = { soft_attack = 0.05 hard_attack = 0.03 }
+        production_bonus = { production_efficiency_gain_factor = 0.05 }
+    }
+    trait = {
+        token = bombardment
+        name = bijuu_bombardment
+        parent = { traits = { raw_power } num_parents_needed = 1 }
+        position = { x = 0 y = 1 }
+        visible = { always = yes }
+        available = { FROM = { has_country_flag = jinchuriki_bombardment_unlocked } }
+        equipment_bonus = { soft_attack = 0.08 breakthrough = 0.05 }
+    }
+    trait = {
+        token = transformation
+        name = bijuu_transformation
+        parent = { traits = { raw_power } num_parents_needed = 1 }
+        position = { x = 1 y = 1 }
+        visible = { always = yes }
+        available = { FROM = { has_country_flag = jinchuriki_transformation_unlocked } }
+        equipment_bonus = { soft_attack = 0.10 breakthrough = 0.08 }
+    }
+
+    # CONTROL branch
+    trait = {
+        token = partnership
+        name = bijuu_partnership
+        position = { x = 2 y = 0 }
+        visible = { always = yes }
+        available = { FROM = { has_country_flag = jinchuriki_partnership } }
+        equipment_bonus = { defense = 0.06 reliability = 0.04 }
+        organization_modifier = { military_industrial_organization_research_bonus = 0.03 }
+    }
+    trait = {
+        token = perfect_form
+        name = bijuu_perfect_form
+        parent = { traits = { partnership } num_parents_needed = 1 }
+        position = { x = 2 y = 1 }
+        visible = { always = yes }
+        available = { FROM = { has_country_flag = jinchuriki_perfect_form } }
+        equipment_bonus = { soft_attack = 0.10 defense = 0.10 }
+    }
+    trait = {
+        token = sage_mode
+        name = bijuu_sage_mode
+        parent = { traits = { perfect_form } num_parents_needed = 1 }
+        position = { x = 3 y = 1 }
+        visible = { always = yes }
+        available = { FROM = { has_country_flag = jinchuriki_sage_mode } }
+        equipment_bonus = { soft_attack = 0.12 breakthrough = 0.08 }
+    }
+    trait = {
+        token = link
+        name = bijuu_link
+        parent = { traits = { partnership } num_parents_needed = 1 }
+        position = { x = 3 y = 2 }
+        visible = { always = yes }
+        available = { FROM = { has_country_flag = jinchuriki_link_unlocked } }
+        equipment_bonus = { defense = 0.05 reliability = 0.03 }
+        production_bonus = { production_efficiency_gain_factor = 0.03 }
+    }
+
+    # DEFENSE branch
+    trait = {
+        token = shield
+        name = bijuu_shield
+        position = { x = 4 y = 0 }
+        visible = { always = yes }
+        available = { FROM = { has_country_flag = jinchuriki_shield } }
+        equipment_bonus = { defense = 0.12 reliability = 0.03 }
+    }
+    trait = {
+        token = regeneration
+        name = bijuu_regeneration
+        parent = { traits = { shield } num_parents_needed = 1 }
+        position = { x = 4 y = 1 }
+        visible = { always = yes }
+        available = { FROM = { has_country_flag = jinchuriki_regeneration } }
+        equipment_bonus = { defense = 0.08 reliability = 0.05 }
+        production_bonus = { production_efficiency_gain_factor = 0.03 }
+    }
+    trait = {
+        token = chakra_chain
+        name = bijuu_chakra_chain
+        parent = { traits = { shield } num_parents_needed = 1 }
+        position = { x = 5 y = 1 }
+        visible = { always = yes }
+        available = { FROM = { has_country_flag = jinchuriki_chakra_chain } }
+        equipment_bonus = { defense = 0.08 breakthrough = 0.04 }
+    }
+
+    # SPECIAL BRANCH
+    trait = {
+        token = tailed_beast_bomb
+        name = bijuu_tailed_beast_bomb
+        position = { x = 6 y = 0 }
+        visible = { always = yes }
+        available = { FROM = { has_country_flag = jinchuriki_bb_unlocked } }
+        equipment_bonus = { soft_attack = 0.15 breakthrough = 0.12 defense = -0.03 }
+    }
+    trait = {
+        token = naruto_special
+        name = bijuu_naruto_special
+        position = { x = 7 y = 0 }
+        visible = { always = yes }
+        available = { FROM = { tag = KNO has_country_flag = naruto_special_unlocked } }
+        equipment_bonus = { soft_attack = 0.08 defense = 0.08 }
+        organization_modifier = { military_industrial_organization_research_bonus = 0.02 }
+    }
+    trait = {
+        token = gaara_special
+        name = bijuu_gaara_special
+        position = { x = 7 y = 1 }
+        visible = { always = yes }
+        available = { FROM = { tag = SUN has_country_flag = gaara_special_unlocked } }
+        equipment_bonus = { defense = 0.12 }
+    }
+    trait = {
+        token = killer_b_special
+        name = bijuu_killer_b_special
+        position = { x = 7 y = 2 }
+        visible = { always = yes }
+        available = { FROM = { tag = NKU has_country_flag = killer_b_special_unlocked } }
+        equipment_bonus = { soft_attack = 0.10 breakthrough = 0.08 }
+    }
+    trait = {
+        token = yugito_special
+        name = bijuu_yugito_special
+        position = { x = 8 y = 1 }
+        visible = { always = yes }
+        available = { FROM = { tag = KIR has_country_flag = yugito_special_unlocked } }
+        equipment_bonus = { soft_attack = 0.08 defense = 0.05 }
+    }
+    trait = {
+        token = roshi_special
+        name = bijuu_roshi_special
+        position = { x = 8 y = 2 }
+        visible = { always = yes }
+        available = { FROM = { tag = IWA has_country_flag = roshi_special_unlocked } }
+        equipment_bonus = { soft_attack = 0.10 defense = 0.05 }
+    }
+}

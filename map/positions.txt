@@ -1,0 +1,1 @@
+# Province placement layer reserved; buildings, unit stacks and weather positions are defined in their dedicated files.

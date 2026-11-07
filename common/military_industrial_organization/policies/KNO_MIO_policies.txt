@@ -1,0 +1,22 @@
+# Policies are independent root-level definitions in HOI4 1.19.x.
+KNO_mio_policy_traditional = {
+    name = KNO_mio_policy_traditional
+    allowed = { has_mio_equipment_type = infantry }
+    available = { always = yes }
+    equipment_bonus = {
+        same_as_mio = { reliability = 0.02 build_cost_ic = -0.02 }
+    }
+    production_bonus = {
+        same_as_mio = { production_efficiency_gain_factor = 0.05 }
+    }
+}
+
+KNO_mio_policy_innovative = {
+    name = KNO_mio_policy_innovative
+    allowed = { has_mio_equipment_type = infantry }
+    available = { FROM = { has_country_flag = academy_reform_done } }
+    equipment_bonus = {
+        same_as_mio = { soft_attack = 0.04 }
+    }
+    organization_modifier = { military_industrial_organization_research_bonus = 0.05 }
+}

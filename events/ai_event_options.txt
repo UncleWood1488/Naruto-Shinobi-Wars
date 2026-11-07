@@ -1,0 +1,218 @@
+################################
+# AI-ВЕСА ДЛЯ ИВЕНТОВ
+################################
+
+# ---- Пример: Данзо и Акацуки ----
+country_event = {
+    id = danzo_akatsuki.1
+    title = danzo_akatsuki.1.t
+    desc = danzo_akatsuki.1.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = yes
+    major = yes
+
+    # ⚙️ AI предпочитает войну (безопаснее)
+    option = {
+        name = danzo_akatsuki.1.a
+        ai_chance = { base = 30 }
+        add_political_power = 50
+        AKA = { add_opinion = { target = KNO value = 25 } }
+        set_country_flag = danzo_akatsuki_talks
+    }
+
+    option = {
+        name = danzo_akatsuki.1.b
+        ai_chance = {
+            base = 60
+            modifier = {
+                add = 20
+                has_war = yes
+            }
+        }
+        add_war_support = 0.10
+        army_experience = 25
+        set_country_flag = danzo_akatsuki_talks
+    }
+
+    option = {
+        name = danzo_akatsuki.1.c
+        ai_chance = { base = 10 }
+        add_stability = 0.03
+    }
+}
+
+# ---- Пример: Совет Каге ----
+country_event = {
+    id = kage_council.1
+    title = kage_council.1.t
+    desc = kage_council.1.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = kage_council.1.a
+        ai_chance = {
+            base = 70
+            modifier = {
+                add = 20
+                has_country_flag = pain_invasion_survived
+            }
+        }
+        add_political_power = -100
+        add_stability = 0.05
+        set_country_flag = kage_council_held
+        set_country_flag = kage_council_united
+        every_country = {
+            limit = {
+                OR = { tag = KNO tag = SUN tag = KIR tag = NKU tag = IWA }
+            }
+            country_event = { id = kage_council.2 days = 2 }
+        }
+    }
+
+    option = {
+        name = kage_council.1.b
+        ai_chance = {
+            base = 20
+            modifier = {
+                add = 40
+                has_country_flag = sasuke_path
+            }
+        }
+        set_country_flag = kage_council_held
+        set_country_flag = sasuke_attacks_council
+        add_stability = -0.10
+        country_event = { id = kage_council.3 days = 1 }
+    }
+
+    option = {
+        name = kage_council.1.c
+        ai_chance = {
+            base = 10
+            modifier = {
+                add = 30
+                has_war = yes
+            }
+        }
+        add_political_power = 25
+        add_stability = -0.03
+    }
+}
+
+# ---- Пример: Итачи ----
+country_event = {
+    id = itachi.1
+    title = itachi.1.t
+    desc = itachi.1.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = no
+    fire_only_once = yes
+    major = yes
+
+    trigger = {
+        tag = KNO
+        has_country_flag = sasuke_path
+        date > 1937.6.1
+    }
+    mean_time_to_happen = { days = 90 }
+
+    option = {
+        name = itachi.1.a # Убить
+        ai_chance = {
+            base = 50
+            modifier = {
+                add = 20
+                has_country_flag = sasuke_avenged
+            }
+        }
+        add_war_support = 0.15
+        add_stability = -0.05
+        set_country_flag = itachi_killed
+        set_country_flag = sasuke_avenged
+        add_ideas = KNO_sasuke_revenge_idea
+        country_event = { id = itachi.2 days = 30 }
+    }
+
+    option = {
+        name = itachi.1.b # Пощадить
+        ai_chance = {
+            base = 40
+            modifier = {
+                add = 30
+                has_country_flag = triumvirate_started
+            }
+        }
+        add_stability = -0.10
+        add_political_power = 100
+        set_country_flag = itachi_spared
+        set_country_flag = itachi_truth_known
+        add_ideas = KNO_itachi_ally_idea
+        country_event = { id = itachi.3 days = 30 }
+    }
+
+    option = {
+        name = itachi.1.c # Итачи побеждает
+        ai_chance = {
+            base = 10
+            modifier = {
+                add = 30
+                NOT = { has_country_flag = sasuke_leader }
+            }
+        }
+        add_stability = -0.15
+        set_country_flag = sasuke_captured
+        country_event = { id = itachi.4 days = 30 }
+    }
+}
+
+# ---- Пример: Шиноби Альянс ----
+country_event = {
+    id = shinobi_alliance.1
+    title = shinobi_alliance.1.t
+    desc = shinobi_alliance.1.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = no
+    fire_only_once = yes
+    major = yes
+
+    trigger = {
+        OR = { tag = KNO tag = SUN tag = KIR tag = NKU tag = IWA }
+        AKA = { exists = yes has_country_flag = captured_kurama }
+    }
+    mean_time_to_happen = { days = 30 }
+
+    option = {
+        name = shinobi_alliance.1.a # Создать Альянс
+        ai_chance = {
+            base = 90
+            modifier = {
+                add = 10
+                has_country_flag = pain_invasion_survived
+            }
+        }
+        add_political_power = 100
+        add_stability = 0.10
+        add_war_support = 0.15
+        set_country_flag = shinobi_alliance_founder
+        if = {
+            limit = { NOT = { is_in_faction = yes } }
+            create_faction = "Альянс Шиноби"
+        }
+        every_country = {
+            limit = {
+                OR = { tag = KNO tag = SUN tag = KIR tag = NKU tag = IWA }
+                NOT = { tag = PREV }
+            }
+            country_event = { id = shinobi_alliance.2 days = 2 }
+        }
+    }
+
+    option = {
+        name = shinobi_alliance.1.b # В одиночку
+        ai_chance = { base = 10 }
+        add_war_support = 0.10
+        add_stability = -0.05
+        set_country_flag = shinobi_alliance_refused
+    }
+}

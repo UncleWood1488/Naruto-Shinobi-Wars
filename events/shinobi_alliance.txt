@@ -1,0 +1,178 @@
+################################
+# АЛЬЯНС ШИНОБИ — 4-Я МИРОВАЯ ВОЙНА
+################################
+
+# ============================================================
+# СОБЫТИЕ 4-Й МИРОВОЙ ВОЙНЫ — создание Альянса
+# ============================================================
+country_event = {
+    id = shinobi_alliance.1
+    title = shinobi_alliance.1.t
+    desc = shinobi_alliance.1.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = no
+    fire_only_once = yes
+    major = yes
+
+    trigger = {
+        OR = { tag = KNO tag = SUN tag = KIR tag = NKU tag = IWA }
+        AKA = {
+            exists = yes
+            has_country_flag = captured_kurama
+        }
+        date > 1939.1.1
+    }
+    mean_time_to_happen = { days = 30 }
+
+    option = {
+        name = shinobi_alliance.1.a # Создать Альянс Шиноби
+        add_political_power = 100
+        add_stability = 0.10
+        add_war_support = 0.15
+        set_country_flag = shinobi_alliance_founder
+
+        # Создаём фракцию «Альянс Шиноби»
+        if = {
+            limit = { NOT = { is_in_faction = yes } }
+            create_faction = "Альянс Шиноби"
+        }
+
+        # Все деревни получают приглашение
+        every_country = {
+            limit = {
+                OR = { tag = KNO tag = SUN tag = KIR tag = NKU tag = IWA }
+                NOT = { tag = PREV }
+            }
+            country_event = { id = shinobi_alliance.2 days = 2 }
+        }
+    }
+
+    option = {
+        name = shinobi_alliance.1.b # Сражаться в одиночку
+        add_war_support = 0.10
+        add_stability = -0.05
+        set_country_flag = shinobi_alliance_refused
+    }
+}
+
+# ============================================================
+# ПРИГЛАШЕНИЕ В АЛЬЯНС
+# ============================================================
+country_event = {
+    id = shinobi_alliance.2
+    title = shinobi_alliance.2.t
+    desc = shinobi_alliance.2.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = shinobi_alliance.2.a # Присоединиться к Альянсу
+        add_political_power = 50
+        add_stability = 0.05
+        add_war_support = 0.10
+        set_country_flag = in_shinobi_alliance
+
+        every_country = {
+            limit = {
+                has_country_flag = shinobi_alliance_founder
+            }
+            add_to_faction = PREV
+        }
+    }
+
+    option = {
+        name = shinobi_alliance.2.b # Отказаться
+        add_stability = -0.10
+        add_war_support = -0.05
+        set_country_flag = shinobi_alliance_refused
+    }
+}
+
+# ============================================================
+# ОБЪЯВЛЕНИЕ АКАЦУКИ МИРУ
+# ============================================================
+country_event = {
+    id = shinobi_alliance.3
+    title = shinobi_alliance.3.t
+    desc = shinobi_alliance.3.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = no
+    fire_only_once = yes
+    major = yes
+
+    trigger = {
+        tag = AKA
+        has_country_flag = captured_kurama
+        date > 1939.6.1
+    }
+    mean_time_to_happen = { days = 60 }
+
+    option = {
+        name = shinobi_alliance.3.a # Начать войну против мира
+        add_war_support = 0.20
+        set_country_flag = akatsuki_declares_world_war
+
+        # Акацуки объявляет войну всем, кто в Альянсе
+        every_country = {
+            limit = {
+                OR = { tag = KNO tag = SUN tag = KIR tag = NKU tag = IWA }
+                has_country_flag = in_shinobi_alliance
+            }
+            AKA = { create_wargoal = { type = annex_everything target = PREV } }
+        }
+    }
+}
+
+# ============================================================
+# БОНУСЫ АЛЬЯНСА
+# ============================================================
+country_event = {
+    id = shinobi_alliance.4
+    title = shinobi_alliance.4.t
+    desc = shinobi_alliance.4.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = no
+    fire_only_once = yes
+
+    trigger = {
+        has_country_flag = in_shinobi_alliance
+        has_country_flag = fourth_war_started
+        date > 1940.1.1
+    }
+    mean_time_to_happen = { days = 30 }
+
+    option = {
+        name = shinobi_alliance.4.a
+        add_ideas = shinobi_alliance_idea
+        add_stability = 0.10
+        add_war_support = 0.10
+    }
+}
+
+# ============================================================
+# РАЗВАЛ АЛЬЯНСА (если Коноха проиграла / Акацуки победили)
+# ============================================================
+country_event = {
+    id = shinobi_alliance.100
+    title = shinobi_alliance.100.t
+    desc = shinobi_alliance.100.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = no
+    fire_only_once = yes
+
+    trigger = {
+        has_country_flag = in_shinobi_alliance
+        AKA = { has_country_flag = juubi_summoned }
+        date > 1942.1.1
+    }
+    mean_time_to_happen = { days = 60 }
+
+    option = {
+        name = shinobi_alliance.100.a
+        add_stability = -0.20
+        add_war_support = -0.10
+        remove_ideas = shinobi_alliance_idea
+        add_ideas = alliance_broken_idea
+    }
+}

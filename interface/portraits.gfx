@@ -1,0 +1,52 @@
+spriteTypes = {
+
+    # ============================================================
+    # КОНОХА — заглушки (ванильные портреты)
+    # ============================================================
+    spriteType = { name = "GFX_portrait_hiruzen" texturefile = "gfx/leaders/generic/generic_asia_1.dds" }
+    spriteType = { name = "GFX_portrait_tsunade" texturefile = "gfx/leaders/generic/generic_asia_5.dds" }
+    spriteType = { name = "GFX_portrait_kakashi" texturefile = "gfx/leaders/generic/generic_asia_2.dds" }
+    spriteType = { name = "GFX_portrait_danzo" texturefile = "gfx/leaders/generic/generic_asia_3.dds" }
+    spriteType = { name = "GFX_portrait_sasuke" texturefile = "gfx/leaders/generic/generic_asia_6.dds" }
+    spriteType = { name = "GFX_portrait_itachi" texturefile = "gfx/leaders/generic/generic_asia_7.dds" }
+    spriteType = { name = "GFX_portrait_konohamaru" texturefile = "gfx/leaders/generic/generic_asia_8.dds" }
+    spriteType = { name = "GFX_portrait_naruto" texturefile = "gfx/leaders/generic/generic_asia_9.dds" }
+
+    # ============================================================
+    # ДРУГИЕ ДЕРЕВНИ — заглушки
+    # ============================================================
+    spriteType = { name = "GFX_portrait_gaara" texturefile = "gfx/leaders/generic/generic_asia_1.dds" }
+    spriteType = { name = "GFX_portrait_mei" texturefile = "gfx/leaders/generic/generic_asia_2.dds" }
+    spriteType = { name = "GFX_portrait_yagura" texturefile = "gfx/leaders/generic/generic_asia_3.dds" }
+    spriteType = { name = "GFX_portrait_raikage" texturefile = "gfx/leaders/generic/generic_africa_1.dds" }
+    spriteType = { name = "GFX_portrait_killer_b" texturefile = "gfx/leaders/generic/generic_africa_2.dds" }
+    spriteType = { name = "GFX_portrait_onoki" texturefile = "gfx/leaders/generic/generic_asia_4.dds" }
+    spriteType = { name = "GFX_portrait_orochimaru" texturefile = "gfx/leaders/generic/generic_asia_5.dds" }
+
+    spriteType = { name = "GFX_portrait_minor_council" texturefile = "gfx/leaders/generic/generic_asia_10.dds" }
+
+    # ============================================================
+    # АКАЦУКИ — заглушки
+    # ============================================================
+    spriteType = { name = "GFX_portrait_pain" texturefile = "gfx/leaders/generic/generic_asia_1.dds" }
+    spriteType = { name = "GFX_portrait_konan" texturefile = "gfx/leaders/generic/generic_asia_2.dds" }
+    spriteType = { name = "GFX_portrait_obito" texturefile = "gfx/leaders/generic/generic_asia_3.dds" }
+    spriteType = { name = "GFX_portrait_madara" texturefile = "gfx/leaders/generic/generic_asia_4.dds" }
+    spriteType = { name = "GFX_portrait_kisame" texturefile = "gfx/leaders/generic/generic_asia_5.dds" }
+    spriteType = { name = "GFX_portrait_deidara" texturefile = "gfx/leaders/generic/generic_asia_6.dds" }
+    spriteType = { name = "GFX_portrait_sasori" texturefile = "gfx/leaders/generic/generic_asia_7.dds" }
+    spriteType = { name = "GFX_portrait_hidan" texturefile = "gfx/leaders/generic/generic_asia_8.dds" }
+    spriteType = { name = "GFX_portrait_kakuzu" texturefile = "gfx/leaders/generic/generic_asia_9.dds" }
+    spriteType = { name = "GFX_portrait_zetsu" texturefile = "gfx/leaders/generic/generic_asia_10.dds" }
+
+    # Малые варианты портретов персонажей: используют те же ванильные текстуры-заглушки.
+    spriteType = { name = "GFX_portrait_pain_small" texturefile = "gfx/leaders/generic/generic_asia_1.dds" }
+    spriteType = { name = "GFX_portrait_itachi_small" texturefile = "gfx/leaders/generic/generic_asia_7.dds" }
+    spriteType = { name = "GFX_portrait_kisame_small" texturefile = "gfx/leaders/generic/generic_asia_5.dds" }
+    spriteType = { name = "GFX_portrait_madara_small" texturefile = "gfx/leaders/generic/generic_asia_4.dds" }
+    spriteType = { name = "GFX_portrait_kakashi_small" texturefile = "gfx/leaders/generic/generic_asia_2.dds" }
+    spriteType = { name = "GFX_portrait_danzo_small" texturefile = "gfx/leaders/generic/generic_asia_3.dds" }
+    spriteType = { name = "GFX_portrait_yamato_small" texturefile = "gfx/leaders/generic/generic_asia_8.dds" }
+    spriteType = { name = "GFX_portrait_sai_small" texturefile = "gfx/leaders/generic/generic_asia_9.dds" }
+
+}

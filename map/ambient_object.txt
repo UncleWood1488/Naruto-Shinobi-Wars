@@ -1,0 +1,1 @@
+# No custom ambient objects; base game ambient objects remain available.

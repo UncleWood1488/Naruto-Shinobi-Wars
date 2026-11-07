@@ -1,0 +1,83 @@
+# Military Industrial Organizations. Syntax updated for HOI4 1.19.x.
+
+KNO_ninja_academy_mio = {
+    name = KNO_ninja_academy_mio
+    allowed = { tag = KNO }
+    visible = { FROM = { has_country_flag = konoha_mio_unlocked } }
+    available = { FROM = { tag = KNO } }
+
+    equipment_type = { infantry artillery }
+    research_categories = { mio_cat_tech_all_infantry mio_cat_tech_all_artillery }
+    research_bonus = 0.05
+    task_capacity = 3
+
+    initial_trait = {
+        name = KNO_ninja_academy_mio_initial_trait
+        production_bonus = { production_efficiency_gain_factor = 0.05 }
+        organization_modifier = { military_industrial_organization_research_bonus = 0.03 }
+    }
+
+    trait = {
+        token = taijutsu_school
+        name = KNO_taijutsu_school
+        position = { x = 0 y = 0 }
+        visible = { always = yes }
+        available = { always = yes }
+        equipment_bonus = { soft_attack = 0.05 breakthrough = 0.03 }
+    }
+
+    trait = {
+        token = anbu_spec
+        name = KNO_anbu_spec
+        position = { x = 1 y = 0 }
+        visible = { always = yes }
+        available = { FROM = { has_country_flag = anbu_active } }
+        equipment_bonus = { soft_attack = 0.04 reliability = 0.03 }
+    }
+
+    trait = {
+        token = medical_spec
+        name = KNO_medical_spec
+        position = { x = 2 y = 0 }
+        visible = { always = yes }
+        available = { FROM = { has_country_flag = tsunade_path } }
+        equipment_bonus = { defense = 0.05 reliability = 0.05 }
+    }
+
+    trait = {
+        token = sealing_corps
+        name = KNO_sealing_corps
+        position = { x = 3 y = 0 }
+        visible = { always = yes }
+        available = { FROM = { has_country_flag = uzumaki_sealing_research } }
+        organization_modifier = { military_industrial_organization_research_bonus = 0.05 }
+    }
+}
+
+KNO_akatsuki_arms_mio = {
+    name = KNO_akatsuki_arms_mio
+    allowed = { OR = { tag = AKA tag = OTO } }
+    visible = { always = yes }
+    available = { OR = { FROM = { tag = AKA } FROM = { tag = OTO } } }
+
+    equipment_type = { infantry artillery }
+    research_categories = { mio_cat_tech_all_infantry mio_cat_tech_all_artillery }
+    research_bonus = 0.03
+    task_capacity = 2
+
+    initial_trait = {
+        name = KNO_akatsuki_arms_mio_initial_trait
+        production_bonus = { production_efficiency_gain_factor = 0.05 }
+        equipment_bonus = { soft_attack = 0.03 }
+    }
+
+    trait = {
+        token = s_rank_craft
+        name = AKA_s_rank_craft
+        position = { x = 0 y = 0 }
+        visible = { always = yes }
+        available = { always = yes }
+        equipment_bonus = { soft_attack = 0.05 hard_attack = 0.03 }
+        production_bonus = { production_efficiency_gain_factor = 0.05 }
+    }
+}

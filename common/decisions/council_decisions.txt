@@ -1,0 +1,177 @@
+kage_council_actions = {
+    icon = generic_national_unity
+    allowed = {
+        OR = { tag = KNO tag = SUN tag = KIR tag = NKU tag = IWA }
+    }
+    visible = {
+        has_country_flag = in_kage_council
+        NOT = { has_country_flag = kage_council_disbanded }
+    }
+    priority = 60
+}
+
+kage_council_actions = {
+
+    # ============================================================
+    # СОВМЕСТНОЕ ИССЛЕДОВАНИЕ
+    # ============================================================
+    council_joint_research = {
+        icon = generic_national_unity
+        allowed = { has_country_flag = in_kage_council }
+        visible = {
+            has_country_flag = in_kage_council
+            NOT = { has_ideas = kage_council_joint_research_idea }
+        }
+        available = {
+            has_political_power >= 100
+            NOT = { has_country_flag = council_research_cooldown }
+        }
+        complete_effect = {
+            add_ideas = kage_council_joint_research_idea
+            set_country_flag = council_research_cooldown
+            add_political_power = -50
+        }
+        remove_effect = { remove_ideas = kage_council_joint_research_idea }
+        days_remove = 365
+        cost = 100
+        fire_only_once = no
+        ai_will_do = { factor = 50 }
+    }
+
+    # ============================================================
+    # СОВМЕСТНЫЕ ВОЕННЫЕ УЧЕНИЯ
+    # ============================================================
+    council_joint_military = {
+        icon = generic_national_unity
+        allowed = { has_country_flag = in_kage_council }
+        visible = {
+            has_country_flag = in_kage_council
+            NOT = { has_ideas = kage_council_joint_military_idea }
+        }
+        available = {
+            has_political_power >= 75
+        }
+        complete_effect = {
+            add_ideas = kage_council_joint_military_idea
+            army_experience = 25
+            add_political_power = -25
+        }
+        remove_effect = { remove_ideas = kage_council_joint_military_idea }
+        days_remove = 180
+        cost = 75
+        ai_will_do = { factor = 50 }
+    }
+
+    # ============================================================
+    # СОВМЕСТНАЯ ЭКОНОМИКА
+    # ============================================================
+    council_joint_economy = {
+        icon = generic_national_unity
+        allowed = { has_country_flag = in_kage_council }
+        visible = {
+            has_country_flag = in_kage_council
+            NOT = { has_ideas = kage_council_joint_economy_idea }
+        }
+        available = {
+            has_political_power >= 100
+        }
+        complete_effect = {
+            add_ideas = kage_council_joint_economy_idea
+            add_political_power = -25
+        }
+        remove_effect = { remove_ideas = kage_council_joint_economy_idea }
+        days_remove = 365
+        cost = 100
+        ai_will_do = { factor = 50 }
+    }
+
+    # ============================================================
+    # ЭКСТРЕННОЕ ЗАСЕДАНИЕ (только в войне)
+    # ============================================================
+    council_emergency_session = {
+        icon = generic_national_unity
+        allowed = { has_country_flag = in_kage_council }
+        visible = {
+            has_country_flag = in_kage_council
+            has_war = yes
+        }
+        available = {
+            has_political_power >= 150
+            NOT = { has_ideas = kage_council_emergency_idea }
+        }
+        complete_effect = {
+            add_ideas = kage_council_emergency_idea
+            add_war_support = 0.10
+            add_manpower = 10000
+            add_political_power = -50
+        }
+        remove_effect = { remove_ideas = kage_council_emergency_idea }
+        days_remove = 180
+        cost = 150
+        ai_will_do = { factor = 100 }
+    }
+
+    # ============================================================
+    # РАСПУСТИТЬ СОВЕТ
+    # ============================================================
+    council_disband = {
+        icon = generic_national_unity
+        allowed = { has_country_flag = in_kage_council }
+        visible = {
+            has_country_flag = in_kage_council
+        }
+        available = {
+            has_political_power >= 200
+        }
+        complete_effect = {
+            set_country_flag = kage_council_disbanded
+            remove_ideas = kage_council_active_idea
+            remove_ideas = kage_council_strong_idea
+            remove_ideas = kage_council_weakened_idea
+            add_stability = -0.05
+            add_political_power = -100
+
+            # Все члены Совета выходят
+            every_country = {
+                limit = { has_country_flag = in_kage_council }
+                country_event = { id = kage_council_permanent.100 days = 1 }
+            }
+        }
+        cost = 200
+        fire_only_once = yes
+        ai_will_do = { factor = 5 }
+    }
+
+    # ============================================================
+    # УКРЕПИТЬ СОВЕТ (становится strong)
+    # ============================================================
+    council_strengthen = {
+        icon = generic_national_unity
+        allowed = { has_country_flag = in_kage_council }
+        visible = {
+            has_country_flag = in_kage_council
+            has_country_flag = kage_council_active
+            NOT = { has_country_flag = kage_council_strong }
+        }
+        available = {
+            has_political_power >= 300
+            NOT = { has_country_flag = kage_council_disbanded }
+        }
+        complete_effect = {
+            set_country_flag = kage_council_strong
+            add_political_power = -150
+
+            # Всем членам — сильная идея
+            every_country = {
+                limit = { has_country_flag = in_kage_council }
+                remove_ideas = kage_council_active_idea
+                remove_ideas = kage_council_weakened_idea
+                add_ideas = kage_council_strong_idea
+                set_country_flag = kage_council_strong
+            }
+        }
+        cost = 300
+        fire_only_once = yes
+        ai_will_do = { factor = 25 }
+    }
+}

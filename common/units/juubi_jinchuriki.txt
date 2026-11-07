@@ -1,0 +1,43 @@
+sub_units = {
+    juubi_jinchuriki = {
+        sprite = infantry
+        type = { infantry }
+        group = infantry
+        categories = {
+            category_all_infantry
+            category_special_forces
+        }
+        map_icon_category = infantry
+        need = { ninja_equipment = 1 }
+
+        active = no
+        priority = 9999
+        combat_width = 4
+
+        max_strength = 500
+        max_organisation = 80
+        default_morale = 0.80
+        manpower = 10
+        training_time = 99999
+        weight = 20
+        supply_consumption = 15
+        fuel_consumption = 5
+
+        soft_attack = 800
+        hard_attack = 600
+        air_attack = 500
+        defense = 600
+        breakthrough = 800
+        hardness = 0.70
+        armor_value = 80
+        ap_attack = 200
+
+        forest = { attack = 0.20 }
+        urban = { attack = 0.20 }
+        desert = { attack = 0.20 }
+        plains = { attack = 0.30 }
+        mountain = { attack = 0.10 }
+
+        special_forces = yes
+    }
+}

@@ -1,0 +1,58 @@
+ideas = {
+    country = {
+
+        # Дейдара
+        KNO_deidara_killed_idea = { picture = generic_national_unity_idea removal_cost = -1 modifier = { war_support_factor = 0.05 army_attack_factor = 0.03 } }
+        KNO_deidara_intel_idea = { picture = generic_national_unity_idea removal_cost = -1 modifier = { decryption_factor = 0.20 research_speed_factor = 0.05 } }
+        KNO_deidara_ally_idea = { picture = generic_national_unity_idea removal_cost = -1 modifier = { army_attack_factor = 0.08 special_forces_cap_flat = 1 } }
+
+        # Сасори
+        KNO_sasori_killed_idea = { picture = generic_national_unity_idea removal_cost = -1 modifier = { war_support_factor = 0.05 } }
+        KNO_sasori_puppets_idea = { picture = generic_national_unity_idea removal_cost = -1 modifier = { research_speed_factor = 0.10 special_forces_cap_flat = 1 } }
+        KNO_sasori_ally_idea = { picture = generic_national_unity_idea removal_cost = -1 modifier = { army_defence_factor = 0.10 special_forces_cap_flat = 1 } }
+
+        # Хидан
+        KNO_hidan_buried_idea = { picture = generic_national_unity_idea removal_cost = -1 modifier = { war_support_factor = 0.05 } }
+        KNO_hidan_research_idea = { picture = generic_national_unity_idea removal_cost = -1 modifier = { research_speed_factor = 0.10 army_defence_factor = 0.05 } }
+
+        # Какузу
+        KNO_kakuzu_killed_idea = { picture = generic_national_unity_idea removal_cost = -1 modifier = { war_support_factor = 0.05 } }
+        KNO_kakuzu_hearts_idea = { picture = generic_national_unity_idea removal_cost = -1 modifier = { conscription_factor = 0.10 army_defence_factor = 0.05 } }
+
+        # Кисаме
+        KNO_kisame_killed_idea = { picture = generic_national_unity_idea removal_cost = -1 modifier = { war_support_factor = 0.10 } }
+        KNO_samehada_idea = { picture = generic_national_unity_idea removal_cost = -1 modifier = { army_attack_factor = 0.10 special_forces_cap_flat = 1 } }
+        KNO_kisame_ally_idea = { picture = generic_national_unity_idea removal_cost = -1 modifier = { army_attack_factor = 0.15 special_forces_cap_flat = 1 } }
+
+        # Конан
+        KNO_konan_killed_idea = { picture = generic_national_unity_idea removal_cost = -1 modifier = { war_support_factor = 0.05 } }
+        KNO_konan_paper_idea = { picture = generic_national_unity_idea removal_cost = -1 modifier = { research_speed_factor = 0.10 army_defence_factor = 0.05 } }
+        KNO_konan_ally_idea = { picture = generic_national_unity_idea removal_cost = -1 modifier = { decryption_factor = 0.25 army_defence_factor = 0.05 } }
+
+        # Зецу
+        KNO_zetsu_killed_idea = { picture = generic_national_unity_idea removal_cost = -1 modifier = { war_support_factor = 0.05 } }
+        KNO_zetsu_research_idea = { picture = generic_national_unity_idea removal_cost = -1 modifier = { research_speed_factor = 0.15 } }
+        KNO_zetsu_double_idea = { picture = generic_national_unity_idea removal_cost = -1 modifier = { decryption_factor = 0.30 operative_slots = 1 } }
+
+        # Пейн
+        KNO_pain_killed_idea = { picture = generic_national_unity_idea removal_cost = -1 modifier = { war_support_factor = 0.15 } }
+        KNO_nagato_ally_idea = { picture = generic_national_unity_idea removal_cost = -1 modifier = { army_attack_factor = 0.15 army_defence_factor = 0.15 special_forces_cap_flat = 2 stability_factor = 0.10 } }
+        KNO_rinnegan_captured_idea = { picture = generic_national_unity_idea removal_cost = -1 modifier = { research_speed_factor = 0.20 army_attack_factor = 0.10 army_defence_factor = 0.10 } }
+
+        # Обито
+        KNO_obito_killed_idea = { picture = generic_national_unity_idea removal_cost = -1 modifier = { war_support_factor = 0.20 } }
+        KNO_obito_revealed_idea = { picture = generic_national_unity_idea removal_cost = -1 modifier = { stability_factor = 0.15 political_power_gain = 0.20 war_support_factor = 0.10 } }
+        KNO_obito_ally_idea = { picture = generic_national_unity_idea removal_cost = -1 modifier = { army_attack_factor = 0.20 army_defence_factor = 0.15 special_forces_cap_flat = 2 } }
+
+        # Финал
+        KNO_anbu_legend_idea = { picture = generic_national_unity_idea removal_cost = -1 modifier = { stability_factor = 0.20 army_attack_factor = 0.15 army_defence_factor = 0.15 political_power_gain = 0.15 operative_slots = 2 } }
+
+        # Акацуки — потеря членов
+        AKA_deidara_idea = { picture = generic_national_unity_idea removal_cost = -1 modifier = { army_attack_factor = 0.05 } }
+        AKA_sasori_idea = { picture = generic_national_unity_idea removal_cost = -1 modifier = { army_defence_factor = 0.05 } }
+        AKA_hidan_idea = { picture = generic_national_unity_idea removal_cost = -1 modifier = { army_attack_factor = 0.03 } }
+        AKA_kakuzu_idea = { picture = generic_national_unity_idea removal_cost = -1 modifier = { army_defence_factor = 0.03 } }
+        AKA_kisame_idea = { picture = generic_national_unity_idea removal_cost = -1 modifier = { army_attack_factor = 0.05 } }
+        AKA_konan_idea = { picture = generic_national_unity_idea removal_cost = -1 modifier = { army_defence_factor = 0.03 } }
+    }
+}

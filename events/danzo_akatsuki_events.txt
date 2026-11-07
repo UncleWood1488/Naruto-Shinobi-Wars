@@ -1,0 +1,147 @@
+################################
+# ДАНЗО И АКАЦУКИ
+################################
+
+country_event = {
+    id = danzo_akatsuki.1
+    title = danzo_akatsuki.1.t
+    desc = danzo_akatsuki.1.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = danzo_akatsuki.1.a # Предложить Акацуки союз
+        add_political_power = 50
+        AKA = { add_opinion = { target = KNO value = 25 } }
+        set_country_flag = danzo_akatsuki_talks
+    }
+
+    option = {
+        name = danzo_akatsuki.1.b # Готовиться к войне
+        add_war_support = 0.10
+        army_experience = 25
+        set_country_flag = danzo_akatsuki_talks
+    }
+
+    option = {
+        name = danzo_akatsuki.1.c # Игнорировать Акацуки
+        add_stability = 0.03
+    }
+}
+
+# ---- Акацуки отвечает на предложение ----
+country_event = {
+    id = danzo_akatsuki.2
+    title = danzo_akatsuki.2.t
+    desc = danzo_akatsuki.2.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = no
+    fire_only_once = yes
+    major = yes
+
+    trigger = {
+        tag = AKA
+        KNO = { has_country_flag = danzo_akatsuki_talks }
+        has_country_flag = akatsuki_active
+        date > 1938.1.1
+    }
+    mean_time_to_happen = { days = 60 }
+
+    option = {
+        name = danzo_akatsuki.2.a # Принять союз Данзо
+        add_political_power = 100
+        add_ideas = AKA_konoha_pact_idea
+        KNO = {
+            add_opinion = { target = AKA value = 75 }
+            set_country_flag = akatsuki_accepts_danzo
+            country_event = { id = danzo_akatsuki.3 days = 1 }
+        }
+    }
+
+    option = {
+        name = danzo_akatsuki.2.b # Отказать — Данзо лишь пешка
+        add_war_support = 0.05
+        KNO = { add_opinion = { target = AKA value = -50 } }
+    }
+}
+
+# ---- Данзо получает ответ ----
+country_event = {
+    id = danzo_akatsuki.3
+    title = danzo_akatsuki.3.t
+    desc = danzo_akatsuki.3.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = yes
+
+    option = {
+        name = danzo_akatsuki.3.a
+        set_country_flag = danzo_akatsuki_alliance
+        add_ideas = KNO_danzo_akatsuki_pact_idea
+        add_stability = 0.05
+    }
+}
+
+# ---- Охота на Акацуки — периодический ивент ----
+country_event = {
+    id = danzo_akatsuki.10
+    title = danzo_akatsuki.10.t
+    desc = danzo_akatsuki.10.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = no
+    fire_only_once = no
+    major = yes
+
+    trigger = {
+        tag = KNO
+        has_country_flag = akatsuki_hunt_active
+        AKA = { exists = yes }
+        date > 1939.1.1
+    }
+    mean_time_to_happen = { days = 90 }
+
+    option = {
+        name = danzo_akatsuki.10.a # Найти члена Акацуки
+        add_political_power = 50
+        army_experience = 15
+        add_ideas = KNO_anbu_found_idea
+        set_country_flag = akatsuki_member_found
+    }
+
+    option = {
+        name = danzo_akatsuki.10.b # Ложный след
+        add_stability = -0.03
+        add_political_power = 10
+    }
+
+    option = {
+        name = danzo_akatsuki.10.c # Провал операции
+        add_stability = -0.05
+        add_war_support = 0.05
+    }
+}
+
+# ---- Финальный ивент разгрома Акацуки ----
+country_event = {
+    id = danzo_akatsuki.20
+    title = danzo_akatsuki.20.t
+    desc = danzo_akatsuki.20.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = no
+    fire_only_once = yes
+    major = yes
+
+    trigger = {
+        tag = KNO
+        has_country_flag = danzo_defeated_akatsuki
+        date > 1945.1.1
+    }
+    mean_time_to_happen = { days = 30 }
+
+    option = {
+        name = danzo_akatsuki.20.a
+        add_stability = 0.15
+        add_political_power = 200
+        add_ideas = KNO_danzo_hero_idea
+    }
+}

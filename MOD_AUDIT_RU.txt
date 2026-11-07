@@ -1,0 +1,48 @@
+ОТЧЁТ О ПРОВЕРКЕ ЗАВИСИМОСТЕЙ И ВТОРОМ РЕМОНТЕ — Naruto Shinobi Wars
+Дата: 2026-11-03
+Целевая версия из descriptor.mod: HOI4 1.19.*
+
+ИЗМЕНЕНИЯ В ЭТОМ ПРОХОДЕ
+1. Добавлены отсутствовавшие определения идей:
+   - AKA_bijuu_extracted_idea
+   - KNO_edo_tensei_idea
+   - KNO_bijuu_seal_idea
+   - KNO_uzumaki_sealing_mastery_idea
+   - KNO_rinnegan_idea
+   - jonin_training_idea
+   Для них добавлены английские и русские названия и описания.
+2. Удалена ссылка unlock_decision = KNO_perform_edo_tensei из KNO_special_projects.txt: решения с таким ID в common/decisions не было, а реализация решения отсутствовала. Награда проекта и связанные идеи сохранены.
+3. Добавлены отсутствовавшие GFX-спрайты малых портретов (Pain, Itachi, Kisame, Madara, Kakashi, Danzo, Yamato, Sai). Они используют те же ванильные текстуры-заглушки, что и соответствующие большие портреты.
+4. Добавлены недостающие MIN-флаги для размеров medium и small, а также идеологических вариантов. Использован существующий MIN.tga как графическая заглушка.
+5. Деревья национальных фокусов не изменялись.
+
+РЕЗУЛЬТАТЫ ПОВТОРНОЙ ПРОВЕРКИ
+- ZIP исходного архива успешно прочитан; до ремонта в нём было 381 файл внутри папки мода и 33 пустых файла.
+- Проверка баланса фигурных скобок для текстовых .txt: нарушений не найдено.
+- Вызовы add_ideas/remove_ideas/has_idea/has_any_idea: после добавления определений отсутствующих ID не осталось.
+- Ссылки country_event/state_event/news_event: 95 используемых ID сопоставлены с объявлениями; отсутствующих ID не найдено.
+- Ссылок unlock_decision на отсутствующие решения после удаления KNO_perform_edo_tensei не осталось.
+- Проверка MIO: 21 токен traits; все ссылки parent.traits разрешаются. Все ключи name из MIO присутствуют в английской и русской локализации.
+- GFX: отсутствовавшие пользовательские small portrait sprites добавлены; повторяющихся имён spriteType не найдено. Все нестандартные texturefile пути либо присутствуют в моде, либо относятся к ванильным текстурам игры.
+- Страны: все 8 тегов имеют файл определения страны и файл history/countries.
+- Флаги: все 8 тегов теперь имеют базовые standard/medium/small файлы; для MIN добавлены также варианты идеологий.
+- Повторяющихся ключей локализации внутри YAML-файлов не обнаружено.
+
+ОСТАВШИЕСЯ ПРОБЛЕМЫ / НЕПОЛНОТА
+1. 33 файла остаются пустыми. Это не автоматически означает ошибку загрузки: некоторые являются заглушками. Их нельзя заполнять вымышленным контентом без понимания задуманной механики.
+2. В обоих языках отсутствуют локализационные ключи для части идей: статическая проверка выявила 85 ID в каждом языке. Это влияет на отображение текста, но само по себе не доказывает причину вылета.
+3. Для цепочек событий ANBU Hunt и Itachi Double Agent отсутствует 105 локализационных ключей в каждом языке (заголовки, описания и варианты ответов). Сами event ID объявлены, ссылки на них разрешаются.
+4. В файлах history/countries нет назначений OOB через поле `oob`. Это может означать, что стартовые армии не назначаются автоматически; это не подтверждено как причина падения.
+5. Внутренние `positions.txt` и `cities.txt` содержат только комментарии. Остальные размещения вынесены в отдельные файлы; требуется игровая проверка карты.
+6. Проверка MIO и скриптовых эффектов была статической. Она не заменяет парсер HOI4 и запуск игры.
+
+НЕ ИСПРАВЛЯЛОСЬ
+- Национальные деревья фокусов.
+- Содержимое пустых событий, решений, технологий, персонажей и других заглушек.
+- Карта и даты сезонов.
+- Внешние моды и файлы самой игры.
+
+ПУСТЫЕ ФАЙЛЫ
+- events/akatsuki_events.txt\n- events/konoha_news.txt\n- events/akatsuki_start.txt\n- events/akatsuki_secret_events.txt\n- interface/unit_icons.gfx\n- common/decisions/akatsuki_decisions.txt\n- common/units/samurai.txt\n- common/scripted_effects/council_effects.txt\n- common/technologies/bijuu_tech.txt\n- common/technologies/forbidden_jutsu.txt\n- common/national_focus/kiri.txt\n- common/national_focus/iwa.txt\n- common/national_focus/akatsuki.txt\n- common/national_focus/suna.txt\n- common/national_focus/akatsuki_secret.txt\n- common/national_focus/oto.txt\n- common/national_focus/kumo.txt\n- common/characters/IWA_characters.txt\n- common/characters/SUN_characters.txt\n- common/characters/KIR_characters.txt\n- common/characters/NKU_characters.txt\n- common/characters/OTO_characters.txt\n- common/decisions/categories/agency_cat.txt\n- common/decisions/categories/kage_council_cat.txt\n- common/decisions/categories/akatsuki_cat.txt\n- localisation/english/jinchuriki_l_english.yml\n- localisation/english/akatsuki_l_english.yml\n- localisation/english/akatsuki_secret_l_english.yml\n- localisation/english/akatsuki_focus_l_english.yml\n- localisation/russian/akatsuki_focus_l_russian.yml\n- localisation/russian/akatsuki_secret_l_russian.yml\n- localisation/russian/jinchuriki_l_russian.yml\n- localisation/russian/akatsuki_l_russian.yml\n
+ВАЖНО
+Игра HOI4 в этой среде не запускалась. Этот архив прошёл статические проверки и проверку целостности ZIP, но устранение причины EXCEPTION_INT_DIVIDE_BY_ZERO пока не подтверждено. Для следующего этапа нужен свежий error.log и meta.yml после запуска только Naruto Shinobi Wars.

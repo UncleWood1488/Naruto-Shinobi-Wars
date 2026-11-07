@@ -1,0 +1,3 @@
+# TEMPORARILY DISABLED: use the original Hearts of Iron IV research tree for diagnosis.
+# Reason: Naruto-specific technology definitions are disabled temporarily.
+# Original file is preserved at _disabled_research_backup/common/technologies/forbidden_jutsu.txt.disabled

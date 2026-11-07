@@ -1,0 +1,205 @@
+################################
+# НАСЛЕДОВАНИЕ В КОНОХЕ
+################################
+
+# ---- Смерть Третьего Хокаге ----
+country_event = {
+    id = konoha.4
+    title = konoha.4.t
+    desc = konoha.4.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = konoha.4.a
+        add_stability = -0.05
+        add_war_support = 0.10
+        # Хирузен погиб — выбираем преемника
+    }
+}
+
+# ---- Возвращение Цунаде ----
+country_event = {
+    id = konoha.5
+    title = konoha.5.t
+    desc = konoha.5.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = yes
+
+    option = {
+        name = konoha.5.a
+        add_political_power = 50
+        add_stability = 0.05
+    }
+}
+
+# ---- Цунаде — Пятая Хокаге ----
+country_event = {
+    id = konoha.6
+    title = konoha.6.t
+    desc = konoha.6.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = konoha.6.a
+        set_country_leader = {
+            name = "Цунаде Сенджу"
+            desc = "Пятая Хокаге"
+            picture = "GFX_portrait_generic_asia_5"
+            ideology = democratic
+        }
+        add_political_power = 100
+        add_stability = 0.10
+    }
+}
+
+# ---- Вторжение Пейна ----
+country_event = {
+    id = konoha.7
+    title = konoha.7.t
+    desc = konoha.7.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = konoha.7.a
+        add_stability = -0.15
+        add_war_support = 0.20
+        set_country_flag = konoha_destroyed
+    }
+
+    option = {
+        name = konoha.7.b
+        add_stability = -0.10
+        add_war_support = 0.30
+        add_ideas = KNO_pain_revenge_idea
+    }
+}
+
+# ---- Начало Четвёртой мировой войны шиноби ----
+country_event = {
+    id = konoha.8
+    title = konoha.8.t
+    desc = konoha.8.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = konoha.8.a
+        add_war_support = 0.15
+        set_country_flag = fourth_war_started
+    }
+}
+
+# ---- Какаши — Шестой Хокаге (после войны) ----
+country_event = {
+    id = konoha.9
+    title = konoha.9.t
+    desc = konoha.9.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = konoha.9.a
+        set_country_leader = {
+            name = "Какаши Хатаке"
+            desc = "Шестой Хокаге"
+            picture = "GFX_portrait_generic_asia_2"
+            ideology = democratic
+        }
+        add_political_power = 100
+        add_stability = 0.15
+    }
+}
+
+# ---- Какаши — Шестой Хокаге (ранний путь) ----
+country_event = {
+    id = konoha.10
+    title = konoha.10.t
+    desc = konoha.10.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = yes
+
+    option = {
+        name = konoha.10.a
+        set_country_leader = {
+            name = "Какаши Хатаке"
+            desc = "Шестой Хокаге"
+            picture = "GFX_portrait_generic_asia_2"
+            ideology = democratic
+        }
+        add_political_power = 75
+    }
+}
+
+# ---- Данзо — Шестой Хокаге ----
+country_event = {
+    id = konoha.11
+    title = konoha.11.t
+    desc = konoha.11.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = yes
+
+    option = {
+        name = konoha.11.a
+        set_country_leader = {
+            name = "Данзо Симура"
+            desc = "Шестой Хокаге"
+            picture = "GFX_portrait_generic_asia_3"
+            ideology = fascism
+        }
+        add_war_support = 0.15
+        add_stability = -0.10
+    }
+}
+
+# ---- Саске возвращается ----
+country_event = {
+    id = konoha.12
+    title = konoha.12.t
+    desc = konoha.12.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = yes
+    major = yes
+
+    option = {
+        name = konoha.12.a
+        set_country_leader = {
+            name = "Саске Учиха"
+            desc = "Тень Хокаге"
+            picture = "GFX_portrait_generic_asia_6"
+            ideology = fascism
+        }
+        add_political_power = 100
+        add_war_support = 0.10
+    }
+
+    option = {
+        name = konoha.12.b
+        # Саске — союзник, но не лидер
+        add_ideas = KNO_sasuke_ally_idea
+        army_experience = 50
+    }
+}
+
+# ---- Конохамару ----
+country_event = {
+    id = konoha.13
+    title = konoha.13.t
+    desc = konoha.13.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = yes
+
+    option = {
+        name = konoha.13.a
+        add_political_power = 50
+        add_stability = 0.05
+        add_research_slot = 1
+    }
+}

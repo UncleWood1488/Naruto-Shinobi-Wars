@@ -1,0 +1,13 @@
+# Событие вызывается фокусом KNO_rebuild_village.
+country_event = {
+    id = konoha.1
+    title = konoha.1.t
+    desc = konoha.1.d
+    is_triggered_only = yes
+
+    option = {
+        name = konoha.1.a
+        add_political_power = 25
+        add_stability = 0.05
+    }
+}

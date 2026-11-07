@@ -1,0 +1,5 @@
+spriteTypes = {
+    # Safe vanilla texture fallback for raid target markers.
+    spriteType = { name = "GFX_nsw_raid_target_industry" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_nsw_raid_target_naval_base" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+}

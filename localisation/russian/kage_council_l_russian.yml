@@ -1,0 +1,63 @@
+﻿l_russian:
+ # Решения
+ kage_council_category:0 "Совет Каге"
+ kage_council_category_desc:0 "Дипломатические действия, связанные с Советом Пяти Каге."
+
+ kage_call_council:0 "Созвать Совет Пяти Каге"
+ kage_call_council_desc:0 "Соберём всех Каге для обсуждения будущего мира шиноби."
+
+ # Совет
+ kage_council.1.t:0 "Совет Пяти Каге"
+ kage_council.1.d:0 "Все Каге собрались вместе. Настало время принять решение о будущем."
+ kage_council.1.a:0 "Объединить всех Каге"
+ kage_council.1.b:0 "Саске атакует Совет"
+ kage_council.1.c:0 "Отложить Совет"
+
+ kage_council.2.t:0 "Приглашение на Совет"
+ kage_council.2.d:0 "Нас приглашают на Совет Пяти Каге."
+ kage_council.2.a:0 "Присоединиться к Совету"
+ kage_council.2.b:0 "Отказаться"
+
+ kage_council.3.t:0 "Резня на Совете"
+ kage_council.3.d:0 "Саске Учиха ворвался на Совет Каге. Кровь начнётся."
+ kage_council.3.a:0 "Убить всех Каге"
+ kage_council.3.b:0 "Убить только Данзо"
+
+ kage_council.3.target.t:0 "Каге убит"
+ kage_council.3.target.d:0 "Саске Учиха убил нашего Каге. Деревня в хаосе."
+ kage_council.3.target.a:0 "Мы отомстим"
+
+ kage_council.3.danzo_dies.t:0 "Смерть Данзо"
+ kage_council.3.danzo_dies.d:0 "Саске Учиха убил Данзо Симуру. Коноха встречает нового Хокаге."
+ kage_council.3.danzo_dies.a:0 "Да здравствует Хокаге"
+
+ # Альянс Шиноби
+ shinobi_alliance.1.t:0 "Альянс Шиноби"
+ shinobi_alliance.1.d:0 "Акацуки захватили последнего дзинчурики. Мир должен объединиться."
+ shinobi_alliance.1.a:0 "Создать Альянс Шиноби"
+ shinobi_alliance.1.b:0 "Сражаться в одиночку"
+
+ shinobi_alliance.2.t:0 "Приглашение в Альянс Шиноби"
+ shinobi_alliance.2.d:0 "Нас приглашают присоединиться к Альянсу Шиноби."
+ shinobi_alliance.2.a:0 "Присоединиться"
+ shinobi_alliance.2.b:0 "Отказаться"
+
+ shinobi_alliance.3.t:0 "Акацуки объявляют мировую войну"
+ shinobi_alliance.3.d:0 "Акацуки перешли в наступление против всего мира шиноби."
+ shinobi_alliance.3.a:0 "Начать войну"
+
+ shinobi_alliance.4.t:0 "Сила Альянса"
+ shinobi_alliance.4.d:0 "Объединённые силы синоби дают нам преимущество."
+ shinobi_alliance.4.a:0 "Вместе мы сильнее"
+
+ shinobi_alliance.100.t:0 "Альянс рушится"
+ shinobi_alliance.100.d:0 "Джуби пробуждён. Альянс Шиноби рассыпается под натиском Акацуки."
+ shinobi_alliance.100.a:0 "Мы проигрываем"
+
+ # Идеи
+ shinobi_alliance_idea:0 "Альянс Шиноби"
+ shinobi_alliance_idea_desc:0 "Объединённые силы пяти деревень."
+ alliance_broken_idea:0 "Разбитый Альянс"
+ alliance_broken_idea_desc:0 "Альянс рухнул. Мы остались одни."
+ village_chaos_idea:0 "Хаос в деревне"
+ village_chaos_idea_desc:0 "Убийство Каге погрузило деревню в хаос."

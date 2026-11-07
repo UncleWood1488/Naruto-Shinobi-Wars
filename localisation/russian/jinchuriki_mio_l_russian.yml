@@ -1,0 +1,73 @@
+﻿l_russian:
+ # MIO
+ jinchuriki_mio:0 "Совет хвостатых"
+ jinchuriki_mio_desc:0 "Организация, управляющая снаряжением и развитием дзинчурики."
+
+ # Трейты
+ bijuu_traditional_bond:0 "Традиционная связь"
+ bijuu_traditional_bond_desc:0 "Древний метод взаимодействия с хвостатым."
+ bijuu_raw_power:0 "Сырая сила"
+ bijuu_raw_power_desc:0 "Использовать неконтролируемую мощь зверя."
+ bijuu_bombardment:0 "Бомбардировка"
+ bijuu_bombardment_desc:0 "Атаки на расстоянии с использованием чакры."
+ bijuu_transformation:0 "Трансформация"
+ bijuu_transformation_desc:0 "Полное превращение в зверя."
+ bijuu_partnership:0 "Партнёрство"
+ bijuu_partnership_desc:0 "Синхронизация с хвостатым."
+ bijuu_perfect_form:0 "Совершенная форма"
+ bijuu_perfect_form_desc:0 "Полный контроль над зверем."
+ bijuu_sage_mode:0 "Режим мудреца"
+ bijuu_sage_mode_desc:0 "Использование сенjutsu вместе с чакрой зверя."
+ bijuu_shield:0 "Щит зверя"
+ bijuu_shield_desc:0 "Защита через чакру хвостатого."
+ bijuu_regeneration:0 "Регенерация"
+ bijuu_regeneration_desc:0 "Быстрое восстановление ран."
+ bijuu_tailed_beast_bomb:0 "Хвостатая бомба"
+ bijuu_tailed_beast_bomb_desc:0 "Абсолютное оружие массового поражения."
+ bijuu_chakra_chain:0 "Чакра-цепи"
+ bijuu_chakra_chain_desc:0 "Цепи из чакры для сковывания врагов."
+ bijuu_link:0 "Связь разумов"
+ bijuu_link_desc:0 "Телепатическая связь между дзинчурики."
+
+ # Конкретные персонажи
+ bijuu_naruto_special:0 "Наруто и Курама"
+ bijuu_naruto_special_desc:0 "Истинное партнёрство."
+ bijuu_gaara_special:0 "Гаара и Шукаку"
+ bijuu_gaara_special_desc:0 "Контроль над песком."
+ bijuu_killer_b_special:0 "Киллер Би и Гьюки"
+ bijuu_killer_b_special_desc:0 "Совершенный дзинчурики."
+ bijuu_yugito_special:0 "Югито и Мататаби"
+ bijuu_yugito_special_desc:0 "Сила двухвостой."
+ bijuu_roshi_special:0 "Роши и Сон Гоку"
+ bijuu_roshi_special_desc:0 "Ярость лавы."
+
+ # Политики
+ jinchuriki_policy_traditional:0 "Традиционный подход"
+ jinchuriki_policy_aggressive:0 "Агрессивная тактика"
+ jinchuriki_policy_balanced:0 "Сбалансированный подход"
+
+ # Ивенты
+ jinchuriki_mio.1.t:0 "Совет хвостатых создан"
+ jinchuriki_mio.1.d:0 "Мы создали организацию для управления силой хвостатых."
+ jinchuriki_mio.1.a:0 "Разблокировать MIO"
+
+ jinchuriki_mio.2.t:0 "Выбор пути"
+ jinchuriki_mio.2.d:0 "Как мы будем развивать наших дзинчурики?"
+ jinchuriki_mio.2.a:0 "Путь силы"
+ jinchuriki_mio.2.b:0 "Путь контроля"
+ jinchuriki_mio.2.c:0 "Путь защиты"
+
+ jinchuriki_mio.10.t:0 "Наруто и Курама"
+ jinchuriki_mio.10.d:0 "Наруто подружился с Курамой. Он обрёл совершенную форму."
+ jinchuriki_mio.10.a:0 "Партнёрство достигнуто"
+
+ jinchuriki_mio.20.t:0 "Мадара — совершенный дзинчурики"
+ jinchuriki_mio.20.d:0 "Мадара обрёл полную власть над Джуби."
+ jinchuriki_mio.20.a:0 "Сила бога"
+
+ # Идеи
+ jinchuriki_path_power_idea:0 "Путь силы"
+ jinchuriki_path_control_idea:0 "Путь контроля"
+ jinchuriki_path_defense_idea:0 "Путь защиты"
+ KNO_naruto_kurama_bond_idea:0 "Связь Наруто и Курамы"
+ AKA_madara_perfect_bijuu_idea:0 "Совершенный дзинчурики"

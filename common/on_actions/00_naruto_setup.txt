@@ -1,0 +1,83 @@
+﻿on_actions = {
+
+    on_startup = {
+        effect = {
+            # ============================================================
+            # КОНОХА
+            # ============================================================
+            KNO = {
+                add_ideas = KNO_jinchuriki_present
+                set_country_flag = konoha_mio_unlocked
+                set_country_flag = anbu_active
+                set_country_flag = uzumaki_sealing_research
+                set_country_flag = uchiha_research
+                set_country_flag = forbidden_jutsu_research
+
+                # Открываем MIO
+                add_military_industrial_organization = KNO_ninja_academy_mio
+
+                # Открываем решения
+                unlock_decision_tier = {
+                    decision = kage_call_council
+                    tier = 1
+                }
+
+                # Персонажи доступны с начала
+                set_country_flag = itachi_advisor_available
+            }
+
+            # ============================================================
+            # СУНА
+            # ============================================================
+            SUN = {
+                add_ideas = SUN_jinchuriki_present
+                set_country_flag = sun_puppet_agency_unlocked
+                set_country_flag = medical_reform
+            }
+
+            # ============================================================
+            # КИРИ
+            # ============================================================
+            KIR = {
+                add_ideas = KIR_jinchuriki_present
+                set_country_flag = kir_hunter_agency_unlocked
+            }
+
+            # ============================================================
+            # КУМО
+            # ============================================================
+            NKU = {
+                add_ideas = NKU_jinchuriki_present
+                set_country_flag = kum_anbu_unlocked
+            }
+
+            # ============================================================
+            # ИВА
+            # ============================================================
+            IWA = {
+                add_ideas = IWA_jinchuriki_present
+                set_country_flag = iwa_explosion_unlocked
+            }
+
+            # ============================================================
+            # ОТО
+            # ============================================================
+            OTO = {
+                set_country_flag = oto_lab_unlocked
+                set_country_flag = forbidden_jutsu_research
+
+                add_military_industrial_organization = KNO_akatsuki_arms_mio
+            }
+
+            # ============================================================
+            # АКАЦУКИ
+            # ============================================================
+            AKA = {
+                set_country_flag = akatsuki_active
+                set_country_flag = aka_zetsu_unlocked
+
+                add_military_industrial_organization = KNO_akatsuki_arms_mio
+            }
+        }
+    }
+}

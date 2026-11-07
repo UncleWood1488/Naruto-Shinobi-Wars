@@ -1,0 +1,27 @@
+# Policies are independent root-level definitions in HOI4 1.19.x.
+jinchuriki_policy_traditional = {
+    name = jinchuriki_policy_traditional
+    allowed = { has_mio_equipment_type = infantry }
+    available = { always = yes }
+    equipment_bonus = {
+        same_as_mio = { defense = 0.04 reliability = 0.02 }
+    }
+}
+
+jinchuriki_policy_aggressive = {
+    name = jinchuriki_policy_aggressive
+    allowed = { has_mio_equipment_type = infantry }
+    available = { FROM = { has_country_flag = jinchuriki_aggressive } }
+    equipment_bonus = {
+        same_as_mio = { soft_attack = 0.08 defense = -0.03 }
+    }
+}
+
+jinchuriki_policy_balanced = {
+    name = jinchuriki_policy_balanced
+    allowed = { has_mio_equipment_type = infantry }
+    available = { always = yes }
+    equipment_bonus = {
+        same_as_mio = { soft_attack = 0.03 defense = 0.03 }
+    }
+}

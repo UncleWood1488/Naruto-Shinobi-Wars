@@ -1,0 +1,12 @@
+ИСПРАВЛЕНИЕ ОШИБОК ПАРСЕРА РЕЙДОВ
+
+Исправлены сообщения из error.log:
+- Missing property 'target_icon' для двух воздушных рейдов;
+- Missing or invalid starting point и Missing property 'target_icon' для наземной диверсии;
+- Missing property 'target_icon' для морской диверсии;
+- Missing property 'target_icon' для парашютной диверсии.
+
+В каждый тип рейда добавлен явный target_icon. Для этих GFX-ключей создан файл interface/nsw_raid_target_icons.gfx с существующей ванильной текстурой как fallback.
+Для наземной диверсии добавлен starting_point от промышленного комплекса — этот тип здания присутствует на карте Naruto Shinobi Wars.
+
+Это устраняет конкретно перечисленные пропуски свойств в скриптах. Запуск Hearts of Iron IV и внутриигровую работоспособность рейдов в этой среде проверить нельзя; после запуска проверьте новый error.log.

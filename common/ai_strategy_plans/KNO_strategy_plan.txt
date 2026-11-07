@@ -1,0 +1,93 @@
+KNO_historical_plan = {
+    name = "KNO_historical_plan"
+    desc = "Konoha follows the canon storyline"
+
+    # Приоритеты производства
+    strategy = {
+        type = role_ratio
+        id = infantry
+        value = 55
+    }
+
+    strategy = {
+        type = role_ratio
+        id = elite
+        value = 25
+    }
+
+    strategy = {
+        type = role_ratio
+        id = special_forces
+        value = 15
+    }
+
+    strategy = {
+        type = role_ratio
+        id = artillery
+        value = 5
+    }
+
+    # Не производить запрещённое
+    strategy = {
+        type = dont_produce_unit
+        id = jinchuriki
+        value = yes
+    }
+
+    strategy = {
+        type = dont_produce_unit
+        id = juubi_jinchuriki
+        value = yes
+    }
+
+    # Приоритетные техи
+# Temporarily disabled: priority referred to Naruto-specific technology removed for vanilla research test.
+
+# Temporarily disabled: priority referred to Naruto-specific technology removed for vanilla research test.
+
+# Temporarily disabled: priority referred to Naruto-specific technology removed for vanilla research test.
+
+
+    # Строительство
+    strategy = {
+        type = construction_priority
+        id = industrial_complex
+        value = 70
+    }
+
+    strategy = {
+        type = construction_priority
+        id = arms_factory
+        value = 80
+    }
+
+    # Дипломатия
+    strategy = {
+        type = diplomatic_action
+        id = improve_relations
+        target = SUN
+        value = 50
+    }
+
+    strategy = {
+        type = diplomatic_action
+        id = improve_relations
+        target = NKU
+        value = 30
+    }
+}
+
+KNO_defensive_plan = {
+    name = "KNO_defensive_plan"
+    desc = "Konoha prioritizes defense"
+
+    strategy = { type = role_ratio id = infantry value = 70 }
+    strategy = { type = role_ratio id = elite value = 20 }
+    strategy = { type = role_ratio id = special_forces value = 10 }
+
+    strategy = {
+        type = dont_produce_unit
+        id = jinchuriki
+        value = yes
+    }
+}

@@ -1,0 +1,45 @@
+on_actions = {
+
+    # ============================================================
+    # ПРИ ЗАПУСКЕ — ничего не делаем, Совет создаётся ивентом
+    # ============================================================
+
+    # ============================================================
+    # ЕЖЕМЕСЯЧНО — поддержание флага Совета
+    # ============================================================
+    on_monthly = {
+        effect = {
+            every_country = {
+                limit = {
+                    has_country_flag = in_kage_council
+                }
+
+                # Если Совет создан, но идеи нет — выдаём
+                if = {
+                    limit = { NOT = { has_idea = kage_council_active_idea } }
+                    add_ideas = kage_council_active_idea
+                }
+
+                # Если Совет распущен, но идея есть — убираем
+                if = {
+                    limit = {
+                        has_idea = kage_council_active_idea
+                        has_country_flag = kage_council_disbanded
+                    }
+                    remove_ideas = kage_council_active_idea
+                    remove_ideas = kage_council_strong_idea
+                    remove_ideas = kage_council_weakened_idea
+                }
+
+                # Роспуск фракции, если Совет распался
+                if = {
+                    limit = {
+                        has_country_flag = kage_council_disbanded
+                        is_in_faction = yes
+                    }
+                    # TODO: remove_from_faction = yes
+                }
+            }
+        }
+    }
+}

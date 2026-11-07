@@ -1,0 +1,10 @@
+spriteTypes = {
+    # Naruto Shinobi Wars custom unit icon aliases.
+    # Unit definitions currently use vanilla sprite categories (infantry/motorized),
+    # so these aliases are available for future GUI references and do not override vanilla sprites.
+    spriteType = { name = "GFX_unit_genin" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_unit_chunin" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_unit_jonin" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_unit_jinchuriki" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_unit_juubi_jinchuriki" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+}

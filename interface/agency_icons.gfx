@@ -1,0 +1,51 @@
+spriteTypes = {
+
+    # Фоны агентств
+    spriteType = { name = "GFX_agency_kno" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_agency_kno_2" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_agency_sun" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_agency_sun_2" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_agency_kir" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_agency_kir_2" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_agency_kum" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_agency_kum_2" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_agency_iwa" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_agency_iwa_2" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_agency_oto" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_agency_oto_2" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_agency_aka" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_agency_aka_2" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+
+    # Улучшения
+    spriteType = { name = "GFX_agency_upgrade_operative_slot" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_agency_upgrade_intel" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_agency_upgrade_encryption" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_agency_upgrade_defense" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_agency_upgrade_offense" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+
+    spriteType = { name = "GFX_agency_upgrade_kno_anbu" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_agency_upgrade_kno_root" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_agency_upgrade_kno_itachi" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_agency_upgrade_kno_sharingan" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+
+    spriteType = { name = "GFX_agency_upgrade_sun_puppet" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_agency_upgrade_sun_poison" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+
+    spriteType = { name = "GFX_agency_upgrade_kir_hunter" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_agency_upgrade_kir_swords" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_agency_upgrade_kir_mist" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+
+    spriteType = { name = "GFX_agency_upgrade_kum_lightning" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_agency_upgrade_kum_kinkaku" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+
+    spriteType = { name = "GFX_agency_upgrade_iwa_explosion" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_agency_upgrade_iwa_wall" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+
+    spriteType = { name = "GFX_agency_upgrade_oto_sound" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_agency_upgrade_oto_curse" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_agency_upgrade_oto_lab" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+
+    spriteType = { name = "GFX_agency_upgrade_aka_zetsu" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_agency_upgrade_aka_rinnegan" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_agency_upgrade_aka_pain" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+}

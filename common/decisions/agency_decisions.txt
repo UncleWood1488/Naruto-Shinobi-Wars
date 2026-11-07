@@ -1,0 +1,183 @@
+agency_operations = {
+    icon = generic_intelligence_exchange
+    allowed = {
+        OR = { tag = KNO tag = SUN tag = KIR tag = NKU tag = IWA tag = OTO tag = AKA }
+    }
+    visible = {
+        has_any_idea = {
+            KNO_anbu_agency_idea
+            KNO_root_agency_idea
+            SUN_puppet_brigade_idea
+            KIR_hunter_nin_idea
+            NKU_kinkaku_force_idea
+            IWA_explosion_corps_idea
+            OTO_sound_four_idea
+            AKA_zetsu_intel_idea
+        }
+    }
+    priority = 70
+}
+
+agency_operations = {
+
+    # ============================================================
+    # РАЗВЕДКА ПРОТИВНИКА
+    # ============================================================
+    agency_gather_intel = {
+        icon = generic_intelligence_exchange
+        allowed = { always = yes }
+        visible = {
+            has_any_idea = {
+                KNO_anbu_agency_idea
+                SUN_puppet_brigade_idea
+                KIR_hunter_nin_idea
+                NKU_kinkaku_force_idea
+                IWA_explosion_corps_idea
+                OTO_sound_four_idea
+                AKA_zetsu_intel_idea
+            }
+        }
+        available = {
+            has_political_power >= 50
+            any_country = {
+                NOT = { is_in_faction_with = ROOT }
+                exists = yes
+            }
+        }
+        complete_effect = {
+            add_political_power = -25
+            add_decryption = 100
+            set_country_flag = intel_gathered
+        }
+        cost = 50
+        days_remove = 60
+        fire_only_once = no
+        ai_will_do = { factor = 50 }
+    }
+
+    # ============================================================
+    # САБОТАЖ
+    # ============================================================
+    agency_sabotage = {
+        icon = generic_intelligence_exchange
+        allowed = { always = yes }
+        visible = {
+            has_any_idea = {
+                KNO_root_agency_idea
+                SUN_puppet_brigade_idea
+                KIR_hunter_nin_idea
+                IWA_explosion_corps_idea
+                AKA_zetsu_intel_idea
+            }
+        }
+        available = {
+            has_political_power >= 100
+            has_war = yes
+        }
+        complete_effect = {
+            add_political_power = -50
+            random_enemy_country = {
+                limit = { has_war_with = ROOT }
+                add_stability = -0.05
+                add_war_support = -0.05
+            }
+        }
+        cost = 100
+        days_remove = 90
+        fire_only_once = no
+        ai_will_do = { factor = 30 }
+    }
+
+    # ============================================================
+    # ВЕРБОВКА АГЕНТА
+    # ============================================================
+    agency_recruit_agent = {
+        icon = generic_intelligence_exchange
+        allowed = { always = yes }
+        visible = {
+            has_any_idea = {
+                KNO_anbu_agency_idea
+                KNO_root_agency_idea
+                NKU_cloud_anbu_idea
+                OTO_sound_intel_idea
+                AKA_spy_master_idea
+            }
+        }
+        available = {
+            has_political_power >= 75
+        }
+        complete_effect = {
+            add_political_power = -25
+            add_ideas = agency_recruited_agent_idea
+        }
+        remove_effect = { remove_ideas = agency_recruited_agent_idea }
+        cost = 75
+        days_remove = 180
+        fire_only_once = no
+        ai_will_do = { factor = 40 }
+    }
+
+    # ============================================================
+    # ЛИКВИДАЦИЯ ЦЕЛИ
+    # ============================================================
+    agency_assassination = {
+        icon = generic_intelligence_exchange
+        allowed = { always = yes }
+        visible = {
+            has_any_idea = {
+                KNO_root_agency_idea
+                KIR_hunter_nin_idea
+                AKA_spy_master_idea
+                OTO_sound_intel_idea
+            }
+        }
+        available = {
+            has_political_power >= 150
+            has_war = yes
+        }
+        complete_effect = {
+            add_political_power = -75
+            random_enemy_country = {
+                limit = { has_war_with = ROOT }
+                add_stability = -0.10
+                if = {
+                    limit = { has_war_support > 0.20 }
+                    add_war_support = -0.10
+                }
+            }
+        }
+        cost = 150
+        days_remove = 120
+        fire_only_once = no
+        ai_will_do = { factor = 20 }
+    }
+
+    # ============================================================
+    # КОНТРРАЗВЕДКА
+    # ============================================================
+    agency_counter_intel = {
+        icon = generic_intelligence_exchange
+        allowed = { always = yes }
+        visible = {
+            has_any_idea = {
+                KNO_anbu_agency_idea
+                KNO_danzo_counter_intel_idea
+                SUN_puppet_brigade_idea
+                NKU_cloud_anbu_idea
+                IWA_earth_anbu_idea
+            }
+        }
+        available = {
+            has_political_power >= 75
+        }
+        complete_effect = {
+            add_political_power = -25
+            add_ideas = agency_counter_intel_idea
+        }
+        remove_effect = { remove_ideas = agency_counter_intel_idea }
+        cost = 75
+        days_remove = 180
+        fire_only_once = no
+        ai_will_do = { factor = 40 }
+    }
+}

@@ -1,0 +1,16 @@
+l_english:
+ jinchuriki:0 "Jinchuriki"
+ jinchuriki_desc:0 "A unique combat unit — a living embodiment of a tailed beast. CANNOT be produced, created, or disbanded by the player."
+ juubi_jinchuriki:0 "Ten-Tails Jinchuriki"
+ juubi_jinchuriki_desc:0 "The host of the Ten-Tailed Beast. Absolute power, available only to Madara Uchiha."
+
+ bijuu_extraction.1.t:0 "Tailed Beast Extraction"
+ bijuu_extraction.1.d:0 "The Akatsuki have extracted the beast from the jinchuriki. The host dies, the division is destroyed."
+ bijuu_extraction.1.a:0 "The beast is extracted"
+
+ bijuu_extraction.100.t:0 "Madara — Ten-Tails Jinchuriki"
+ bijuu_extraction.100.d:0 "Madara Uchiha has absorbed the Ten-Tails. A god has appeared on the battlefield."
+ bijuu_extraction.100.a:0 "A new era has begun"
+
+ extract_bijuu:0 "Extract the Beast"
+ extract_bijuu_desc:0 "Perform the extraction ritual on a captured jinchuriki. The host dies."

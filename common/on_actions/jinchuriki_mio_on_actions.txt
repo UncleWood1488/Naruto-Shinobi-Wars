@@ -1,0 +1,17 @@
+on_actions = {
+
+    on_startup = {
+        effect = {
+            every_country = {
+                limit = {
+                    OR = { tag = KNO tag = SUN tag = KIR tag = NKU tag = IWA }
+                }
+                set_country_flag = jinchuriki_mio_unlocked
+                if = {
+                    limit = { NOT = { has_military_industrial_organization = jinchuriki_mio } }
+                    add_military_industrial_organization = jinchuriki_mio
+                }
+            }
+        }
+    }
+}

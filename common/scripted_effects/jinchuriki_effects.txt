@@ -1,0 +1,46 @@
+#############################
+# ЭФФЕКТЫ СОЗДАНИЯ ДЗИНЧУРИКИ
+#############################
+
+# Универсальный: создать дзинчурики в провинции
+create_jinchuriki_division = {
+    create_division = {
+        division_template = "Дзинчурики"
+        location = 12345
+        name = "[Root.GetName] — Дзинчурики"
+        start_experience_factor = 0.5
+        start_equipment_factor = 1.0
+    }
+}
+
+# Создать с конкретным именем (для OOB уже работает, но для ивентов пригодится)
+create_named_jinchuriki = {
+    create_division = {
+        division_template = "Дзинчурики"
+        location = 12345
+        name = "[?jinchuriki_name]"
+        start_experience_factor = 0.5
+        start_equipment_factor = 1.0
+    }
+}
+
+# Уничтожить дзинчурики (при извлечении зверя)
+destroy_jinchuriki_division = {
+    every_owned_division = {
+        limit = {
+            division_template = "Дзинчурики"
+        }
+        delete_unit = yes
+    }
+}
+
+# Создать дзинчурики-Джуби (для Мадары)
+create_juubi_jinchuriki = {
+    create_division = {
+        division_template = "Дзинчурики Джуби"
+        location = 12351
+        name = "Мадара Учиха — Дзинчурики Джуби"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+    }
+}

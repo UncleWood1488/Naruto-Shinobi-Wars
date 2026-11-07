@@ -1,0 +1,49 @@
+kage_council_category = {
+    icon = generic_national_unity
+    allowed = {
+        OR = { tag = KNO tag = SUN tag = KIR tag = NKU tag = IWA }
+    }
+    visible = {
+        has_country_flag = kage_council_unlocked
+    }
+    priority = 50
+}
+
+kage_council_category = {
+
+    # =========================================================
+    # СОЗВАТЬ СОВЕТ ПЯТИ КАГЕ
+    # =========================================================
+    kage_call_council = {
+        icon = generic_national_unity
+        allowed = {
+            OR = { tag = KNO tag = SUN tag = KIR tag = NKU tag = IWA }
+        }
+        visible = {
+            has_country_flag = kage_council_unlocked
+            NOT = { has_country_flag = kage_council_held }
+        }
+        available = {
+            has_political_power >= 200
+            # Все пять деревень существуют
+            KNO = { exists = yes }
+            SUN = { exists = yes }
+            KIR = { exists = yes }
+            NKU = { exists = yes }
+            IWA = { exists = yes }
+            # Никто не в войне друг с другом
+            NOT = { has_war_with = KNO }
+            NOT = { has_war_with = SUN }
+            NOT = { has_war_with = KIR }
+            NOT = { has_war_with = NKU }
+            NOT = { has_war_with = IWA }
+        }
+        complete_effect = {
+            country_event = { id = kage_council.1 days = 1 }
+            set_country_flag = kage_council_called
+        }
+        cost = 200
+        fire_only_once = yes
+        ai_will_do = { factor = 50 }
+    }
+}

@@ -1,0 +1,121 @@
+################################
+# ПРЕДАТЕЛЬСТВО ВНУТРИ АКАЦУКИ
+################################
+
+# ---- Обито пытается убить Мадару ----
+country_event = {
+    id = akatsuki_betrayal.1
+    title = akatsuki_betrayal.1.t
+    desc = akatsuki_betrayal.1.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = no
+    fire_only_once = yes
+    major = yes
+
+    trigger = {
+        tag = AKA
+        has_country_flag = madara_leader
+        has_country_flag = obito_path
+        date > 1942.1.1
+    }
+    mean_time_to_happen = { days = 180 }
+
+    option = {
+        name = akatsuki_betrayal.1.a # Мадара побеждает
+        add_stability = -0.10
+        add_war_support = 0.10
+        set_country_flag = madara_prevails
+        add_ideas = AKA_madara_prevails_idea
+    }
+    option = {
+        name = akatsuki_betrayal.1.b # Обито побеждает
+        add_stability = 0.05
+        add_war_support = 0.15
+        set_country_flag = obito_prevails
+        remove_country_flag = madara_leader
+        set_country_leader = {
+            name = "Обито Учиха"
+            desc = "Лидер Акацуки"
+            picture = "GFX_portrait_generic_asia_4"
+            ideology = fascism
+        }
+        add_ideas = AKA_obito_prevails_idea
+    }
+    option = {
+        name = akatsuki_betrayal.1.c # Компромисс
+        add_stability = 0.05
+        add_political_power = 100
+        add_ideas = AKA_dual_leadership_idea
+    }
+}
+
+# ---- Пейн vs Обито (если выбран pain_path) ----
+country_event = {
+    id = akatsuki_betrayal.2
+    title = akatsuki_betrayal.2.t
+    desc = akatsuki_betrayal.2.d
+    picture = GFX_evt_generic_war
+    is_triggered_only = no
+    fire_only_once = yes
+    major = yes
+
+    trigger = {
+        tag = AKA
+        has_country_flag = pain_path
+        date > 1941.6.1
+    }
+    mean_time_to_happen = { days = 180 }
+
+    option = {
+        name = akatsuki_betrayal.2.a # Пейн сохраняет власть
+        add_stability = 0.10
+        add_political_power = 150
+        set_country_flag = pain_prevails
+        add_ideas = AKA_pain_prevails_idea
+    }
+    option = {
+        name = akatsuki_betrayal.2.b # Обито свергает Пейна
+        add_stability = -0.05
+        add_war_support = 0.10
+        set_country_flag = obito_path
+        set_country_leader = {
+            name = "Обито Учиха"
+            desc = "Лидер Акацуки"
+            picture = "GFX_portrait_generic_asia_4"
+            ideology = fascism
+        }
+        add_ideas = AKA_obito_prevails_idea
+    }
+}
+
+# ---- Возвращение Орочимару (если Данзо у власти в Конохе) ----
+country_event = {
+    id = akatsuki_betrayal.3
+    title = akatsuki_betrayal.3.t
+    desc = akatsuki_betrayal.3.d
+    picture = GFX_evt_generic_asia
+    is_triggered_only = no
+    fire_only_once = yes
+
+    trigger = {
+        tag = OTO
+        KNO = {
+            has_country_flag = danzo_leader
+            exists = yes
+        }
+        date > 1938.1.1
+    }
+    mean_time_to_happen = { days = 120 }
+
+    option = {
+        name = akatsuki_betrayal.3.a # Союз с Акацуки против Конохи
+        add_political_power = 100
+        add_ideas = OTO_akatsuki_alliance_idea
+        AKA = { add_opinion = { target = OTO value = 50 } }
+    }
+    option = {
+        name = akatsuki_betrayal.3.b # Действовать в одиночку
+        add_war_support = 0.10
+        army_experience = 50
+    }
+}

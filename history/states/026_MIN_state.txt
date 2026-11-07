@@ -1,0 +1,18 @@
+state = {
+    id = 26
+    name = "STATE_26"
+    manpower = 25000
+    state_category = town
+    history = {
+        owner = MIN
+        controller = MIN
+        add_core_of = MIN
+        buildings = {
+            infrastructure = 1
+        }
+            victory_points = { 39 4 }
+            victory_points = { 71 2 }
+    }
+    provinces = { 3 19 39 49 64 71 113 223 }
+    local_supplies = 2.0
+}

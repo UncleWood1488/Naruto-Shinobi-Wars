@@ -1,0 +1,193 @@
+ideas = {
+    country = {
+
+        KIR_reform_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                stability_factor = 0.10
+                research_speed_factor = 0.05
+            }
+        }
+
+        NKU_raikage_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                army_attack_factor = 0.05
+                conscription_factor = 0.05
+            }
+        }
+
+        NKU_war_prep_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                training_time_factor = -0.10
+                army_attack_factor = 0.05
+            }
+        }
+
+        IWA_tsuchikage_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                army_defence_factor = 0.05
+                stability_factor = 0.05
+            }
+        }
+
+        IWA_mobilization_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                conscription_factor = 0.15
+            }
+        }
+
+        IWA_economy_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                industrial_capacity_factory = 0.10
+                consumer_goods_factor = -0.05
+            }
+        }
+
+        OTO_orochimaru_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                research_speed_factor = 0.10
+                army_attack_factor = 0.05
+            }
+        }
+
+        OTO_immortality_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                research_speed_factor = 0.15
+                army_defence_factor = 0.10
+                special_forces_cap_flat = 1
+            }
+        }
+
+        OTO_akatsuki_alliance_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                army_attack_factor = 0.10
+                war_support_factor = 0.10
+            }
+        }
+
+        AKA_madara_prevails_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                army_attack_factor = 0.20
+                army_defence_factor = 0.15
+                war_support_factor = 0.15
+                special_forces_cap_flat = 2
+            }
+        }
+
+        AKA_obito_prevails_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                army_attack_factor = 0.10
+                justify_war_goal_time = -0.25
+                encryption_factor = 0.20
+                decryption_factor = 0.20
+            }
+        }
+
+        AKA_dual_leadership_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                political_power_gain = 0.15
+                army_attack_factor = 0.10
+                stability_factor = 0.05
+            }
+        }
+
+        AKA_pain_prevails_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                stability_factor = 0.10
+                war_support_factor = 0.10
+                army_defence_factor = 0.10
+            }
+        }
+
+        AKA_god_emperor_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                army_attack_factor = 0.40
+                army_defence_factor = 0.40
+                political_power_gain = 0.50
+                stability_factor = 0.40
+                special_forces_cap_flat = 4
+            }
+        }
+
+        AKA_world_emperor_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                army_attack_factor = 0.30
+                army_defence_factor = 0.30
+                industrial_capacity_factory = 0.20
+                political_power_gain = 0.30
+                stability_factor = 0.25
+            }
+        }
+
+        dreaming_under_tsukuyomi_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                stability_factor = -0.20
+                war_support_factor = -0.30
+                army_attack_factor = -0.30
+                army_defence_factor = -0.30
+            }
+        }
+
+        conquered_by_akatsuki_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                stability_factor = -0.15
+                war_support_factor = -0.20
+                political_power_gain = -0.30
+            }
+        }
+
+        last_stand_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                war_support_factor = 0.20
+                army_defence_factor = 0.15
+                conscription_factor = 0.15
+            }
+        }
+
+        KNO_victory_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                stability_factor = 0.25
+                political_power_gain = 0.15
+                army_attack_factor = 0.10
+                army_defence_factor = 0.10
+            }
+        }
+    }
+}

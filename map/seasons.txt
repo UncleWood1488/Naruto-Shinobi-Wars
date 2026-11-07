@@ -1,0 +1,40 @@
+winter = {
+    start_date = 00.12.01
+    end_date = 00.02.10
+    hsv_north = { 0 0.1 1 }
+    colorbalance_north = { 0.9 0.9 1 }
+    hsv_center = { 0.0 1.0 1.0 }
+    colorbalance_center = { 1.0 1.0 1.0 }
+    hsv_south = { 0.0 1.0 1.0 }
+    colorbalance_south = { 1.0 1.0 1.0 }
+}
+spring = {
+    start_date = 00.03.10
+    end_date = 00.04.22
+    hsv_north = { 0 0.1 1 }
+    colorbalance_north = { 0.9 0.9 1 }
+    hsv_center = { 0.0 1.0 1.0 }
+    colorbalance_center = { 1.0 1.0 1.0 }
+    hsv_south = { 0.0 1.0 1.0 }
+    colorbalance_south = { 1.0 1.0 1.0 }
+}
+summer = {
+    start_date = 00.05.20
+    end_date = 00.09.10
+    hsv_north = { 0 0.1 1 }
+    colorbalance_north = { 0.9 0.9 1 }
+    hsv_center = { 0.0 1.0 1.0 }
+    colorbalance_center = { 1.0 1.0 1.0 }
+    hsv_south = { 0.0 1.0 1.0 }
+    colorbalance_south = { 1.0 1.0 1.0 }
+}
+autumn = {
+    start_date = 00.09.11
+    end_date = 00.11.30
+    hsv_north = { 0 0.1 1 }
+    colorbalance_north = { 0.9 0.9 1 }
+    hsv_center = { 0.0 1.0 1.0 }
+    colorbalance_center = { 1.0 1.0 1.0 }
+    hsv_south = { 0.0 1.0 1.0 }
+    colorbalance_south = { 1.0 1.0 1.0 }
+}

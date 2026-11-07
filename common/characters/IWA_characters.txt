@@ -1,0 +1,16 @@
+characters = {
+    IWA_onoki_character = {
+        name = IWA_onoki_character
+        portraits = {
+            civilian = {
+                large = GFX_portrait_onoki
+            }
+        }
+        gender = male
+        country_leader = {
+            ideology = despotism
+            desc = IWA_onoki_character_desc
+            traits = { }
+        }
+    }
+}

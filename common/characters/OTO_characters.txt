@@ -1,0 +1,16 @@
+characters = {
+    OTO_orochimaru_character = {
+        name = OTO_orochimaru_character
+        portraits = {
+            civilian = {
+                large = GFX_portrait_orochimaru
+            }
+        }
+        gender = male
+        country_leader = {
+            ideology = despotism
+            desc = OTO_orochimaru_character_desc
+            traits = { }
+        }
+    }
+}

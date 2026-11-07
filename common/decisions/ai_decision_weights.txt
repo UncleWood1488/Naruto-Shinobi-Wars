@@ -1,0 +1,61 @@
+anbu_hunt_category = {
+
+    anbu_hunt_deidara = {
+        icon = generic_intelligence_exchange
+        allowed = { tag = KNO }
+        visible = { NOT = { has_country_flag = deidara_captured } }
+        available = {
+            has_political_power >= 100
+            AKA = { exists = yes }
+        }
+        complete_effect = {
+            add_political_power = -50
+            random_list = {
+                60 = { country_event = { id = anbu_hunt.1 days = 1 } }
+                40 = { country_event = { id = anbu_hunt.1.fail days = 1 } }
+            }
+        }
+        cost = 100
+        days_remove = 60
+        fire_only_once = yes
+        ai_will_do = {
+            base = 80
+            modifier = {
+                add = 20
+                has_war_with = AKA
+            }
+            modifier = {
+                factor = 0.5
+                NOT = { has_war = yes }
+            }
+        }
+    }
+
+    anbu_hunt_pain = {
+        icon = generic_intelligence_exchange
+        allowed = { tag = KNO }
+        visible = { NOT = { has_country_flag = pain_captured } }
+        available = {
+            has_political_power >= 250
+            has_country_flag = konan_captured
+            has_country_flag = zetsu_captured
+        }
+        complete_effect = {
+            add_political_power = -125
+            random_list = {
+                40 = { country_event = { id = anbu_hunt.8 days = 1 } }
+                60 = { country_event = { id = anbu_hunt.8.fail days = 1 } }
+            }
+        }
+        cost = 250
+        days_remove = 120
+        fire_only_once = yes
+        ai_will_do = {
+            base = 100
+            modifier = {
+                add = 50
+                has_country_flag = pain_invasion_survived
+            }
+        }
+    }
+}

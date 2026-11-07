@@ -1,0 +1,22 @@
+ideas = {
+    country = {
+
+        agency_recruited_agent_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                operative_slots = 1
+                decryption_factor = 0.15
+            }
+        }
+
+        agency_counter_intel_idea = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                encryption_factor = 0.30
+                decryption_factor = 0.15
+            }
+        }
+    }
+}

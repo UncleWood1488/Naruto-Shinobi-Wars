@@ -1,0 +1,49 @@
+ideas = {
+    country = {
+
+        KNO_jinchuriki_present = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                special_forces_cap_flat = 1
+                conscription_factor = 0.05
+            }
+        }
+
+        SUN_jinchuriki_present = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                special_forces_cap_flat = 1
+                conscription_factor = 0.05
+            }
+        }
+
+        KIR_jinchuriki_present = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                special_forces_cap_flat = 1
+                conscription_factor = 0.05
+            }
+        }
+
+        NKU_jinchuriki_present = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                special_forces_cap_flat = 1
+                conscription_factor = 0.05
+            }
+        }
+
+        IWA_jinchuriki_present = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                special_forces_cap_flat = 1
+                conscription_factor = 0.05
+            }
+        }
+    }
+}

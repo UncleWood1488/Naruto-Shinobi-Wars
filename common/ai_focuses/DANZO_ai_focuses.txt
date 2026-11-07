@@ -1,0 +1,57 @@
+KNO_danzo_akatsuki_ai_focuses = {
+    ai_focus = {
+        focus = KNO_danzo_and_akatsuki
+        value = 100
+        modifier = {
+            base = 50
+            has_country_flag = danzo_leader
+        }
+    }
+
+    # ИИ выбирает войну против Акацуки (безопаснее)
+    ai_focus = {
+        focus = KNO_danzo_war_akatsuki
+        value = 70
+    }
+
+    ai_focus = {
+        focus = KNO_danzo_counter_intel
+        value = 65
+    }
+
+    ai_focus = {
+        focus = KNO_danzo_hunt_akatsuki
+        value = 80
+    }
+
+    ai_focus = {
+        focus = KNO_danzo_united_front
+        value = 75
+    }
+
+    ai_focus = {
+        focus = KNO_danzo_akatsuki_defeat
+        value = 90
+    }
+
+    # Союз — только если ИИ слаб
+    ai_focus = {
+        focus = KNO_danzo_pact_with_akatsuki
+        value = 30
+        modifier = {
+            base = 50
+            has_war = yes
+            NOT = { has_war_with = AKA }
+        }
+    }
+
+    ai_focus = {
+        focus = KNO_danzo_share_bijuu
+        value = 25
+    }
+
+    ai_focus = {
+        focus = KNO_danzo_secret_war
+        value = 20
+    }
+}

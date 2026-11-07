@@ -1,0 +1,16 @@
+characters = {
+    MIN_council_character = {
+        name = MIN_council_character
+        portraits = {
+            civilian = {
+                large = GFX_portrait_minor_council
+            }
+        }
+        gender = undefined
+        country_leader = {
+            ideology = despotism
+            desc = MIN_council_character_desc
+            traits = { }
+        }
+    }
+}

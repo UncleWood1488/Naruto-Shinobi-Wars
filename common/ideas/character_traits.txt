@@ -1,0 +1,24 @@
+ideas = {
+    country = {
+
+        # Адвайзеры
+        KNO_itachi_advisor_trait = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                decryption_factor = 0.20
+                army_attack_factor = 0.05
+            }
+        }
+
+        KNO_danzo_trait = {
+            picture = generic_national_unity_idea
+            removal_cost = -1
+            modifier = {
+                encryption_factor = 0.25
+                decryption_factor = 0.25
+                stability_factor = -0.05
+            }
+        }
+    }
+}

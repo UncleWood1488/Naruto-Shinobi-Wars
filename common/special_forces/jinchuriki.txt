@@ -1,0 +1,14 @@
+special_forces = {
+
+    jinchuriki_category = {
+        cap = 1
+        cap_flat = 1
+        unit_types = { jinchuriki }
+    }
+
+    juubi_jinchuriki_category = {
+        cap = 1
+        cap_flat = 1
+        unit_types = { juubi_jinchuriki }
+    }
+}

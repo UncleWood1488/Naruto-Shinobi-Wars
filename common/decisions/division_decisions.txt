@@ -1,0 +1,41 @@
+division_management = {
+
+    # ============================================================
+    # ИЗВЛЕЧЬ ЗВЕРЯ — только AKA, только после захвата
+    # ============================================================
+    extract_bijuu = {
+        icon = generic_secret_weapon
+        allowed = { tag = AKA }
+        visible = {
+            has_country_flag = akatsuki_active
+            any_country = {
+                OR = { tag = KNO tag = SUN tag = KIR tag = NKU tag = IWA }
+                has_country_flag = bijuu_target
+            }
+        }
+        available = {
+            has_political_power >= 200
+        }
+        complete_effect = {
+            add_political_power = -100
+
+            # Уничтожаем дивизию дзинчурики у цели
+            every_country = {
+                limit = {
+                    has_country_flag = bijuu_target
+                }
+                every_owned_division = {
+                    limit = {
+                        division_template = "Дзинчурики"
+                    }
+                    delete_unit = yes
+                }
+                country_event = { id = bijuu_extraction.1 days = 1 }
+            }
+        }
+        days_remove = 30
+        cost = 200
+        fire_only_once = yes
+        ai_will_do = { factor = 100 }
+    }
+}
