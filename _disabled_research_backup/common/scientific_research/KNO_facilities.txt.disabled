@@ -1,0 +1,44 @@
+KNO_research_facilities = {
+    KNO_iryo_lab = {
+        name = KNO_iryo_lab
+        icon = GFX_facility_medical
+        building = KNO_medical_facility
+        allowed = { tag = KNO }
+        visible = { has_country_flag = medical_reform }
+        max_level = 5
+
+        researcher_slots = 1
+        research_speed_factor = 0.10
+
+        bonus = {
+            research_speed_factor = 0.05
+            recovery_rate = 0.05
+        }
+    }
+
+    KNO_uzumaki_lab = {
+        name = KNO_uzumaki_lab
+        icon = GFX_facility_sealing
+        building = KNO_sealing_facility
+        allowed = { tag = KNO }
+        visible = { has_country_flag = uzumaki_sealing_research }
+        max_level = 3
+
+        researcher_slots = 1
+        research_speed_factor = 0.15
+    }
+}
+
+OTO_research_facilities = {
+    OTO_orochimaru_lab = {
+        name = OTO_orochimaru_lab
+        icon = GFX_facility_orochimaru
+        building = OTO_lab_facility
+        allowed = { tag = OTO }
+        visible = { always = yes }
+        max_level = 5
+
+        researcher_slots = 2
+        research_speed_factor = 0.20
+    }
+}

@@ -1,0 +1,22 @@
+Naruto Shinobi Wars — аудит и безопасная корректировка 10.11.2026
+
+Внесённые изменения:
+1. Удалён replace_path = "common/raids". Он отключал ванильные рейды целиком.
+2. Пользовательские файлы рейдов переименованы в уникальные nsw_*.txt, чтобы не подменять файлы игры с теми же именами.
+3. Файл категорий переименован в nsw_raid_categories.txt; категория nuclear_raids удалена, чтобы не конфликтовать с ванильной.
+4. Удалён пустой nuclear_raids.txt, который не добавлял контента.
+5. Из nsw_land_infiltration_raids.txt удалён спорный starting_point с вложенным types, который совпадал с сообщением Unexpected token: types.
+
+Проверки последней исходной сборки:
+- Все 6 BMP имеют размер 5632x2048. provinces.bmp — RGB (24-bit); terrain/rivers/trees — indexed 8-bit; heightmap — grayscale 8-bit; world_normal — RGB.
+- Все 74 weather markers, 16 building placements и 39 unit stack placements находятся в пределах карты.
+- Все 39 unit stack placements попадают в пиксель своей указанной province ID.
+- Все 16 building placements попадают в провинции соответствующих штатов (проверено по provinces.bmp и history/states).
+- Все 74 weather markers попадают в провинции своих strategic regions (проверено по provinces.bmp и map/strategicregions).
+- Все текстовые файлы .txt/.gfx/.gui/.lua/.yml прошли балансировку фигурных скобок.
+- Проверки definition.csv, province colors, state ownership, strategic region coverage и capitals прошли по предыдущему статическому аудиту этой же линии сборки.
+
+Ограничения:
+- HOI4 не запускается в среде сборки. Поэтому устранение C0000094 нельзя подтвердить без запуска игры. LastRead указывает на ванильный gfx/interface/equipmentdesigner/graphic_db/00_plane_icons.txt, но не доказывает его виновность.
+- Координаты buildings.txt и weatherpositions.txt проверены не только по границам, но и по соответствию штатам/стратегическим регионам. Фактическую отрисовку и визуальное положение в игровом движке всё равно нельзя подтвердить без запуска HOI4/Nudger.
+- Удаление starting_point устраняет спорный синтаксический узел, но внутриигровая возможность запуска наземного рейда требует проверки.

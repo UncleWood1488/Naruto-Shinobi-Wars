@@ -1,0 +1,69 @@
+technologies = {
+    kunai_1 = {
+        enable_equipments = { kunai_equipment }
+        research_cost = 1.0
+        start_year = 1936
+        folder = { name = infantry_folder position = { x = 8 y = 1 } }
+        path = { leads_to_tech = ninja_sword_1 research_cost_coeff = 1 }
+        categories = { infantry_weapons }
+        ai_will_do = { factor = 1 }
+    }
+
+    ninja_sword_1 = {
+        enable_equipments = { ninja_sword }
+        prerequisite = { tech = kunai_1 }
+        research_cost = 1.5
+        start_year = 1937
+        folder = { name = infantry_folder position = { x = 9 y = 1 } }
+        path = { leads_to_tech = chakra_armor_1 research_cost_coeff = 1 }
+        categories = { infantry_weapons }
+        ai_will_do = { factor = 1 }
+    }
+
+    chakra_armor_1 = {
+        enable_equipments = { chakra_armor }
+        prerequisite = { tech = ninja_sword_1 }
+        research_cost = 2.0
+        start_year = 1938
+        folder = { name = infantry_folder position = { x = 10 y = 1 } }
+        path = { leads_to_tech = anbu_gear_1 research_cost_coeff = 1 }
+        categories = { infantry_weapons }
+        ai_will_do = { factor = 1 }
+    }
+
+    anbu_gear_1 = {
+        enable_equipments = { anbu_equipment }
+        prerequisite = { tech = chakra_armor_1 }
+        research_cost = 2.5
+        start_year = 1939
+        folder = { name = infantry_folder position = { x = 11 y = 1 } }
+        categories = { infantry_weapons }
+        ai_will_do = { factor = 1 }
+    }
+
+    jinchuriki_gear_1 = {
+        enable_equipments = { jinchuriki_equipment }
+        allow = {
+            OR = { tag = KNO tag = SUN tag = KIR tag = NKU tag = IWA }
+        }
+        research_cost = 3.0
+        start_year = 1938
+        folder = { name = infantry_folder position = { x = 8 y = 4 } }
+        path = { leads_to_tech = jinchuriki_gear_2 research_cost_coeff = 1 }
+        categories = { infantry_weapons }
+        ai_will_do = { factor = 1 }
+    }
+
+    jinchuriki_gear_2 = {
+        enable_equipments = { jinchuriki_equipment_2 }
+        prerequisite = { tech = jinchuriki_gear_1 }
+        allow = {
+            OR = { tag = KNO tag = SUN tag = KIR tag = NKU tag = IWA }
+        }
+        research_cost = 4.0
+        start_year = 1941
+        folder = { name = infantry_folder position = { x = 9 y = 4 } }
+        categories = { infantry_weapons }
+        ai_will_do = { factor = 1 }
+    }
+}

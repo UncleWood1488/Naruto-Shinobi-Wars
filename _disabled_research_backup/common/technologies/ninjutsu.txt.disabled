@@ -1,0 +1,60 @@
+technologies = {
+    # Minimal functional research chain reconstructed for IDs referenced elsewhere in the mod.
+    # Uses the vanilla infantry folder because the original custom folder definition was absent.
+    ninja_training_1 = {
+        research_cost = 1.0
+        start_year = 1936
+        folder = { name = infantry_folder position = { x = -5 y = 4 } }
+        categories = { ninjutsu }
+        ai_will_do = { factor = 2 }
+    }
+
+    ninjutsu_1 = {
+        prerequisite = { tech = ninja_training_1 }
+        research_cost = 1.0
+        start_year = 1936
+        folder = { name = infantry_folder position = { x = -4 y = 4 } }
+        path = { leads_to_tech = ninjutsu_2 research_cost_coeff = 1 }
+        categories = { ninjutsu }
+        ai_will_do = { factor = 1.5 }
+    }
+
+    ninjutsu_2 = {
+        prerequisite = { tech = ninjutsu_1 }
+        research_cost = 1.5
+        start_year = 1937
+        folder = { name = infantry_folder position = { x = -4 y = 5 } }
+        path = { leads_to_tech = ninjutsu_3 research_cost_coeff = 1 }
+        categories = { ninjutsu }
+        ai_will_do = { factor = 1 }
+    }
+
+    ninjutsu_3 = {
+        prerequisite = { tech = ninjutsu_2 }
+        research_cost = 2.0
+        start_year = 1938
+        folder = { name = infantry_folder position = { x = -4 y = 6 } }
+        categories = { ninjutsu }
+        ai_will_do = { factor = 1 }
+    }
+
+    sharingan = {
+        allow = { tag = KNO }
+        research_cost = 2.0
+        start_year = 1938
+        folder = { name = infantry_folder position = { x = -1 y = 4 } }
+        path = { leads_to_tech = mangekyou research_cost_coeff = 1 }
+        categories = { ninjutsu }
+        ai_will_do = { factor = 1 }
+    }
+
+    mangekyou = {
+        prerequisite = { tech = sharingan }
+        allow = { tag = KNO }
+        research_cost = 3.0
+        start_year = 1940
+        folder = { name = infantry_folder position = { x = -1 y = 5 } }
+        categories = { ninjutsu }
+        ai_will_do = { factor = 1 }
+    }
+}

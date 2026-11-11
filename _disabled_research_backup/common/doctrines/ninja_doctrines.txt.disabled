@@ -1,0 +1,124 @@
+doctrines = {
+
+    ninja_doctrines_folder = {
+        name = ninja_doctrines_folder
+        type = folder
+        start_year = 1936
+
+        folder = {
+            name = ninja_training_doctrine
+            position = { x = 0 y = 0 }
+            research_cost = 1
+            start_year = 1936
+
+            ninja_training_1 = {
+                name = ninja_training_1
+                research_cost = 2
+                start_year = 1936
+                unlock_tactic = ninja_substitution
+                effects = {
+                    army = {
+                        organisation = 5
+                        recovery_rate = 0.05
+                    }
+                }
+            }
+
+            ninja_training_2 = {
+                name = ninja_training_2
+                research_cost = 3
+                start_year = 1938
+                prerequisite = { ninja_training_1 }
+                unlock_tactic = shadow_clone_swarm
+                effects = {
+                    army = {
+                        organisation = 5
+                        soft_attack = 0.05
+                    }
+                }
+            }
+
+            ninja_training_3 = {
+                name = ninja_training_3
+                research_cost = 4
+                start_year = 1940
+                prerequisite = { ninja_training_2 }
+                unlock_tactic = ninja_ambush
+                effects = {
+                    army = {
+                        breakthrough = 0.10
+                        soft_attack = 0.10
+                    }
+                }
+            }
+        }
+
+        folder = {
+            name = genjutsu_doctrine
+            position = { x = 1 y = 0 }
+            research_cost = 2
+            start_year = 1936
+            allow_branch = {
+                OR = { tag = KNO tag = KIR tag = OTO }
+            }
+
+            genjutsu_doctrine_1 = {
+                name = genjutsu_doctrine_1
+                research_cost = 3
+                start_year = 1938
+                unlock_tactic = genjutsu_illusion
+                effects = {
+                    army = {
+                        defense = 0.10
+                    }
+                }
+            }
+        }
+
+        folder = {
+            name = jinchuriki_doctrine
+            position = { x = 2 y = 0 }
+            research_cost = 3
+            start_year = 1936
+            allow_branch = {
+                OR = { tag = KNO tag = SUN tag = KIR tag = NKU tag = IWA }
+            }
+
+            jinchuriki_doctrine_1 = {
+                name = jinchuriki_doctrine_1
+                research_cost = 4
+                start_year = 1938
+                unlock_tactic = bijuu_bombardment
+                effects = {
+                    army = {
+                        soft_attack = 0.15
+                        breakthrough = 0.15
+                    }
+                }
+            }
+        }
+
+        folder = {
+            name = sealing_doctrine
+            position = { x = 3 y = 0 }
+            research_cost = 2
+            start_year = 1936
+            allow_branch = {
+                OR = { tag = KNO tag = IWA }
+            }
+
+            sealing_doctrine_1 = {
+                name = sealing_doctrine_1
+                research_cost = 3
+                start_year = 1939
+                unlock_tactic = sealing_formation
+                effects = {
+                    army = {
+                        defense = 0.15
+                        hardness = 0.10
+                    }
+                }
+            }
+        }
+    }
+}

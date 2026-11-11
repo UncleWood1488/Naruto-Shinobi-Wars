@@ -1,0 +1,8 @@
+spriteTypes = {
+    spriteType = { name = "GFX_kunai_1_medium" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_ninja_sword_1_medium" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_chakra_armor_1_medium" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_anbu_gear_1_medium" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_jinchuriki_gear_1_medium" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+    spriteType = { name = "GFX_jinchuriki_gear_2_medium" texturefile = "gfx/interface/technologies/infantry_equipment_0.dds" }
+}

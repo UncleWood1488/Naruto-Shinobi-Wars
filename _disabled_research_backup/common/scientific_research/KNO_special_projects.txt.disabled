@@ -1,0 +1,57 @@
+KNO_special_projects = {
+
+    KNO_project_edo_tensei = {
+        name = KNO_project_edo_tensei
+        icon = GFX_project_edo_tensei
+        allowed = {
+            OR = { tag = KNO tag = OTO }
+        }
+        visible = { has_country_flag = forbidden_jutsu_research }
+        cost = 5
+
+        required_facility = OTO_orochimaru_lab
+
+        prerequisites = {
+            ninjutsu_3
+        }
+
+        reward = {
+            add_ideas = KNO_edo_tensei_idea
+        }
+    }
+
+    KNO_project_rinnegan = {
+        name = KNO_project_rinnegan
+        icon = GFX_project_rinnegan
+        allowed = { tag = KNO }
+        visible = { has_country_flag = uchiha_research }
+        cost = 10
+
+        required_facility = KNO_iryo_lab
+
+        prerequisites = {
+            sharingan
+            mangekyou
+        }
+
+        reward = {
+            add_ideas = KNO_rinnegan_idea
+            add_research_slot = 1
+        }
+    }
+
+    KNO_project_bijuu_seal = {
+        name = KNO_project_bijuu_seal
+        icon = GFX_project_sealing
+        allowed = { tag = KNO }
+        visible = { has_country_flag = uzumaki_sealing_research }
+        cost = 7
+
+        required_facility = KNO_uzumaki_lab
+
+        reward = {
+            add_ideas = KNO_bijuu_seal_idea
+            add_ideas = KNO_uzumaki_sealing_mastery_idea
+        }
+    }
+}

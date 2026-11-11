@@ -38,3 +38,9 @@ NARUTO SHINOBI WARS — РЕЙДЫ ПОД КАРТУ 5632x2048
 - Actual in-game startup / raid launch was not tested in this environment.
 
 Изменение совместимости: старт наземной диверсии перенесён с industrial_complex (недопустимая стартовая точка) на naval_base (допустимая стартовая точка); цель рейда по-прежнему industrial_complex.
+
+
+Дополнительная изоляция для HOI4 1.19.x:
+- Добавлены пустые перекрывающие файлы с точными ванильными именами: air_raids.txt, land_infiltration_raids.txt, naval_commando_raids.txt, nuclear_raids.txt, paratrooper_raids.txt и categories/raid_categories.txt.
+- Это не даёт загрузчику объединять определения Naruto с одноимёнными ванильными файлами, даже если пользовательский launcher .mod не передал replace_path из descriptor.mod.
+- Ванильные *_custom файлы также оставлены пустыми. Собственные рейды Naruto находятся в файлах nsw_*.txt.

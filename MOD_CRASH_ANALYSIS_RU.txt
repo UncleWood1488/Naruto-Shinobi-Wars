@@ -32,11 +32,5 @@ MAP_ERROR: Palette in rivers.bmp is probably not correct.
 ДОПОЛНЕНИЕ: СОВМЕСТИМОСТЬ РЕЙДОВ
 - LastRead common/raids/paratrooper_raids_custom.txt (771) теперь переопределён внутри Naruto Shinobi Wars безопасным файлом без ванильных country-tag ссылок. Это последняя прочитанная точка, но не доказанная причина C0000094.
 - Аналогично переопределены несовместимые исторические файлы air_raids_custom.txt, land_infiltration_custom.txt и naval_commando_raids.txt.
-- В обоих дескрипторах удалён оставшийся replace_path = "common/raids": отчёт и фактические настройки теперь согласованы.
+- Глобальный replace_path = "common/raids" удалён: общие ванильные файлы рейдов, включая air_raids.txt, снова могут загружаться.
 - Детали и ограничения перечислены в RAID_COMPATIBILITY_RU.txt.
-
-
-ДОПОЛНЕНИЕ ПО ЛОГУ 07.11.2026
-- Новый meta.yml указывает LastRead: common/raids/land_infiltration_raids.txt (74). Этот путь существует в Naruto Shinobi Wars; прежняя запись о paratrooper_raids_custom.txt относится к более старому логу и не описывает текущий запуск.
-- LastRead показывает последнюю зафиксированную точку чтения, но не доказывает, что именно этот файл вызвал C0000094.
-- В текущем error.log нет явного сообщения о синтаксической ошибке в этом raid-файле. Причина divide-by-zero остаётся не подтверждённой.
